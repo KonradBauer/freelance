@@ -93,7 +93,7 @@ Właściciele małych firm tracą klientów przez brak profesjonalnej obecności
 
 ---
 
-- [ ] **Unit 1: Scaffolding projektu Next.js 15**
+- [x] **Unit 1: Scaffolding projektu Next.js 15**
 
 **Cel:** Działający projekt Next.js z pełną konfiguracją — TypeScript strict, Tailwind v4, wszystkie zależności.
 
@@ -130,7 +130,7 @@ Właściciele małych firm tracą klientów przez brak profesjonalnej obecności
 
 ---
 
-- [ ] **Unit 2: Root layout, metadata i fonty**
+- [x] **Unit 2: Root layout, metadata i fonty**
 
 **Cel:** Globalny layout z metadanymi SEO/OG (FB Ads link preview), fontami, bez nawigacji.
 
