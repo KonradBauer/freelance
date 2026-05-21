@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import ThankYouPixelEvent from "@/components/ui/ThankYouPixelEvent";
 
 export const metadata: Metadata = {
   title: "Dziekujemy za kontakt",
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 export default function ThankYouPage() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-slate-900 px-6 text-center">
+      <ThankYouPixelEvent />
       <div className="max-w-lg mx-auto">
         <div className="flex items-center justify-center w-20 h-20 rounded-full bg-amber-400 mx-auto mb-8">
           <svg

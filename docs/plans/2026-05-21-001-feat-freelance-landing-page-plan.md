@@ -1,7 +1,7 @@
 ---
 title: "feat: Freelance Landing Page — Lead Generation via FB Ads"
 type: feat
-status: active
+status: completed
 date: 2026-05-21
 origin: docs/dev-brainstorms/2026-05-21-freelance-landing-page-requirements.md
 ---
@@ -158,7 +158,7 @@ Właściciele małych firm tracą klientów przez brak profesjonalnej obecności
 
 ---
 
-- [ ] **Unit 3: Sekcje hero, agitacja, transformacja**
+- [x] **Unit 3: Sekcje hero, agitacja, transformacja**
 
 **Cel:** Emocjonalna narracja sprzedażowa — ból → konsekwencje → rozwiązanie.
 
@@ -191,7 +191,7 @@ Właściciele małych firm tracą klientów przez brak profesjonalnej obecności
 
 ---
 
-- [ ] **Unit 4: Sekcje proces, portfolio i video**
+- [x] **Unit 4: Sekcje proces, portfolio i video**
 
 **Cel:** Budowanie zaufania — przewidywalny proces, realizacje, dowód społeczny (wideo).
 
@@ -274,7 +274,7 @@ Właściciele małych firm tracą klientów przez brak profesjonalnej obecności
 
 ---
 
-- [ ] **Unit 6: FB Pixel + Cookie Consent**
+- [x] **Unit 6: FB Pixel + Cookie Consent**
 
 **Cel:** GDPR-compliant tracking — Pixel fires tylko po zgodzie użytkownika.
 
