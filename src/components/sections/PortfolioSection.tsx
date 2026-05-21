@@ -23,13 +23,19 @@ export default function PortfolioSection() {
               className="rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-200"
             >
               <div className="relative aspect-video bg-slate-100">
-                <Image
-                  src={item.imageSrc}
-                  alt={item.imageAlt}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
+                {item.imageSrc ? (
+                  <Image
+                    src={item.imageSrc}
+                    alt={item.imageAlt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-slate-200 to-slate-100">
+                    <span className="text-slate-400 text-sm font-medium">Wkrótce</span>
+                  </div>
+                )}
               </div>
               <div className="p-6">
                 <span className="inline-block bg-amber-100 text-amber-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">

@@ -37,38 +37,31 @@ export const PROCESS_STEPS: ProcessStep[] = [
   },
 ];
 
-// TODO: właściciel — podmień imageSrc na rzeczywiste screenshoty w public/portfolio/
-// TODO: właściciel — uzupełnij result o konkretny efekt dla klienta
 export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: "projekt-1",
-    industry: "Branża slubna",
-    result: "TODO: konkretny efekt, np. wzrost zapytań o 40%",
-    imageSrc: "/portfolio/projekt-1.jpg",
-    imageAlt: "TODO: opis zdjęcia projektu 1",
-    url: "TODO: link do realizacji (opcjonalny)",
+    industry: "Fotografia i wideo slubne",
+    result:
+      "Skowyronek Studio — profesjonalna strona dla fotografa i videografa slubnego. Klienci rezerwuja sesje przez formularz kontaktowy.",
+    imageSrc: "/portfolio/portfolio-1.png",
+    imageAlt: "Strona Skowyronek Studio — fotografia i wideo slubne",
   },
   {
     id: "projekt-2",
-    industry: "Branża slubna",
-    result: "TODO: konkretny efekt, np. profesjonalna prezentacja oferty",
-    imageSrc: "/portfolio/projekt-2.jpg",
-    imageAlt: "TODO: opis zdjęcia projektu 2",
-    url: "TODO: link do realizacji (opcjonalny)",
+    industry: "Zespol muzyczny",
+    result:
+      "Armagedon — strona zespolu weselnego z galerią, audio demo i formularzem rezerwacji terminów.",
+    imageSrc: "/portfolio/portfolio-2.png",
+    imageAlt: "Strona Armagedon — zespol weselny",
   },
   {
     id: "projekt-3",
-    industry: "Branża meblarska",
-    result: "TODO: konkretny efekt, np. klienci sami znajdowali katalog online",
-    imageSrc: "/portfolio/projekt-3.jpg",
-    imageAlt: "TODO: opis zdjęcia projektu 3",
+    industry: "Branza meblarska",
+    result: "Realizacja w trakcie przygotowania. Wkrotce nowy projekt.",
+    imageSrc: "",
+    imageAlt: "",
   },
 ];
 
-// TODO: właściciel — podmień na rzeczywisty URL YouTube/Vimeo embed
-// Format YouTube: https://www.youtube.com/embed/VIDEO_ID
-// Format Vimeo:   https://player.vimeo.com/video/VIDEO_ID
-export const VIDEO_EMBED_SRC = "https://www.youtube.com/embed/TODO_VIDEO_ID";
-
-// TODO: właściciel — dodaj miniaturę wideo do public/portfolio/video-thumbnail.jpg
+export const VIDEO_EMBED_SRC = "/portfolio/video.mp4";
 export const VIDEO_THUMBNAIL_SRC = "/portfolio/video-thumbnail.jpg";

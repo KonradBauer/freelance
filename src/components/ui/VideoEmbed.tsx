@@ -9,19 +9,33 @@ interface VideoEmbedProps {
   title: string;
 }
 
+function isLocalVideo(src: string) {
+  return src.startsWith("/") || src.startsWith("./");
+}
+
 export default function VideoEmbed({ src, thumbnailSrc, title }: VideoEmbedProps) {
   const [isPlaying, setIsPlaying] = useState(false);
 
   if (isPlaying) {
     return (
       <div className="relative aspect-video rounded-2xl overflow-hidden bg-black">
-        <iframe
-          src={`${src}?autoplay=1`}
-          title={title}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          className="absolute inset-0 w-full h-full"
-        />
+        {isLocalVideo(src) ? (
+          <video
+            src={src}
+            autoPlay
+            controls
+            className="absolute inset-0 w-full h-full"
+            title={title}
+          />
+        ) : (
+          <iframe
+            src={`${src}?autoplay=1`}
+            title={title}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="absolute inset-0 w-full h-full"
+          />
+        )}
       </div>
     );
   }
