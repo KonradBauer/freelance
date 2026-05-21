@@ -15,34 +15,55 @@ export default function PortfolioSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {PORTFOLIO_ITEMS.map((item) => (
-            <div
-              key={item.id}
-              className="rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-200"
-            >
-              <div className="relative aspect-video bg-slate-100">
-                {item.imageSrc ? (
-                  <Image
-                    src={item.imageSrc}
-                    alt={item.imageAlt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                ) : (
-                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-slate-200 to-slate-100">
-                    <span className="text-slate-400 text-sm font-medium">Wkrótce</span>
+          {PORTFOLIO_ITEMS.map((item) => {
+            const CardWrapper = item.url
+              ? ({ children }: { children: React.ReactNode }) => (
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-200 block"
+                  >
+                    {children}
+                  </a>
+                )
+              : ({ children }: { children: React.ReactNode }) => (
+                  <div className="rounded-2xl overflow-hidden border border-slate-100 shadow-sm">
+                    {children}
                   </div>
-                )}
-              </div>
-              <div className="p-6">
-                <span className="inline-block bg-amber-100 text-amber-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
-                  {item.industry}
-                </span>
-                <p className="text-slate-700 leading-relaxed">{item.result}</p>
-              </div>
-            </div>
-          ))}
+                );
+
+            return (
+              <CardWrapper key={item.id}>
+                <div className="relative aspect-video bg-slate-100">
+                  {item.imageSrc ? (
+                    <Image
+                      src={item.imageSrc}
+                      alt={item.imageAlt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-slate-200 to-slate-100">
+                      <span className="text-slate-400 text-sm font-medium">Wkrótce</span>
+                    </div>
+                  )}
+                </div>
+                <div className="p-6">
+                  <span className="inline-block bg-amber-100 text-amber-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                    {item.industry}
+                  </span>
+                  <p className="text-slate-700 leading-relaxed">{item.result}</p>
+                  {item.url && (
+                    <p className="mt-3 text-sm font-semibold text-amber-600 group-hover:text-amber-500 transition-colors duration-200">
+                      Zobacz projekt →
+                    </p>
+                  )}
+                </div>
+              </CardWrapper>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -57,7 +57,12 @@
       "Bash(git -C /c/dev/freelancer add src/lib/constants.ts src/components/ui/VideoEmbed.tsx src/components/sections/PortfolioSection.tsx)",
       "Bash(git -C /c/dev/freelancer commit -m 'feat\\(portfolio\\): uzupelnij projekty + local mp4 video *)",
       "Bash(git -C /c/dev/freelancer add src/components/ui/VideoEmbed.tsx)",
-      "Bash(git -C /c/dev/freelancer commit -m 'fix\\(video\\): pierwsza klatka jako thumbnail zamiast osobnego pliku *)"
+      "Bash(git -C /c/dev/freelancer commit -m 'fix\\(video\\): pierwsza klatka jako thumbnail zamiast osobnego pliku *)",
+      "Bash(agent-browser snapshot *)",
+      "Bash(agent-browser eval *)",
+      "Bash(Test-Path \"C:\\\\dev\\\\freelancer\\\\src\\\\components\\\\sections\\\\TestimonialsSection.tsx\")",
+      "Bash(Test-Path \"C:\\\\dev\\\\freelancer\\\\src\\\\components\\\\sections\\\\StatsSection.tsx\")",
+      "Bash(Test-Path \"C:\\\\dev\\\\freelancer\\\\src\\\\components\\\\sections\\\\SocialProofSection.tsx\")"
     ],
     "deny": [
       "**/.env",

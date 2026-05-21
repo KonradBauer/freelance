@@ -44,6 +44,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
       "Skowronek Studio - profesjonalna strona dla fotografa i videografa ślubnego. Klienci rezerwują sesje przez formularz kontaktowy.",
     imageSrc: "/portfolio/portfolio-1.png",
     imageAlt: "Strona Skowronek Studio - fotografia i wideo ślubne",
+    url: "https://skowronekstudio.pl",
   },
   {
     id: "projekt-2",
@@ -52,6 +53,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
       "Armagedon - strona zespołu weselnego z galerią, audio demo i formularzem rezerwacji terminów.",
     imageSrc: "/portfolio/portfolio-2.png",
     imageAlt: "Strona Armagedon - zespół weselny",
+    url: "https://armagedon.pl",
   },
   {
     id: "projekt-3",
