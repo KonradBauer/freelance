@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
+import { siteMetadata } from "@/lib/metadata";
 import "./globals.css";
 
-export const metadata: Metadata = {
-  title: "Strony internetowe dla małych firm",
-  description: "Tworzę strony internetowe, które generują klientów.",
-};
+export const metadata: Metadata = siteMetadata;
 
 export default function RootLayout({
   children,
@@ -13,7 +11,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
-      <body>{children}</body>
+      <body className="font-body antialiased">{children}</body>
     </html>
   );
 }
