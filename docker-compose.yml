@@ -1,0 +1,14 @@
+services:
+  app:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL}
+        NEXT_PUBLIC_FB_PIXEL_ID: ${NEXT_PUBLIC_FB_PIXEL_ID}
+    ports:
+      - "3000:3000"
+    environment:
+      - RESEND_API_KEY=${RESEND_API_KEY}
+      - RESEND_TO_EMAIL=${RESEND_TO_EMAIL}
+      - RESEND_FROM_EMAIL=${RESEND_FROM_EMAIL}
+    restart: unless-stopped

@@ -1,5 +1,4 @@
 const AFTER_POINTS = [
-  // TODO: właściciel — zmień na konkretne korzyści po zbudowaniu strony
   "Klienci znajdują Cię w Google i na Facebooku, nie konkurencję",
   "Strona sprzedaje za Ciebie 24/7, nawet gdy śpisz",
   "Wyglądasz profesjonalnie. Klienci mają do Ciebie zaufanie od pierwszej sekundy",
@@ -27,15 +26,12 @@ export default function TransformationSection() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <span className="inline-block text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4">
-            {/* TODO: eyebrow opcjonalny */}
             Wyobraź sobie
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white mb-4">
-            {/* TODO: nagłówek transformacji — stan "po", konkretny i emocjonalny */}
             Twoja firma widoczna, wiarygodna i gotowa na klientów
           </h2>
           <p className="text-slate-300 text-lg max-w-2xl mx-auto">
-            {/* TODO: sub-nagłówek — obietnica zmiany */}
             Profesjonalna strona to nie koszt, to inwestycja, która zwraca się
             przy pierwszym nowym kliencie.
           </p>

@@ -6,13 +6,11 @@ export default function ContactFormSection() {
       <div className="max-w-xl mx-auto">
         <div className="text-center mb-10">
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-            {/* TODO: naglowek formularza */}
-            Napisz do mnie, oddzwonie dzis
+            Napisz do mnie, oddzwonię dziś
           </h2>
           <p className="text-slate-600 text-lg">
-            {/* TODO: sub-naglowek formularza */}
-            Wypelnij formularz. Skontaktuje sie w ciagu 24 godzin i omowimy
-            Twoj projekt bez zobowiazan.
+            Wypełnij formularz. Skontaktuję się w ciągu 24 godzin i omówimy
+            Twój projekt bez zobowiązań.
           </p>
         </div>
 

@@ -52,17 +52,21 @@ export async function POST(request: Request) {
     return Response.json({ error: "Invalid submission" }, { status: 400 });
   }
 
-  if (process.env.RESEND_API_KEY && process.env.RESEND_TO_EMAIL) {
-    const resend = new Resend(process.env.RESEND_API_KEY);
+  const apiKey = process.env.RESEND_API_KEY;
+  const toEmail = process.env.RESEND_TO_EMAIL;
+  const fromEmail = process.env.RESEND_FROM_EMAIL ?? "onboarding@resend.dev";
+
+  if (apiKey && toEmail) {
+    const resend = new Resend(apiKey);
     await resend.emails.send({
-      from: "formularz@twoja-domena.pl",
-      to: process.env.RESEND_TO_EMAIL,
+      from: fromEmail,
+      to: toEmail,
       subject: `Nowy lead: ${name} (${industry})`,
       text: [
-        `Imie: ${name}`,
+        `Imię: ${name}`,
         `Telefon: ${phone}`,
-        `Branza: ${industry}`,
-        `Budzet: ${budget}`,
+        `Branża: ${industry}`,
+        `Budżet: ${budget}`,
       ].join("\n"),
     });
   }

@@ -1,7 +1,6 @@
 const PAIN_POINTS = [
   {
     id: 1,
-    // TODO: właściciel — zmień tytuły i opisy na konkretne problemy swoich klientów
     title: "Tracisz klientów na rzecz konkurencji",
     description:
       "Ktoś szuka w Google usługi którą oferujesz. Trafia na stronę konkurenta, bo Ciebie tam nie ma. Zamówienie ląduje u nich.",
@@ -45,11 +44,9 @@ export default function AgitationSection() {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-            {/* TODO: nagłówek sekcji — konkretna strata, np. "Co tracisz bez profesjonalnej strony" */}
             Co tracisz każdego dnia bez profesjonalnej strony
           </h2>
           <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-            {/* TODO: sub-nagłówek — wzmocnienie bólu */}
             To nie jest teoria. To codzienność firm, które nie mają strony lub
             mają taką, która nie działa.
           </p>

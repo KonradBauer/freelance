@@ -7,12 +7,10 @@ export default function PortfolioSection() {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-            {/* TODO: nagłówek sekcji portfolio */}
             Zrealizowane projekty
           </h2>
           <p className="text-slate-600 text-lg max-w-xl mx-auto">
-            {/* TODO: sub-nagłówek portfolio */}
-            Kazda strona zaprojektowana pod konkretna brance i jej klientow
+            Każda strona zaprojektowana pod konkretną branżę i jej klientów
           </p>
         </div>
 

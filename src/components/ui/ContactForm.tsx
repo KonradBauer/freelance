@@ -46,21 +46,21 @@ export default function ContactForm() {
         router.push("/dziekujemy");
       } else if (res.status === 429) {
         setServerError(
-          "Wyslales juz formularz niedawno. Sprobuj za godzine lub zadzwon bezposrednio."
+          "Wysłałeś już formularz niedawno. Spróbuj za godzinę lub zadzwoń bezpośrednio."
         );
       } else {
         setServerError(
-          "Cos poszlo nie tak. Sprobuj ponownie lub skontaktuj sie bezposrednio."
+          "Coś poszło nie tak. Spróbuj ponownie lub skontaktuj się bezpośrednio."
         );
       }
     } catch {
-      setServerError("Blad polaczenia. Sprawdz internet i sprobuj ponownie.");
+      setServerError("Błąd połączenia. Sprawdź internet i spróbuj ponownie.");
     }
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-5">
-      {/* Honeypot — ukryte przed uzytkownikiem, wypelniane przez boty */}
+      {/* Honeypot — ukryte przed użytkownikiem, wypełniane przez boty */}
       <input
         type="text"
         {...register("honeypot")}
@@ -72,7 +72,7 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="name" className={labelClass}>
-          Imie i nazwisko <span aria-hidden="true">*</span>
+          Imię i nazwisko <span aria-hidden="true">*</span>
         </label>
         <input
           id="name"
@@ -114,7 +114,7 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="industry" className={labelClass}>
-          Branza <span aria-hidden="true">*</span>
+          Branża <span aria-hidden="true">*</span>
         </label>
         <select
           id="industry"
@@ -125,7 +125,7 @@ export default function ContactForm() {
           {...register("industry")}
         >
           <option value="" disabled>
-            Wybierz branze...
+            Wybierz branżę...
           </option>
           {INDUSTRIES.map((ind) => (
             <option key={ind} value={ind}>
@@ -142,7 +142,7 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="budget" className={labelClass}>
-          Orientacyjny budzet <span aria-hidden="true">*</span>
+          Orientacyjny budżet <span aria-hidden="true">*</span>
         </label>
         <select
           id="budget"
@@ -153,7 +153,7 @@ export default function ContactForm() {
           {...register("budget")}
         >
           <option value="" disabled>
-            Wybierz budzet...
+            Wybierz budżet...
           </option>
           {BUDGETS.map((b) => (
             <option key={b} value={b}>
@@ -179,11 +179,11 @@ export default function ContactForm() {
         disabled={isSubmitting}
         className="w-full rounded-xl bg-amber-400 px-8 py-4 font-bold text-lg text-slate-900 transition-colors duration-200 hover:bg-amber-300 disabled:cursor-not-allowed disabled:opacity-60"
       >
-        {isSubmitting ? "Wysylanie..." : "Chce wiecej klientow"}
+        {isSubmitting ? "Wysyłanie..." : "Chcę więcej klientów →"}
       </button>
 
       <p className="text-center text-sm text-slate-500">
-        Odpiszemy w ciagu 24 godzin. Bez zobowiazan.
+        Odpiszę w ciągu 24 godzin. Bez zobowiązań.
       </p>
     </form>
   );

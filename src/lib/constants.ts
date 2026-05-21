@@ -15,7 +15,6 @@ export type PortfolioItem = {
   url?: string;
 };
 
-// TODO: właściciel — dostosuj opisy kroków do swojego procesu
 export const PROCESS_STEPS: ProcessStep[] = [
   {
     step: 1,
@@ -40,24 +39,24 @@ export const PROCESS_STEPS: ProcessStep[] = [
 export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: "projekt-1",
-    industry: "Fotografia i wideo slubne",
+    industry: "Fotografia i wideo ślubne",
     result:
-      "Skowyronek Studio — profesjonalna strona dla fotografa i videografa slubnego. Klienci rezerwuja sesje przez formularz kontaktowy.",
+      "Skowronek Studio - profesjonalna strona dla fotografa i videografa ślubnego. Klienci rezerwują sesje przez formularz kontaktowy.",
     imageSrc: "/portfolio/portfolio-1.png",
-    imageAlt: "Strona Skowyronek Studio — fotografia i wideo slubne",
+    imageAlt: "Strona Skowronek Studio - fotografia i wideo ślubne",
   },
   {
     id: "projekt-2",
-    industry: "Zespol muzyczny",
+    industry: "Zespół muzyczny",
     result:
-      "Armagedon — strona zespolu weselnego z galerią, audio demo i formularzem rezerwacji terminów.",
+      "Armagedon - strona zespołu weselnego z galerią, audio demo i formularzem rezerwacji terminów.",
     imageSrc: "/portfolio/portfolio-2.png",
-    imageAlt: "Strona Armagedon — zespol weselny",
+    imageAlt: "Strona Armagedon - zespół weselny",
   },
   {
     id: "projekt-3",
-    industry: "Branza meblarska",
-    result: "Realizacja w trakcie przygotowania. Wkrotce nowy projekt.",
+    industry: "Branża meblarska",
+    result: "Realizacja w trakcie przygotowania. Wkrótce nowy projekt.",
     imageSrc: "",
     imageAlt: "",
   },
