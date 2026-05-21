@@ -62,7 +62,8 @@
       "Bash(agent-browser eval *)",
       "Bash(Test-Path \"C:\\\\dev\\\\freelancer\\\\src\\\\components\\\\sections\\\\TestimonialsSection.tsx\")",
       "Bash(Test-Path \"C:\\\\dev\\\\freelancer\\\\src\\\\components\\\\sections\\\\StatsSection.tsx\")",
-      "Bash(Test-Path \"C:\\\\dev\\\\freelancer\\\\src\\\\components\\\\sections\\\\SocialProofSection.tsx\")"
+      "Bash(Test-Path \"C:\\\\dev\\\\freelancer\\\\src\\\\components\\\\sections\\\\SocialProofSection.tsx\")",
+      "Bash(dir C:devfreelancerpublic *)"
     ],
     "deny": [
       "**/.env",

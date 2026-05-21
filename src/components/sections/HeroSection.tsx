@@ -30,17 +30,26 @@ export default function HeroSection() {
       className="min-h-screen flex flex-col justify-center bg-slate-900"
       style={{
         background:
-          "radial-gradient(ellipse at 70% 50%, rgba(251,191,36,0.10) 0%, transparent 60%), #0f172a",
+          "radial-gradient(ellipse at 60% 50%, rgba(251,191,36,0.12) 0%, transparent 60%), #0f172a",
       }}
     >
-      <div className="max-w-6xl mx-auto w-full px-6 py-20 lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
-        {/* Lewa kolumna — tekst */}
+      <div className="max-w-4xl mx-auto w-full px-6 py-20 text-center">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="show"
-          className="text-center lg:text-left"
         >
+          <motion.div variants={item} className="flex justify-center mb-10">
+            <Image
+              src="/logo.png"
+              alt="Studio Code Art"
+              width={200}
+              height={80}
+              priority
+              className="h-32 w-auto"
+            />
+          </motion.div>
+
           <motion.span
             variants={item}
             className="inline-block text-amber-400 text-sm font-semibold tracking-widest uppercase mb-6"
@@ -58,7 +67,7 @@ export default function HeroSection() {
 
           <motion.p
             variants={item}
-            className="text-slate-300 text-lg sm:text-xl max-w-2xl mx-auto lg:mx-0 mb-10 leading-relaxed"
+            className="text-slate-300 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
           >
             Bez profesjonalnej strony tracisz zlecenia każdego dnia. Zbuduję Ci
             stronę, która pracuje na Ciebie 24/7 i zamienia odwiedzających w
@@ -77,30 +86,6 @@ export default function HeroSection() {
               Bezpłatna konsultacja · Bez zobowiązań
             </p>
           </motion.div>
-        </motion.div>
-
-        {/* Prawa kolumna — browser mockup */}
-        <motion.div
-          initial={{ opacity: 0, y: shouldReduce ? 0 : 32 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: shouldReduce ? 0 : 0.35,
-            duration: shouldReduce ? 0 : 0.6,
-            ease: "easeOut" as const,
-          }}
-          className="mt-12 lg:mt-0"
-        >
-          <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-            <Image
-              src="/portfolio/hero-animation.gif"
-              alt="Przykładowa strona internetowa w akcji"
-              width={800}
-              height={500}
-              priority
-              unoptimized
-              className="w-full h-auto"
-            />
-          </div>
         </motion.div>
       </div>
     </section>
