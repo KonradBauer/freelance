@@ -10,8 +10,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pl">
-      <body className="font-body antialiased">{children}</body>
+    <html lang="pl" className="scroll-smooth">
+      <body className="font-body antialiased bg-white text-slate-900">{children}</body>
     </html>
   );
 }
