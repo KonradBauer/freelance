@@ -16,26 +16,31 @@ function isLocalVideo(src: string) {
 export default function VideoEmbed({ src, thumbnailSrc, title }: VideoEmbedProps) {
   const [isPlaying, setIsPlaying] = useState(false);
 
+  if (isLocalVideo(src)) {
+    return (
+      <div className="relative aspect-video rounded-2xl overflow-hidden bg-black">
+        {/* #t=0.001 forces first-frame thumbnail on Safari */}
+        <video
+          src={`${src}#t=0.001`}
+          controls
+          preload="metadata"
+          className="absolute inset-0 w-full h-full"
+          title={title}
+        />
+      </div>
+    );
+  }
+
   if (isPlaying) {
     return (
       <div className="relative aspect-video rounded-2xl overflow-hidden bg-black">
-        {isLocalVideo(src) ? (
-          <video
-            src={src}
-            autoPlay
-            controls
-            className="absolute inset-0 w-full h-full"
-            title={title}
-          />
-        ) : (
-          <iframe
-            src={`${src}?autoplay=1`}
-            title={title}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="absolute inset-0 w-full h-full"
-          />
-        )}
+        <iframe
+          src={`${src}?autoplay=1`}
+          title={title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="absolute inset-0 w-full h-full"
+        />
       </div>
     );
   }
