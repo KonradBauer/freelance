@@ -5,7 +5,6 @@ import { useInView } from "framer-motion";
 
 const STATS = [
   { value: "12+", label: "zrealizowanych projektów" },
-  { value: "5", label: "lat doświadczenia" },
   { value: "14 dni", label: "czas realizacji" },
 ];
 
@@ -49,7 +48,7 @@ export default function StatsSection() {
   return (
     <section className="bg-slate-900 py-16 px-6">
       <div className="max-w-4xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-10 sm:gap-20">
           {STATS.map((stat) => (
             <CounterStat key={stat.label} value={stat.value} label={stat.label} />
           ))}
