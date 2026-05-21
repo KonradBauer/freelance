@@ -4,19 +4,19 @@ const PAIN_POINTS = [
     // TODO: właściciel — zmień tytuły i opisy na konkretne problemy swoich klientów
     title: "Tracisz klientów na rzecz konkurencji",
     description:
-      "Ktoś szuka w Google usługi którą oferujesz. Trafia na stronę konkurenta — bo Ciebie tam nie ma. Zamówienie ląduje u nich.",
+      "Ktoś szuka w Google usługi którą oferujesz. Trafia na stronę konkurenta, bo Ciebie tam nie ma. Zamówienie ląduje u nich.",
   },
   {
     id: 2,
     title: "Nie wyglądasz poważnie bez strony",
     description:
-      "Klient pyta o wizytówkę albo stronę. Gdy jej nie ma — wzrusza ramionami i dzwoni do kogoś innego. Pierwsze wrażenie decyduje w 7 sekund.",
+      "Klient pyta o wizytówkę albo stronę. Gdy jej nie ma, wzrusza ramionami i dzwoni do kogoś innego. Pierwsze wrażenie decyduje w 7 sekund.",
   },
   {
     id: 3,
     title: "Polecenia przestają wystarczać",
     description:
-      "Sam z siebie nie możesz kontrolować ile poleceń dostaniesz w tym miesiącu. Bez strony jesteś zdany na los — zamiast mieć stały napływ klientów.",
+      "Sam z siebie nie możesz kontrolować ile poleceń dostaniesz w tym miesiącu. Bez strony nie masz stałego napływu klientów.",
   },
 ];
 

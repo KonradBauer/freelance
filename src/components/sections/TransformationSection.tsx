@@ -1,8 +1,8 @@
 const AFTER_POINTS = [
   // TODO: właściciel — zmień na konkretne korzyści po zbudowaniu strony
-  "Klienci znajdują Cię w Google i na Facebooku — zamiast konkurencji",
+  "Klienci znajdują Cię w Google i na Facebooku, nie konkurencję",
   "Strona sprzedaje za Ciebie 24/7, nawet gdy śpisz",
-  "Wyglądasz profesjonalnie — klienci mają do Ciebie zaufanie od pierwszej sekundy",
+  "Wyglądasz profesjonalnie. Klienci mają do Ciebie zaufanie od pierwszej sekundy",
   "Masz stały napływ zapytań, nie tylko polecenia",
 ];
 
@@ -27,7 +27,7 @@ export default function TransformationSection() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <span className="inline-block text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4">
-            {/* TODO: eyebrow — opcjonalny, np. "Jak to wygląda po" */}
+            {/* TODO: eyebrow opcjonalny */}
             Wyobraź sobie
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -36,7 +36,7 @@ export default function TransformationSection() {
           </h2>
           <p className="text-slate-300 text-lg max-w-2xl mx-auto">
             {/* TODO: sub-nagłówek — obietnica zmiany */}
-            Profesjonalna strona to nie koszt — to inwestycja, która zwraca się
+            Profesjonalna strona to nie koszt, to inwestycja, która zwraca się
             przy pierwszym nowym kliencie.
           </p>
         </div>
@@ -55,8 +55,7 @@ export default function TransformationSection() {
             href="#formularz"
             className="inline-block bg-amber-400 hover:bg-amber-300 text-slate-900 font-bold text-lg px-8 py-4 rounded-xl transition-colors duration-200 shadow-lg"
           >
-            {/* TODO: tekst CTA #2 */}
-            Zrób to teraz — bezpłatna konsultacja →
+            Chcę więcej klientów →
           </a>
         </div>
       </div>
