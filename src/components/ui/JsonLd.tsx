@@ -53,9 +53,11 @@ function buildSchemas() {
     areaServed: { "@type": "Country", name: "Polska" },
     availableLanguage: "pl",
     address: { "@type": "PostalAddress", addressCountry: "PL" },
+    telephone: "+48781573274",
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer service",
+      telephone: "+48781573274",
       availableLanguage: "pl",
       url: `${SITE_URL}/#formularz`,
     },
