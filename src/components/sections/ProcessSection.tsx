@@ -2,7 +2,7 @@ import { PROCESS_STEPS } from "@/lib/constants";
 
 export default function ProcessSection() {
   return (
-    <section className="bg-slate-50 py-20 px-6">
+    <section id="proces" className="bg-slate-50 py-20 px-6">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-slate-900 mb-4">

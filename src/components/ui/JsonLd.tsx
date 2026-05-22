@@ -43,7 +43,7 @@ function buildSchemas() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "@id": `${SITE_URL}/#business`,
-    name: "Konrad Bauer — Strony internetowe dla małych firm",
+    name: "Studio Code Art — Strony internetowe dla małych firm",
     description:
       "Tworzę profesjonalne strony internetowe dla małych firm, które generują klientów. Strona gotowa w 14 dni. Bezpłatna wycena.",
     url: SITE_URL,

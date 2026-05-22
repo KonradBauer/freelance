@@ -10,11 +10,13 @@ import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import FaqSection from "@/components/sections/FaqSection";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import StickyHeader from "@/components/ui/StickyHeader";
+import Footer from "@/components/ui/Footer";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <StickyHeader />
+      <main>
       <HeroSection />
       <AgitationSection />
       <TransformationSection />
@@ -26,6 +28,8 @@ export default function Home() {
       <TestimonialsSection />
       <FaqSection />
       <ContactFormSection />
-    </main>
+      </main>
+      <Footer />
+    </>
   );
 }

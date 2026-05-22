@@ -10,7 +10,7 @@ export default function PortfolioSection() {
   const items = [...PORTFOLIO_ITEMS, ...PORTFOLIO_ITEMS];
 
   return (
-    <section className="bg-white py-20 overflow-hidden">
+    <section id="portfolio" className="bg-white py-20 overflow-hidden">
       <div className="max-w-5xl mx-auto px-6 mb-12 text-center">
         <h2 className="font-heading text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
           Zrealizowane projekty

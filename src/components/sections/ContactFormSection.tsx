@@ -43,12 +43,7 @@ export default function ContactFormSection() {
         </div>
 
         <address className="mt-8 text-center text-slate-500 text-sm not-italic">
-          <p>Konrad Bauer · Studio Code Art</p>
-          <p>
-            <a href="mailto:konradbauer94@gmail.com" className="hover:text-slate-700 transition-colors">
-              konradbauer94@gmail.com
-            </a>
-          </p>
+          <p>Studio Code Art</p>
         </address>
       </div>
     </section>

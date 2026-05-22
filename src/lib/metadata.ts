@@ -5,8 +5,8 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://studiocodeart.pl";
 export const siteMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Strony internetowe dla małych firm | Konrad Bauer — gotowe w 14 dni",
-    template: "%s | Konrad Bauer",
+    default: "Strony internetowe dla małych firm | Studio Code Art — gotowe w 14 dni",
+    template: "%s | Studio Code Art",
   },
   description:
     "Profesjonalna strona internetowa dla Twojej firmy gotowa w 14 dni. Projektuję strony, które generują klientów, budują wiarygodność i są widoczne w Google. Bezpłatna wycena.",
@@ -28,13 +28,13 @@ export const siteMetadata: Metadata = {
     description:
       "Profesjonalna strona internetowa dla Twojej firmy gotowa w 14 dni. Sprawdź realizacje i zamów bezpłatną wycenę.",
     url: SITE_URL,
-    siteName: "Konrad Bauer — Strony internetowe",
+    siteName: "Studio Code Art — Strony internetowe",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Konrad Bauer — Strony internetowe dla małych firm",
+        alt: "Studio Code Art — Strony internetowe dla małych firm",
       },
     ],
     locale: "pl_PL",
@@ -42,7 +42,7 @@ export const siteMetadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Strony internetowe dla małych firm | Konrad Bauer",
+    title: "Strony internetowe dla małych firm | Studio Code Art",
     description:
       "Profesjonalna strona gotowa w 14 dni. Projektuję i wdrażam strony, które generują klientów.",
     images: ["/og-image.jpg"],
