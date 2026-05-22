@@ -1,5 +1,5 @@
 // JSON-LD structured data for SEO rich results.
-// All content is hardcoded server-side constants — no user input involved.
+// All content is hardcoded server-side constants - no user input involved.
 // JSON.stringify on static objects is XSS-safe.
 /* eslint-disable react/no-danger */
 
@@ -9,7 +9,7 @@ const FAQ_ITEMS = [
   {
     question: "Ile kosztuje strona internetowa?",
     answer:
-      "Cena zależy od zakresu projektu. Podstawowa strona wizytówkowa zaczyna się od 1500 zł, a rozbudowane strony ofertowe od 2500 zł. Bezpłatna wycena w ciągu 24 godzin — wystarczy wypełnić formularz.",
+      "Cena zależy od zakresu projektu. Podstawowa strona wizytówkowa zaczyna się od 1500 zł, a rozbudowane strony ofertowe od 2500 zł. Bezpłatna wycena w ciągu 24 godzin - wystarczy wypełnić formularz.",
   },
   {
     question: "Jak długo trwa wykonanie strony internetowej?",
@@ -43,7 +43,7 @@ function buildSchemas() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "@id": `${SITE_URL}/#business`,
-    name: "Studio Code Art — Strony internetowe dla małych firm",
+    name: "Studio Code Art - Strony internetowe dla małych firm",
     description:
       "Tworzę profesjonalne strony internetowe dla małych firm, które generują klientów. Strona gotowa w 14 dni. Bezpłatna wycena.",
     url: SITE_URL,
@@ -87,7 +87,7 @@ function buildSchemas() {
         "@type": "Review",
         author: { "@type": "Person", name: "Anna Kowalska" },
         reviewBody:
-          "Profesjonalne podejście i zero stresu z mojej strony. Konrad zadbał o wszystko — od projektu po uruchomienie. Strona wygląda dokładnie tak jak chciałam.",
+          "Profesjonalne podejście i zero stresu z mojej strony. Konrad zadbał o wszystko - od projektu po uruchomienie. Strona wygląda dokładnie tak jak chciałam.",
         reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
       },
     ],

@@ -1,7 +1,6 @@
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://studiocodeart.pl";
 
 const NAV_LINKS = [
-  { label: "O mnie", href: "#formularz" },
   { label: "Realizacje", href: "#portfolio" },
   { label: "Proces", href: "#proces" },
   { label: "FAQ", href: "#faq" },

@@ -1,7 +1,7 @@
 import { Resend } from "resend";
 import { contactSchema } from "@/lib/schemas";
 
-// In-memory rate limiter — resets on cold start (acceptable for low-traffic landing page)
+// In-memory rate limiter - resets on cold start (acceptable for low-traffic landing page)
 const requestLog = new Map<string, number[]>();
 
 function isRateLimited(ip: string): boolean {

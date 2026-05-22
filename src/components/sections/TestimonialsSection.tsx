@@ -7,7 +7,7 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      "Profesjonalne podejście i zero stresu z mojej strony. Konrad zadbał o wszystko — od projektu po uruchomienie. Strona wygląda dokładnie tak jak chciałam.",
+      "Profesjonalne podejście i zero stresu z mojej strony. Konrad zadbał o wszystko - od projektu po uruchomienie. Strona wygląda dokładnie tak jak chciałam.",
     name: "Anna Kowalska",
     company: "Studio Urody Ania",
   },

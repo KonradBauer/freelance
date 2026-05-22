@@ -5,7 +5,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://studiocodeart.pl";
 export const siteMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Strony internetowe dla małych firm | Studio Code Art — gotowe w 14 dni",
+    default: "Strony internetowe dla małych firm | Studio Code Art - gotowe w 14 dni",
     template: "%s | Studio Code Art",
   },
   description:
@@ -24,17 +24,17 @@ export const siteMetadata: Metadata = {
     canonical: SITE_URL,
   },
   openGraph: {
-    title: "Twoi klienci szukają Cię w internecie — i wybierają konkurencję",
+    title: "Twoi klienci szukają Cię w internecie - i wybierają konkurencję",
     description:
       "Profesjonalna strona internetowa dla Twojej firmy gotowa w 14 dni. Sprawdź realizacje i zamów bezpłatną wycenę.",
     url: SITE_URL,
-    siteName: "Studio Code Art — Strony internetowe",
+    siteName: "Studio Code Art - Strony internetowe",
     images: [
       {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Studio Code Art — Strony internetowe dla małych firm",
+        alt: "Studio Code Art - Strony internetowe dla małych firm",
       },
     ],
     locale: "pl_PL",

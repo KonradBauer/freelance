@@ -60,7 +60,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-5">
-      {/* Honeypot — ukryte przed użytkownikiem, wypełniane przez boty */}
+      {/* Honeypot - ukryte przed użytkownikiem, wypełniane przez boty */}
       <input
         type="text"
         {...register("honeypot")}
