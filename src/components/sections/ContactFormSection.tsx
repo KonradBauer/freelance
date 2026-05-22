@@ -41,10 +41,6 @@ export default function ContactFormSection() {
             </a>
           </div>
         </div>
-
-        <address className="mt-8 text-center text-slate-500 text-sm not-italic">
-          <p>Studio Code Art</p>
-        </address>
       </div>
     </section>
   );
