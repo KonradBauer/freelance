@@ -51,7 +51,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     result: "Armagedon – strona zespołu weselnego z galerią, audio demo i formularzem rezerwacji terminów.",
     imageSrc: "/portfolio/portfolio-2.png",
     imageAlt: "Strona Armagedon - zespół weselny",
-    url: "https://armagedon.pl",
+    url: "https://armagedon.com.pl",
   },
   {
     id: "devask",

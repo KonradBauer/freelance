@@ -1,6 +1,14 @@
 .git
+.github
 .next
+.idea
+.claude
 node_modules
+nginx
 .env*.local
+.env
 *.md
 .dockerignore
+screenshots
+docs
+*.stackdump
