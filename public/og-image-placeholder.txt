@@ -1,4 +1,0 @@
-TODO: Umieść tutaj og-image.jpg (1200x630px)
-- Obraz wyświetlany w podglądzie linku na Facebooku / LinkedIn
-- Wysoki kontrast, czytelny tekst, bez drobnych detali
-- Format JPG, maks. 1MB

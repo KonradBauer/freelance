@@ -17,6 +17,14 @@
 # misc
 .DS_Store
 *.pem
+*.stackdump
+
+# IDE
+.idea/
+
+# Claude Code skill agent artifacts
+screenshots/
+devfreelancer.claudeskillsagent-browser/
 
 # debug
 npm-debug.log*
