@@ -1,4 +1,4 @@
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://studiocodeart.pl";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://studiocodeart.pl";
 
 const NAV_LINKS = [
   { label: "Realizacje", href: "#portfolio" },

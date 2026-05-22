@@ -3,7 +3,7 @@
 // JSON.stringify on static objects is XSS-safe.
 /* eslint-disable react/no-danger */
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://studiocodeart.pl";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://studiocodeart.pl";
 
 const FAQ_ITEMS = [
   {
