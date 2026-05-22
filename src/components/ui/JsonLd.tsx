@@ -48,7 +48,7 @@ function buildSchemas() {
       "Tworzę profesjonalne strony internetowe dla małych firm, które generują klientów. Strona gotowa w 14 dni. Bezpłatna wycena.",
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
-    image: `${SITE_URL}/og-image.jpg`,
+    image: `${SITE_URL}/opengraph-image`,
     priceRange: "$$",
     areaServed: { "@type": "Country", name: "Polska" },
     availableLanguage: "pl",

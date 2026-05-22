@@ -31,7 +31,7 @@ export const siteMetadata: Metadata = {
     siteName: "Studio Code Art — Strony internetowe",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: "Studio Code Art — Strony internetowe dla małych firm",
@@ -45,7 +45,7 @@ export const siteMetadata: Metadata = {
     title: "Strony internetowe dla małych firm | Studio Code Art",
     description:
       "Profesjonalna strona gotowa w 14 dni. Projektuję i wdrażam strony, które generują klientów.",
-    images: ["/og-image.jpg"],
+    images: ["/opengraph-image"],
   },
   robots: {
     index: true,
