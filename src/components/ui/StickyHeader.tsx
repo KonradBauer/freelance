@@ -30,7 +30,7 @@ export default function StickyHeader() {
           href="#formularz"
           className="bg-amber-400 hover:bg-amber-300 text-slate-900 font-bold text-sm px-5 py-2.5 rounded-xl transition-colors duration-200"
         >
-          Bezpłatna wycena →
+          Chcę więcej klientów →
         </a>
       </div>
     </header>
