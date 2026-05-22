@@ -5,15 +5,28 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://studiocodeart.pl";
 export const siteMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Strony internetowe dla małych firm | Konrad Bauer",
+    default: "Strony internetowe dla małych firm | Konrad Bauer — gotowe w 14 dni",
     template: "%s | Konrad Bauer",
   },
   description:
-    "Tworzę profesjonalne strony internetowe dla małych firm, które generują klientów i budują wiarygodność. Strona gotowa w 14 dni. Bezpłatna wycena.",
+    "Profesjonalna strona internetowa dla Twojej firmy gotowa w 14 dni. Projektuję strony, które generują klientów, budują wiarygodność i są widoczne w Google. Bezpłatna wycena.",
+  keywords: [
+    "strony internetowe dla firm",
+    "tworzenie stron internetowych",
+    "strona internetowa dla małej firmy",
+    "strona www dla firmy",
+    "web developer freelancer Polska",
+    "profesjonalna strona firmowa",
+    "strona internetowa na zamówienie",
+    "strona internetowa 14 dni",
+  ],
+  alternates: {
+    canonical: SITE_URL,
+  },
   openGraph: {
     title: "Twoi klienci szukają Cię w internecie — i wybierają konkurencję",
     description:
-      "Profesjonalna strona internetowa dla Twojej firmy. Projektuję, wdrażam i oddaję w 14 dni. Sprawdź realizacje i zamów bezpłatną wycenę.",
+      "Profesjonalna strona internetowa dla Twojej firmy gotowa w 14 dni. Sprawdź realizacje i zamów bezpłatną wycenę.",
     url: SITE_URL,
     siteName: "Konrad Bauer — Strony internetowe",
     images: [
@@ -37,5 +50,11 @@ export const siteMetadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };

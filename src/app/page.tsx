@@ -7,11 +7,14 @@ import PortfolioSection from "@/components/sections/PortfolioSection";
 import PortfolioCTASection from "@/components/sections/PortfolioCTASection";
 import VideoSection from "@/components/sections/VideoSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
+import FaqSection from "@/components/sections/FaqSection";
 import ContactFormSection from "@/components/sections/ContactFormSection";
+import StickyHeader from "@/components/ui/StickyHeader";
 
 export default function Home() {
   return (
     <main>
+      <StickyHeader />
       <HeroSection />
       <AgitationSection />
       <TransformationSection />
@@ -21,6 +24,7 @@ export default function Home() {
       <PortfolioCTASection />
       <VideoSection />
       <TestimonialsSection />
+      <FaqSection />
       <ContactFormSection />
     </main>
   );
