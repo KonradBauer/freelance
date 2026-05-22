@@ -25,7 +25,7 @@ export default function Home() {
       <PortfolioSection />
       <PortfolioCTASection />
       <VideoSection />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       <FaqSection />
       <ContactFormSection />
       </main>
