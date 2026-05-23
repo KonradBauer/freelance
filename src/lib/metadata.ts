@@ -47,6 +47,9 @@ export const siteMetadata: Metadata = {
       "Profesjonalna strona gotowa w 14 dni. Projektuję i wdrażam strony, które generują klientów.",
     images: ["/opengraph-image"],
   },
+  verification: {
+    google: "4tCBzfc69RPH2Gbpso1NpQwNL-uXIXW5uTW281uDo0g",
+  },
   robots: {
     index: true,
     follow: true,
