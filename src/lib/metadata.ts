@@ -29,14 +29,6 @@ export const siteMetadata: Metadata = {
       "Profesjonalna strona internetowa dla Twojej firmy gotowa w 14 dni. Sprawdź realizacje i zamów bezpłatną wycenę.",
     url: SITE_URL,
     siteName: "Studio Code Art - Strony internetowe",
-    images: [
-      {
-        url: "/opengraph-image",
-        width: 1200,
-        height: 630,
-        alt: "Studio Code Art - Strony internetowe dla małych firm",
-      },
-    ],
     locale: "pl_PL",
     type: "website",
   },
