@@ -75,6 +75,10 @@ export default function OgImage() {
         {/* Main headline */}
         <div
           style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            alignItems: "baseline",
             color: "#ffffff",
             fontSize: "64px",
             fontWeight: 800,
@@ -84,7 +88,7 @@ export default function OgImage() {
             marginBottom: "28px",
           }}
         >
-          Twoi klienci szukają Cię{" "}
+          <span>Twoi klienci szukają Cię&nbsp;</span>
           <span style={{ color: "#fbbf24" }}>w internecie.</span>
         </div>
 
