@@ -29,7 +29,11 @@
       "Bash(git config *)",
       "Bash(git rm *)",
       "Bash(del *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "WebFetch(domain:claude-seo.md)",
+      "Bash(git clone *)",
+      "Bash(Get-Content \"C:\\\\dev\\\\freelancer\\\\src\\\\components\\\\ui\\\\JsonLd.tsx\")",
+      "Bash(Select-Object -First 5)"
     ]
   }
 }
