@@ -29,7 +29,7 @@ export default function ContactFormSection() {
               letterSpacing: "-0.02em",
             }}
           >
-            Napisz do mnie — oddzwonię dziś
+            Zostaw wiadomość
           </h2>
           <p className="text-slate-500 text-lg">
             Wypełnij formularz. Skontaktuję się w ciągu 24 godzin i omówimy

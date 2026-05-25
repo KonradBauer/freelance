@@ -31,7 +31,7 @@ export default function StickyHeader() {
             alt="Studio Code Art"
             width={160}
             height={64}
-            className="h-12 w-auto"
+            className="h-20 w-auto"
           />
           <a
             href="#formularz"
