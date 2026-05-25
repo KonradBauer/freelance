@@ -1,0 +1,47 @@
+# Studio Code Art — Strony internetowe dla firm
+
+## O nas
+
+Studio Code Art to freelance studio web development prowadzone przez Konrada Bauera. Tworzymy profesjonalne strony internetowe dla małych i średnich firm w Polsce.
+
+## Usługi
+
+- Strony wizytówkowe dla firm (od 1500 zł, 14 dni realizacji)
+- Rozbudowane strony ofertowe (od 2500 zł)
+- Landing page pod kampanie reklamowe (od 1200 zł)
+- Sklepy internetowe e-commerce
+- Aplikacje webowe i platformy
+
+## Technologie
+
+Next.js, React, TypeScript, Tailwind CSS, Vercel, Docker
+
+## Kontakt
+
+- Strona: https://www.studiocodeart.pl
+- Telefon: +48 781 573 274
+- Formularz: https://www.studiocodeart.pl/#formularz
+
+## Realizacje
+
+Portfolio dostępne na https://www.studiocodeart.pl/#portfolio — 9 zrealizowanych projektów w branżach: fotografia ślubna, muzyka, wynajem samochodów, e-commerce, Web3, IT.
+
+## Proces
+
+1. Kontakt i bezpłatna wycena w 24h
+2. Projekt graficzny + akceptacja
+3. Kodowanie i uruchomienie w 14 dni
+
+## Często zadawane pytania
+
+**Ile kosztuje strona internetowa?**
+Podstawowa strona wizytówkowa od 1500 zł, rozbudowana od 2500 zł.
+
+**Jak długo trwa realizacja?**
+Standardowo 14 dni roboczych od akceptacji projektu.
+
+**Czy strona będzie widoczna w Google?**
+Tak — każda strona zawiera SEO techniczne: meta tagi, sitemap, dane strukturalne, szybkość ładowania.
+
+**Czy strona będzie responsywna?**
+Tak, mobile-first — wygląda doskonale na telefonach, tabletach i komputerach.

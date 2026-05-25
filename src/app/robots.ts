@@ -4,11 +4,14 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.studiocodeart.
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-      disallow: "/dziekujemy",
-    },
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/dziekujemy", "/api/"],
+      },
+    ],
     sitemap: `${SITE_URL}/sitemap.xml`,
+    host: SITE_URL,
   };
 }

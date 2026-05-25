@@ -33,7 +33,8 @@
       "WebFetch(domain:claude-seo.md)",
       "Bash(git clone *)",
       "Bash(Get-Content \"C:\\\\dev\\\\freelancer\\\\src\\\\components\\\\ui\\\\JsonLd.tsx\")",
-      "Bash(Select-Object -First 5)"
+      "Bash(Select-Object -First 5)",
+      "Bash(dir claude-seo *)"
     ]
   }
 }
