@@ -28,7 +28,7 @@ export default function Footer() {
         <div className="text-center">
           <p className="text-slate-300 font-semibold mb-1">Studio Code Art</p>
           <p className="text-slate-500 text-sm mb-4">
-            Profesjonalne strony internetowe dla małych firm · Polska
+            Profesjonalne strony internetowe dla firm · Polska
           </p>
           <p className="text-slate-600 text-xs">
             © {year} Studio Code Art. Wszelkie prawa zastrzeżone.

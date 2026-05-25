@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt ="Studio Code Art - Strony internetowe dla małych firm";
+export const alt ="Studio Code Art - Strony internetowe dla firm";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

@@ -5,7 +5,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.studiocodeart.
 export const siteMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Strony internetowe dla małych firm | Studio Code Art - gotowe w 14 dni",
+    default: "Strony internetowe dla firm | Studio Code Art - gotowe w 14 dni",
     template: "%s | Studio Code Art",
   },
   description:
@@ -13,7 +13,7 @@ export const siteMetadata: Metadata = {
   keywords: [
     "strony internetowe dla firm",
     "tworzenie stron internetowych",
-    "strona internetowa dla małej firmy",
+    "strona internetowa dla firmy",
     "strona www dla firmy",
     "web developer freelancer Polska",
     "profesjonalna strona firmowa",
@@ -34,7 +34,7 @@ export const siteMetadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Strony internetowe dla małych firm | Studio Code Art",
+    title: "Strony internetowe dla firm | Studio Code Art",
     description:
       "Profesjonalna strona gotowa w 14 dni. Projektuję i wdrażam strony, które generują klientów.",
     images: ["/opengraph-image"],

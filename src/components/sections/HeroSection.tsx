@@ -54,12 +54,13 @@ export default function HeroSection() {
             variants={item}
             className="inline-block text-amber-400 text-sm font-semibold tracking-widest uppercase mb-6"
           >
-            Strony internetowe dla małych firm
+            Strony internetowe dla firm
           </motion.span>
 
           <motion.h1
             variants={item}
-            className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
+            className="font-heading font-bold text-white leading-tight mb-6"
+            style={{ fontSize: "clamp(1.5rem, 5.5vw + 0.25rem, 3.75rem)" }}
           >
             Twoi klienci szukają Cię w internecie.{" "}
             <span className="text-amber-400">I wybierają konkurencję.</span>
