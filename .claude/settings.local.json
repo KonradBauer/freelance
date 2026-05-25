@@ -36,7 +36,9 @@
       "Bash(Select-Object -First 5)",
       "Bash(dir claude-seo *)",
       "WebFetch(domain:www.uupm.cc)",
-      "Bash(curl *)"
+      "Bash(curl *)",
+      "Bash(powershell *)",
+      "Bash(copy *)"
     ]
   }
 }
