@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { siteMetadata } from "@/lib/metadata";
 import CookieConsent from "@/components/ui/CookieConsent";
 import FBPixel from "@/components/ui/FBPixel";
+import GoogleAnalytics from "@/components/ui/GoogleAnalytics";
 import JsonLd from "@/components/ui/JsonLd";
 import "./globals.css";
 
@@ -19,6 +20,7 @@ export default function RootLayout({
         {children}
         <CookieConsent />
         <FBPixel />
+        <GoogleAnalytics />
       </body>
     </html>
   );
