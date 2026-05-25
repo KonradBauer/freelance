@@ -35,10 +35,10 @@ export default function PrivacyPolicyPage() {
             Możesz w każdej chwili zażądać ich usunięcia lub poprawienia —
             wystarczy napisać na{" "}
             <a
-              href="mailto:kontakt@studiocodeart.pl"
+              href="mailto:konradbauer94@gmail.com"
               className="text-amber-400 hover:text-amber-300 transition-colors duration-200"
             >
-              kontakt@studiocodeart.pl
+              konradbauer94@gmail.com
             </a>
             .
           </p>
