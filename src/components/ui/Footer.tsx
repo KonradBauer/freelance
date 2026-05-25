@@ -30,9 +30,15 @@ export default function Footer() {
           <p className="text-slate-500 text-sm mb-4">
             Profesjonalne strony internetowe dla firm · Polska
           </p>
-          <p className="text-slate-600 text-xs">
+          <p className="text-slate-600 text-xs mb-2">
             © {year} Studio Code Art. Wszelkie prawa zastrzeżone.
           </p>
+          <a
+            href="/polityka-prywatnosci"
+            className="text-slate-600 hover:text-amber-400 text-xs transition-colors duration-200"
+          >
+            Polityka prywatności
+          </a>
         </div>
       </div>
     </footer>
