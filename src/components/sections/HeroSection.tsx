@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 
 const stagger = {
@@ -26,6 +27,7 @@ const STATS = [
 export default function HeroSection() {
   const reduce = useReducedMotion() ?? false;
   const item = fade(reduce);
+  const [videoReady, setVideoReady] = useState(false);
 
   const { scrollY } = useScroll();
   const contentY = useTransform(scrollY, [0, 600], [0, reduce ? 0 : -55]);
@@ -43,6 +45,7 @@ export default function HeroSection() {
           muted
           loop
           playsInline
+          onCanPlayThrough={() => setVideoReady(true)}
           style={{
             position: "absolute",
             top: 0,
@@ -51,8 +54,9 @@ export default function HeroSection() {
             height: "100%",
             objectFit: "cover",
             objectPosition: "center",
-            opacity: 0.35,
+            opacity: videoReady ? 0.35 : 0,
             mixBlendMode: "screen",
+            transition: "opacity 1.2s ease",
           }}
         >
           <source src="/hero.mp4" type="video/mp4" />
