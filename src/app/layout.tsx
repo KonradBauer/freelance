@@ -15,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl" className="scroll-smooth">
-      <body className="font-body antialiased bg-white text-slate-900">
+      <body
+        className="font-body antialiased"
+        style={{ background: "#060A14", color: "#E2E8F0" }}
+      >
         <JsonLd />
         {children}
         <CookieConsent />

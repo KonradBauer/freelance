@@ -1,5 +1,3 @@
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://studiocodeart.pl";
-
 const NAV_LINKS = [
   { label: "Realizacje", href: "#portfolio" },
   { label: "Proces", href: "#proces" },
@@ -11,14 +9,23 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-900 border-t border-slate-800 py-10 px-6">
+    <footer
+      className="py-12 px-6"
+      style={{
+        background: "#04060C",
+        borderTop: "1px solid rgba(201,168,76,0.1)",
+      }}
+    >
       <div className="max-w-5xl mx-auto">
-        <nav aria-label="Footer" className="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-8">
+        <nav
+          aria-label="Footer"
+          className="flex flex-wrap justify-center gap-x-8 gap-y-2 mb-10"
+        >
           {NAV_LINKS.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="text-slate-400 hover:text-amber-400 text-sm transition-colors duration-200"
+              className="footer-link text-sm"
             >
               {link.label}
             </a>
@@ -26,16 +33,28 @@ export default function Footer() {
         </nav>
 
         <div className="text-center">
-          <p className="text-slate-300 font-semibold mb-1">Studio Code Art</p>
-          <p className="text-slate-500 text-sm mb-4">
+          <p
+            className="font-heading font-bold text-lg mb-1"
+            style={{
+              background:
+                "linear-gradient(135deg, #C9A84C 0%, #F0D060 50%, #C9A84C 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
+            Studio Code Art
+          </p>
+          <p className="text-sm mb-5" style={{ color: "#334155" }}>
             Profesjonalne strony internetowe dla firm · Polska
           </p>
-          <p className="text-slate-600 text-xs mb-2">
+          <div className="divider-gold max-w-xs mx-auto mb-5" />
+          <p className="text-xs mb-2" style={{ color: "#1E293B" }}>
             © {year} Studio Code Art. Wszelkie prawa zastrzeżone.
           </p>
           <a
             href="/polityka-prywatnosci"
-            className="text-slate-600 hover:text-amber-400 text-xs transition-colors duration-200"
+            className="footer-legal text-xs"
           >
             Polityka prywatności
           </a>

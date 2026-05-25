@@ -12,14 +12,10 @@ import {
 } from "@/lib/schemas";
 
 const inputClass =
-  "w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 placeholder-slate-400 focus:border-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400/20 aria-[invalid=true]:border-red-400";
+  "dark-input w-full rounded-xl px-4 py-3";
 
-const selectClass =
-  "w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 focus:border-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400/20 aria-[invalid=true]:border-red-400";
-
-const labelClass = "block text-sm font-semibold text-slate-700 mb-1.5";
-
-const errorClass = "mt-1.5 text-sm text-red-500";
+const labelClass = "block text-sm font-semibold mb-1.5";
+const errorClass = "mt-1.5 text-sm text-red-400";
 
 export default function ContactForm() {
   const router = useRouter();
@@ -60,7 +56,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-5">
-      {/* Honeypot - ukryte przed użytkownikiem, wypełniane przez boty */}
+      {/* Honeypot */}
       <input
         type="text"
         {...register("honeypot")}
@@ -71,7 +67,7 @@ export default function ContactForm() {
       />
 
       <div>
-        <label htmlFor="name" className={labelClass}>
+        <label htmlFor="name" className={labelClass} style={{ color: "#94A3B8" }}>
           Imię i nazwisko <span aria-hidden="true">*</span>
         </label>
         <input
@@ -92,7 +88,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="phone" className={labelClass}>
+        <label htmlFor="phone" className={labelClass} style={{ color: "#94A3B8" }}>
           Numer telefonu <span aria-hidden="true">*</span>
         </label>
         <input
@@ -113,12 +109,12 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="industry" className={labelClass}>
+        <label htmlFor="industry" className={labelClass} style={{ color: "#94A3B8" }}>
           Branża <span aria-hidden="true">*</span>
         </label>
         <select
           id="industry"
-          className={selectClass}
+          className={inputClass}
           aria-invalid={!!errors.industry}
           aria-describedby={errors.industry ? "industry-error" : undefined}
           defaultValue=""
@@ -141,12 +137,12 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="budget" className={labelClass}>
+        <label htmlFor="budget" className={labelClass} style={{ color: "#94A3B8" }}>
           Orientacyjny budżet <span aria-hidden="true">*</span>
         </label>
         <select
           id="budget"
-          className={selectClass}
+          className={inputClass}
           aria-invalid={!!errors.budget}
           aria-describedby={errors.budget ? "budget-error" : undefined}
           defaultValue=""
@@ -169,7 +165,15 @@ export default function ContactForm() {
       </div>
 
       {serverError && (
-        <div role="alert" className="rounded-xl bg-red-50 px-4 py-3 text-sm text-red-700">
+        <div
+          role="alert"
+          className="rounded-xl px-4 py-3 text-sm"
+          style={{
+            background: "rgba(239,68,68,0.08)",
+            border: "1px solid rgba(239,68,68,0.25)",
+            color: "#FCA5A5",
+          }}
+        >
           {serverError}
         </div>
       )}
@@ -177,12 +181,12 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full rounded-xl bg-amber-400 px-8 py-4 font-bold text-lg text-slate-900 transition-colors duration-200 hover:bg-amber-300 disabled:cursor-not-allowed disabled:opacity-60"
+        className="btn-gold w-full px-8 py-4 rounded-xl text-lg disabled:cursor-not-allowed disabled:opacity-60"
       >
         {isSubmitting ? "Wysyłanie..." : "Chcę więcej klientów →"}
       </button>
 
-      <p className="text-center text-sm text-slate-500">
+      <p className="text-center text-sm" style={{ color: "#475569" }}>
         Odpiszę w ciągu 24 godzin. Bez zobowiązań.
       </p>
     </form>

@@ -33,11 +33,25 @@ function CounterStat({ value, label }: { value: string; label: string }) {
   }, [isInView, target, suffix]);
 
   return (
-    <div ref={ref} className="text-center">
-      <p className="font-heading text-5xl sm:text-6xl font-bold text-amber-400 mb-2">
+    <div ref={ref} className="text-center py-10 px-12">
+      <p
+        className="font-heading font-bold leading-none mb-3"
+        style={{
+          fontSize: "clamp(3rem, 7vw, 5rem)",
+          letterSpacing: "-0.03em",
+          background:
+            "linear-gradient(135deg, #C9A84C 0%, #F0D060 50%, #C9A84C 100%)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
+        }}
+      >
         {display}
       </p>
-      <p className="text-slate-400 text-base uppercase tracking-widest">
+      <p
+        className="text-xs uppercase tracking-[0.18em] font-medium"
+        style={{ color: "#475569" }}
+      >
         {label}
       </p>
     </div>
@@ -46,12 +60,25 @@ function CounterStat({ value, label }: { value: string; label: string }) {
 
 export default function StatsSection() {
   return (
-    <section className="bg-slate-900 py-16 px-6">
-      <div className="max-w-4xl mx-auto">
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-10 sm:gap-20">
-          {STATS.map((stat) => (
-            <CounterStat key={stat.label} value={stat.value} label={stat.label} />
-          ))}
+    <section className="py-8 px-6" style={{ background: "#060A14" }}>
+      <div className="max-w-3xl mx-auto">
+        <div
+          className="flex flex-col sm:flex-row justify-center items-stretch rounded-[20px]"
+          style={{
+            background: "rgba(255,255,255,0.022)",
+            border: "1px solid rgba(201,168,76,0.12)",
+          }}
+        >
+          <div className="flex-1">
+            <CounterStat value={STATS[0].value} label={STATS[0].label} />
+          </div>
+          <div
+            className="w-full sm:w-px h-px sm:h-auto self-stretch"
+            style={{ background: "rgba(201,168,76,0.1)" }}
+          />
+          <div className="flex-1">
+            <CounterStat value={STATS[1].value} label={STATS[1].label} />
+          </div>
         </div>
       </div>
     </section>

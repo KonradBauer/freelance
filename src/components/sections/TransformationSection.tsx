@@ -9,7 +9,8 @@ function CheckIcon() {
   return (
     <svg
       aria-hidden="true"
-      className="w-6 h-6 text-amber-400 shrink-0 mt-0.5"
+      className="w-4 h-4 shrink-0"
+      style={{ color: "#060A14" }}
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -22,26 +23,72 @@ function CheckIcon() {
 
 export default function TransformationSection() {
   return (
-    <section className="bg-slate-900 py-20 px-6">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <span className="inline-block text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4">
-            Wyobraź sobie
-          </span>
-          <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white mb-4">
-            Twoja firma widoczna, wiarygodna i gotowa na klientów
+    <section
+      className="py-24 px-6 relative overflow-hidden"
+      style={{ background: "#060A14" }}
+    >
+      {/* Background radial glow */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        aria-hidden="true"
+        style={{
+          background:
+            "radial-gradient(ellipse at 50% 40%, rgba(201,168,76,0.06) 0%, transparent 60%)",
+        }}
+      />
+
+      <div className="relative z-10 max-w-4xl mx-auto">
+        <div className="divider-gold mb-16" />
+
+        <div className="text-center mb-14">
+          <span className="section-label">Rozwiązanie</span>
+          <h2
+            className="font-heading font-bold text-white mb-5 leading-tight"
+            style={{
+              fontSize: "clamp(1.75rem, 3.5vw + 0.5rem, 2.75rem)",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            Twoja firma widoczna,{" "}
+            <span
+              style={{
+                background: "linear-gradient(135deg, #C9A84C 0%, #F0D060 50%, #C9A84C 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              wiarygodna i gotowa
+            </span>{" "}
+            na klientów
           </h2>
-          <p className="text-slate-300 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed">
             Profesjonalna strona to nie koszt, to inwestycja, która zwraca się
             przy pierwszym nowym kliencie.
           </p>
         </div>
 
-        <ul className="max-w-2xl mx-auto space-y-5">
+        <ul className="max-w-2xl mx-auto space-y-4">
           {AFTER_POINTS.map((point, i) => (
-            <li key={i} className="flex items-start gap-4">
-              <CheckIcon />
-              <span className="text-slate-200 text-lg leading-relaxed">{point}</span>
+            <li
+              key={i}
+              className="flex items-start gap-4 p-5 rounded-xl"
+              style={{
+                background: "rgba(255,255,255,0.025)",
+                border: "1px solid rgba(201,168,76,0.1)",
+              }}
+            >
+              <div
+                className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 mt-0.5"
+                style={{
+                  background: "linear-gradient(135deg, #C9A84C, #F0D060)",
+                }}
+              >
+                <CheckIcon />
+              </div>
+              <span className="text-slate-200 text-base leading-relaxed">
+                {point}
+              </span>
             </li>
           ))}
         </ul>
@@ -49,7 +96,7 @@ export default function TransformationSection() {
         <div className="text-center mt-12">
           <a
             href="#formularz"
-            className="inline-block bg-amber-400 hover:bg-amber-300 text-slate-900 font-bold text-lg px-8 py-4 rounded-xl transition-colors duration-200 shadow-lg"
+            className="btn-gold inline-block text-lg px-10 py-4 rounded-[14px]"
           >
             Chcę więcej klientów →
           </a>
