@@ -100,6 +100,7 @@ function buildSchemas() {
     sameAs: [
       "https://github.com/konradbauer",
       "https://linkedin.com/in/konrad-bauer",
+      "https://www.facebook.com/profile.php?id=61590539004345",
     ],
   };
 
@@ -152,6 +153,7 @@ function buildSchemas() {
     sameAs: [
       "https://github.com/konradbauer",
       "https://linkedin.com/in/konrad-bauer",
+      "https://www.facebook.com/profile.php?id=61590539004345",
     ],
     aggregateRating: {
       "@type": "AggregateRating",

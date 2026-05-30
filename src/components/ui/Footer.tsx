@@ -32,6 +32,24 @@ export default function Footer() {
           ))}
         </nav>
 
+        <div className="flex justify-center mb-8">
+          <a
+            href="https://www.facebook.com/profile.php?id=61590539004345"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook Studio Code Art"
+            className="flex items-center justify-center w-10 h-10 rounded-full transition-opacity duration-200 hover:opacity-70"
+            style={{
+              border: "1px solid rgba(201,168,76,0.3)",
+              color: "#C9A84C",
+            }}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg>
+          </a>
+        </div>
+
         <div className="text-center">
           <p
             className="font-heading font-bold text-lg mb-1"

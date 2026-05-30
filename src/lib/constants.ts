@@ -79,7 +79,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   },
   {
     id: "solidcars",
-    industry: "Wynajem samochodów / CRM",
+    industry: "Wynajem samochodów",
     result: "SolidCars dostał wewnętrzne narzędzia CRM zamiast arkuszy Excel. Śledzenie rezerwacji i raporty w jednym miejscu.",
     imageSrc: "/portfolio/solidcars.png",
     imageAlt: "SolidCars - CRM dla wypożyczalni samochodów",
@@ -95,7 +95,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   },
   {
     id: "justhodl",
-    industry: "Web3 / Fintech",
+    industry: "Foundation",
     result: "JustHodl — landing page i interfejsy Web3 spójne z marką. Szybki czas ładowania mimo złożonych animacji.",
     imageSrc: "/portfolio/justhodl.png",
     imageAlt: "JustHodl - platforma Web3",
@@ -111,11 +111,19 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   },
   {
     id: "neonpolska",
-    industry: "E-commerce / Neony LED",
+    industry: "E-commerce",
     result: "NeonPolska zbudowany od zera. Optymalizacja SEO przełożyła się na pierwsze strony Google dla kluczowych fraz produktowych.",
     imageSrc: "/portfolio/neonpolska.png",
-    imageAlt: "NeonPolska - sklep z neonami LED",
+    imageAlt: "NeonPolska - sklep ze sprzętem narciarskim",
     url: "https://neonpolska.pl/",
+  },
+  {
+    id: "kalabi",
+    industry: "Meble",
+    result: "Kalabi Meble dostało nowoczesną stronę z pełną prezentacją oferty. Klienci przeglądają produkty i pytają o wycenę bezpośrednio ze strony.",
+    imageSrc: "/portfolio/kalabi.png",
+    imageAlt: "Kalabi Meble - sklep z meblami",
+    url: "https://kalabimeble.pl",
   },
 ];
 
