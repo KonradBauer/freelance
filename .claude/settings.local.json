@@ -38,7 +38,11 @@
       "WebFetch(domain:www.uupm.cc)",
       "Bash(curl *)",
       "Bash(powershell *)",
-      "Bash(copy *)"
+      "Bash(copy *)",
+      "Bash(mkdir -p \"C:\\\\Users\\\\Sakiro\\\\.claude\\\\skills\\\\ux-audit\\\\projects\\\\studio-codeart\\\\current-website\\\\audit-feed\\\\layouts\")",
+      "Bash(mkdir -p \"C:\\\\Users\\\\Sakiro\\\\.claude\\\\skills\\\\ux-audit\\\\projects\\\\studio-codeart\\\\current-website\\\\tmp\")",
+      "Bash(PYTHONIOENCODING=utf-8 python references/scripts/ux_utils.py check-html projects/studio-codeart/studio-codeart_audit.html)",
+      "Bash(start *)"
     ]
   }
 }

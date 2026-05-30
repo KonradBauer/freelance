@@ -46,7 +46,7 @@ export async function POST(request: Request) {
     return Response.json({ error: "Invalid data" }, { status: 400 });
   }
 
-  const { name, phone, industry, budget, honeypot } = result.data;
+  const { name, phone, industry, budget, projectDescription, honeypot } = result.data;
 
   if (honeypot && honeypot.length > 0) {
     return Response.json({ error: "Invalid submission" }, { status: 400 });
@@ -67,6 +67,7 @@ export async function POST(request: Request) {
         `Telefon: ${phone}`,
         `Branża: ${industry}`,
         `Budżet: ${budget}`,
+        ...(projectDescription ? [`\nOpis projektu:\n${projectDescription}`] : []),
       ].join("\n"),
     });
   }

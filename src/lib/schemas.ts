@@ -35,6 +35,7 @@ export const contactSchema = z.object({
   budget: z.enum(BUDGETS, {
     errorMap: () => ({ message: "Wybierz orientacyjny budżet" }),
   }),
+  projectDescription: z.string().max(1000, "Opis za długi (max 1000 znaków)").optional(),
   honeypot: z.string().max(0).optional(),
 });
 

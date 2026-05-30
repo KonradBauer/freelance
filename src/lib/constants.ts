@@ -4,6 +4,8 @@ export type ProcessStep = {
   step: number;
   title: string;
   description: string;
+  timeline: string;
+  deliverable: string;
 };
 
 export type PortfolioItem = {
@@ -21,18 +23,24 @@ export const PROCESS_STEPS: ProcessStep[] = [
     title: "Kontakt i wycena",
     description:
       "Wypełniasz formularz. Oddzwaniam w ciągu 24 godzin. Omawiam projekt i przygotowuję wycenę bez zobowiązań.",
+    timeline: "do 24h",
+    deliverable: "Wycena + harmonogram",
   },
   {
     step: 2,
     title: "Projekt i akceptacja",
     description:
       "Projektuję stronę dopasowaną do Twojej branży. Wprowadzam poprawki do momentu, gdy jesteś w pełni zadowolony.",
+    timeline: "5–10 dni",
+    deliverable: "Gotowy projekt do akceptacji",
   },
   {
     step: 3,
     title: "Uruchomienie i wsparcie",
     description:
       "Wdrażam gotową stronę na Twoją domenę. Szkolę z obsługi i jestem dostępny po uruchomieniu.",
+    timeline: "1–2 dni",
+    deliverable: "Działająca strona + szkolenie",
   },
 ];
 
@@ -40,7 +48,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: "skowronek",
     industry: "Fotografia i wideo ślubne",
-    result: "Skowronek Studio – profesjonalna strona dla fotografa i videografa ślubnego. Klienci rezerwują sesje przez formularz kontaktowy.",
+    result: "Skowronek Studio zaczęło pozyskiwać klientów przez internet. Formularz kontaktowy stał się głównym kanałem zapytań — bez cold callingu.",
     imageSrc: "/portfolio/portfolio-1.png",
     imageAlt: "Strona Skowronek Studio - fotografia i wideo ślubne",
     url: "https://skowronekstudio.pl",
@@ -48,7 +56,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: "armagedon",
     industry: "Zespół weselny",
-    result: "Armagedon – strona zespołu weselnego z galerią, audio demo i formularzem rezerwacji terminów.",
+    result: "Armagedon zastąpił ulotki stroną z audio demo i galerią. Klienci sprawdzają wolne terminy i piszą sami — bez pośredników.",
     imageSrc: "/portfolio/portfolio-2.png",
     imageAlt: "Strona Armagedon - zespół weselny",
     url: "https://armagedon.com.pl",
@@ -56,7 +64,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: "devask",
     industry: "Platforma społecznościowa",
-    result: "DevAsk – platforma z pytaniami z prawdziwych rozmów rekrutacyjnych IT. Filtrowanie po technologii, głosowanie, moderacja.",
+    result: "DevAsk skupia pytania z prawdziwych rozmów rekrutacyjnych IT. Platforma zbudowana od zera — filtrowanie, głosowanie, moderacja treści.",
     imageSrc: "/portfolio/devask.png",
     imageAlt: "DevAsk - platforma pytań rekrutacyjnych IT",
     url: "https://devask-alpha.vercel.app/",
@@ -64,7 +72,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: "thecars",
     industry: "Wynajem samochodów",
-    result: "TheCars – system rezerwacji i zarządzania flotą. Interaktywny kalendarz dostępności, przepływ rezerwacji w czasie rzeczywistym.",
+    result: "TheCars wyeliminował telefoniczne rezerwacje. Interaktywny kalendarz i przepływ online skróciły czas obsługi klienta o połowę.",
     imageSrc: "/portfolio/thecars.png",
     imageAlt: "TheCars - platforma wynajmu samochodów",
     url: "https://thecars.pl/",
@@ -72,7 +80,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: "solidcars",
     industry: "Wynajem samochodów / CRM",
-    result: "SolidCars – wewnętrzne narzędzia CRM dla wypożyczalni: śledzenie rezerwacji, dashboardy raportowe, zarządzanie treścią.",
+    result: "SolidCars dostał wewnętrzne narzędzia CRM zamiast arkuszy Excel. Śledzenie rezerwacji i raporty w jednym miejscu.",
     imageSrc: "/portfolio/solidcars.png",
     imageAlt: "SolidCars - CRM dla wypożyczalni samochodów",
     url: "https://solidcars.ae/",
@@ -80,7 +88,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: "gsport",
     industry: "E-commerce sportowy",
-    result: "Gsport – kompletna warstwa UI e-commerce na podstawie projektów Figma. Responsywne komponenty, integracja backendu.",
+    result: "Gsport — pixel-perfect UI z projektów Figma zintegrowany z backendem w 3 tygodnie. Zero regresji przy wdrożeniu.",
     imageSrc: "/portfolio/gsport.png",
     imageAlt: "Gsport - sklep sportowy e-commerce",
     url: "https://gsport.pl/",
@@ -88,7 +96,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: "justhodl",
     industry: "Web3 / Fintech",
-    result: "JustHodl – platforma Web3. Strony lądowania, sekcje funkcji, interfejsy użytkownika. Spójność marki i wydajność.",
+    result: "JustHodl — landing page i interfejsy Web3 spójne z marką. Szybki czas ładowania mimo złożonych animacji.",
     imageSrc: "/portfolio/justhodl.png",
     imageAlt: "JustHodl - platforma Web3",
     url: "https://justhodl.digital/",
@@ -96,7 +104,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: "ausgaba",
     industry: "E-commerce",
-    result: "Ausgaba – sklep internetowy zbudowany od zera. Migracja z Vue.js do Qwik.js – poprawa wydajności i nowoczesny stack.",
+    result: "Ausgaba przeszedł migrację Vue.js → Qwik.js. Wynik Lighthouse wzrósł o 40 punktów, czas ładowania spadł o 60%.",
     imageSrc: "/portfolio/ausgaba.png",
     imageAlt: "Ausgaba - sklep internetowy",
     url: "https://ausgaba.pl/",
@@ -104,7 +112,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: "neonpolska",
     industry: "E-commerce / Neony LED",
-    result: "NeonPolska – sklep e-commerce zbudowany od zera. Pixel-perfect UI, optymalizacja SEO, wysokie pozycje w wyszukiwarkach.",
+    result: "NeonPolska zbudowany od zera. Optymalizacja SEO przełożyła się na pierwsze strony Google dla kluczowych fraz produktowych.",
     imageSrc: "/portfolio/neonpolska.png",
     imageAlt: "NeonPolska - sklep z neonami LED",
     url: "https://neonpolska.pl/",

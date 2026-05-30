@@ -164,6 +164,27 @@ export default function ContactForm() {
         )}
       </div>
 
+      <div>
+        <label htmlFor="projectDescription" className={labelClass} style={{ color: "#94A3B8" }}>
+          Opisz swój projekt <span style={{ color: "#475569" }}>(opcjonalnie)</span>
+        </label>
+        <textarea
+          id="projectDescription"
+          rows={3}
+          placeholder="Czym zajmuje się Twoja firma? Co chcesz osiągnąć stroną?"
+          className={inputClass}
+          style={{ resize: "vertical", minHeight: "80px" }}
+          aria-invalid={!!errors.projectDescription}
+          aria-describedby={errors.projectDescription ? "desc-error" : undefined}
+          {...register("projectDescription")}
+        />
+        {errors.projectDescription && (
+          <p id="desc-error" role="alert" className={errorClass}>
+            {errors.projectDescription.message}
+          </p>
+        )}
+      </div>
+
       {serverError && (
         <div
           role="alert"

@@ -77,9 +77,23 @@ export default function ProcessSection() {
                 >
                   {item.title}
                 </h3>
-                <p className="text-slate-500 leading-relaxed text-sm">
+                <p className="text-slate-500 leading-relaxed text-sm mb-5">
                   {item.description}
                 </p>
+                <div className="flex flex-col gap-1.5 mt-auto">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs" style={{ color: "#475569" }}>⏱</span>
+                    <span className="text-xs font-medium" style={{ color: "#64748B" }}>
+                      {item.timeline}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs" style={{ color: "#475569" }}>📋</span>
+                    <span className="text-xs font-semibold" style={{ color: "#C9A84C" }}>
+                      {item.deliverable}
+                    </span>
+                  </div>
+                </div>
               </div>
             </TiltCard>
           ))}

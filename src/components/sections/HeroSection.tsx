@@ -159,12 +159,31 @@ export default function HeroSection() {
 
               {/* CTA */}
               <motion.div variants={item} className="flex flex-col items-center gap-4">
-                <a
-                  href="#formularz"
-                  className="btn-gold inline-block text-lg px-10 py-4 rounded-[14px]"
-                >
-                  Chcę więcej klientów →
-                </a>
+                <div className="flex flex-wrap justify-center gap-3">
+                  <a
+                    href="#formularz"
+                    className="btn-gold inline-block text-lg px-10 py-4 rounded-[14px]"
+                  >
+                    Chcę więcej klientów →
+                  </a>
+                  <a
+                    href="#portfolio"
+                    className="inline-block text-lg px-10 py-4 rounded-[14px] font-semibold transition-colors duration-200"
+                    style={{
+                      border: "1px solid rgba(201,168,76,0.28)",
+                      color: "#C9A84C",
+                      background: "transparent",
+                    }}
+                    onMouseEnter={(e) => {
+                      (e.currentTarget as HTMLAnchorElement).style.background = "rgba(201,168,76,0.06)";
+                    }}
+                    onMouseLeave={(e) => {
+                      (e.currentTarget as HTMLAnchorElement).style.background = "transparent";
+                    }}
+                  >
+                    Zobacz realizacje
+                  </a>
+                </div>
                 <p className="text-slate-600 text-sm">
                   Bezpłatna konsultacja · Bez zobowiązań
                 </p>

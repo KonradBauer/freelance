@@ -11,7 +11,7 @@ const STATS = [
 function CounterStat({ value, label }: { value: string; label: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true });
-  const [display, setDisplay] = useState("0");
+  const [display, setDisplay] = useState(value);
 
   const match = value.match(/^(\d+)(.*)$/);
   const target = match ? parseInt(match[1]) : 0;

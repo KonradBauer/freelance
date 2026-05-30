@@ -32,10 +32,10 @@ export default function PortfolioCTASection() {
             letterSpacing: "-0.02em",
           }}
         >
-          Twoja firma zasługuje na taką samą stronę
+          Dołącz do firm, które już zdobywają klientów online
         </h2>
         <p className="text-slate-400 text-lg mb-8">
-          Bezpłatna wycena w ciągu 24 godzin. Bez zobowiązań.
+          12+ zrealizowanych projektów. Bezpłatna wycena w ciągu 24 godzin. Bez zobowiązań.
         </p>
         <a
           href="#formularz"
