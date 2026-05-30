@@ -48,7 +48,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: "skowronek",
     industry: "Fotografia i wideo ślubne",
-    result: "Skowronek Studio zaczęło pozyskiwać klientów przez internet. Formularz kontaktowy stał się głównym kanałem zapytań — bez cold callingu.",
+    result: "Skowronek Studio zaczęło pozyskiwać klientów przez internet. Formularz kontaktowy stał się głównym kanałem zapytań - bez cold callingu.",
     imageSrc: "/portfolio/portfolio-1.png",
     imageAlt: "Strona Skowronek Studio - fotografia i wideo ślubne",
     url: "https://skowronekstudio.pl",
@@ -56,7 +56,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: "armagedon",
     industry: "Zespół weselny",
-    result: "Armagedon zastąpił ulotki stroną z audio demo i galerią. Klienci sprawdzają wolne terminy i piszą sami — bez pośredników.",
+    result: "Armagedon zastąpił ulotki stroną z audio demo i galerią. Klienci sprawdzają wolne terminy i piszą sami - bez pośredników.",
     imageSrc: "/portfolio/portfolio-2.png",
     imageAlt: "Strona Armagedon - zespół weselny",
     url: "https://armagedon.com.pl",
@@ -64,7 +64,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: "devask",
     industry: "Platforma społecznościowa",
-    result: "DevAsk skupia pytania z prawdziwych rozmów rekrutacyjnych IT. Platforma zbudowana od zera — filtrowanie, głosowanie, moderacja treści.",
+    result: "DevAsk skupia pytania z prawdziwych rozmów rekrutacyjnych IT. Platforma zbudowana od zera - filtrowanie, głosowanie, moderacja treści.",
     imageSrc: "/portfolio/devask.png",
     imageAlt: "DevAsk - platforma pytań rekrutacyjnych IT",
     url: "https://devask-alpha.vercel.app/",
@@ -88,7 +88,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: "gsport",
     industry: "E-commerce sportowy",
-    result: "Gsport — pixel-perfect UI z projektów Figma zintegrowany z backendem w 3 tygodnie. Zero regresji przy wdrożeniu.",
+    result: "Gsport - pixel-perfect UI z projektów Figma zintegrowany z backendem w 3 tygodnie. Zero regresji przy wdrożeniu.",
     imageSrc: "/portfolio/gsport.png",
     imageAlt: "Gsport - sklep sportowy e-commerce",
     url: "https://gsport.pl/",
@@ -96,7 +96,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: "justhodl",
     industry: "Foundation",
-    result: "JustHodl — landing page i interfejsy Web3 spójne z marką. Szybki czas ładowania mimo złożonych animacji.",
+    result: "JustHodl - landing page i interfejsy Web3 spójne z marką. Szybki czas ładowania mimo złożonych animacji.",
     imageSrc: "/portfolio/justhodl.png",
     imageAlt: "JustHodl - platforma Web3",
     url: "https://justhodl.digital/",
