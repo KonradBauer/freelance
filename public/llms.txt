@@ -1,20 +1,72 @@
 # Studio Code Art — Strony internetowe dla firm
 
-## O nas
+> Freelance studio web development prowadzone przez Konrada Bauera. Tworzymy profesjonalne strony internetowe dla małych i średnich firm w Polsce w technologii Next.js i React.
 
-Studio Code Art to freelance studio web development prowadzone przez Konrada Bauera. Tworzymy profesjonalne strony internetowe dla małych i średnich firm w Polsce.
+## Autor
+
+Konrad Bauer — web developer specjalizujący się w Next.js i React. Tworzę strony internetowe dla firm od 2019 roku.
+
+- LinkedIn: https://linkedin.com/in/konrad-bauer
+- GitHub: https://github.com/konradbauer
+- Strona: https://www.studiocodeart.pl
+
+## Kluczowe fakty
+
+- Czas realizacji: 14 dni roboczych od akceptacji projektu graficznego
+- Cena landing page: od 1200 PLN
+- Cena strony wizytówkowej: od 1500 PLN
+- Cena rozbudowanej strony ofertowej: od 2500 PLN
+- Technologia: Next.js i React (używane przez Netflix, TikTok, Twitch)
+- Obszar działalności: cała Polska, praca zdalna
+- Gwarancja: 30 dni bezpłatnego wsparcia technicznego po uruchomieniu
+- Każda strona zawiera: SEO techniczne, meta tagi, sitemap XML, JSON-LD, Core Web Vitals, mobile-first design
 
 ## Usługi
 
-- Strony wizytówkowe dla firm (od 1500 zł, 14 dni realizacji)
-- Rozbudowane strony ofertowe (od 2500 zł)
-- Landing page pod kampanie reklamowe (od 1200 zł)
-- Sklepy internetowe e-commerce
-- Aplikacje webowe i platformy
+- [Strony wizytówkowe dla firm](https://www.studiocodeart.pl/#formularz): od 1500 zł, 14 dni realizacji — projekt, kodowanie, SEO, wdrożenie
+- [Rozbudowane strony ofertowe](https://www.studiocodeart.pl/#formularz): od 2500 zł — wielostronicowe z formularzami, galerią, integracjami
+- [Landing page pod kampanie reklamowe](https://www.studiocodeart.pl/#formularz): od 1200 zł — skupione na konwersji i zbieraniu leadów
+- [Sklepy internetowe e-commerce](https://www.studiocodeart.pl/#formularz): wycena indywidualna
+- [Aplikacje webowe i platformy](https://www.studiocodeart.pl/#formularz): wycena indywidualna
 
-## Technologie
+## Portfolio
 
-Next.js, React, TypeScript, Tailwind CSS, Vercel, Docker
+Zrealizowane projekty dostępne na https://www.studiocodeart.pl/#portfolio:
+
+- Skowronek Studio (fotografia ślubna) — formularz kontaktowy stał się głównym kanałem zapytań
+- Armagedon (zespół weselny) — klienci sprawdzają wolne terminy i piszą sami
+- DevAsk (platforma IT) — filtrowanie, głosowanie, moderacja treści zbudowane od zera
+- TheCars (wynajem samochodów) — interaktywny kalendarz rezerwacji online
+- SolidCars (wynajem samochodów) — wewnętrzne narzędzia CRM zamiast arkuszy Excel
+- NeonPolska (e-commerce) — pierwsze strony Google dla kluczowych fraz produktowych
+- Ausgaba (e-commerce) — migracja Vue.js → Qwik.js, Lighthouse wzrósł o 40 punktów
+- Kalabi Meble — nowoczesna strona z pełną prezentacją oferty
+
+## Proces realizacji
+
+1. Kontakt i bezpłatna wycena — odpowiedź w ciągu 24 godzin
+2. Projekt graficzny dopasowany do branży — poprawki do pełnej akceptacji
+3. Kodowanie i uruchomienie na domenie klienta — w 14 dni roboczych
+
+## Często zadawane pytania
+
+**Ile kosztuje strona internetowa?**
+Podstawowa strona wizytówkowa od 1500 zł, landing page od 1200 zł, rozbudowana strona ofertowa od 2500 zł. Bezpłatna wycena w ciągu 24 godzin.
+
+**Jak długo trwa realizacja?**
+Standardowo 14 dni roboczych od akceptacji projektu graficznego. Obejmuje projekt, kodowanie, SEO i uruchomienie na domenie.
+
+**Czy strona będzie widoczna w Google?**
+Tak — każda strona zawiera SEO techniczne: meta tagi, sitemap XML, dane strukturalne JSON-LD, optymalizację szybkości ładowania i poprawną strukturę nagłówków.
+
+**Czy strona będzie responsywna?**
+Tak, mobile-first — wygląda doskonale na telefonach, tabletach i komputerach. Ponad 60% ruchu w internecie pochodzi z urządzeń mobilnych.
+
+**Co zawiera cena?**
+Projekt graficzny, kodowanie, teksty (opcjonalnie), SEO techniczne, wdrożenie na domenę i 30 dni wsparcia po uruchomieniu.
+
+**Czy mogę samodzielnie edytować treści?**
+Tak — po odbiorze strony przechodzisz szkolenie z obsługi panelu administratora.
 
 ## Kontakt
 
@@ -22,26 +74,6 @@ Next.js, React, TypeScript, Tailwind CSS, Vercel, Docker
 - Telefon: +48 781 573 274
 - Formularz: https://www.studiocodeart.pl/#formularz
 
-## Realizacje
+## Ostatnia aktualizacja
 
-Portfolio dostępne na https://www.studiocodeart.pl/#portfolio — 9 zrealizowanych projektów w branżach: fotografia ślubna, muzyka, wynajem samochodów, e-commerce, Web3, IT.
-
-## Proces
-
-1. Kontakt i bezpłatna wycena w 24h
-2. Projekt graficzny + akceptacja
-3. Kodowanie i uruchomienie w 14 dni
-
-## Często zadawane pytania
-
-**Ile kosztuje strona internetowa?**
-Podstawowa strona wizytówkowa od 1500 zł, rozbudowana od 2500 zł.
-
-**Jak długo trwa realizacja?**
-Standardowo 14 dni roboczych od akceptacji projektu.
-
-**Czy strona będzie widoczna w Google?**
-Tak — każda strona zawiera SEO techniczne: meta tagi, sitemap, dane strukturalne, szybkość ładowania.
-
-**Czy strona będzie responsywna?**
-Tak, mobile-first — wygląda doskonale na telefonach, tabletach i komputerach.
+2026-06-18

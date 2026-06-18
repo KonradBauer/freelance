@@ -101,6 +101,32 @@ export default function TransformationSection() {
             Chcę więcej klientów →
           </a>
         </div>
+
+        <div
+          className="mt-14 rounded-2xl px-8 py-7"
+          style={{
+            background: "rgba(255,255,255,0.018)",
+            border: "1px solid rgba(201,168,76,0.08)",
+          }}
+        >
+          <p className="text-slate-500 text-sm leading-relaxed">
+            <span style={{ color: "#C9A84C" }} className="font-semibold">
+              Studio Code Art
+            </span>{" "}
+            to freelance studio web development prowadzone przez Konrada Bauera,
+            specjalizujące się w tworzeniu stron internetowych dla małych i
+            średnich firm w Polsce. Realizujemy projekty w technologii Next.js i
+            React — tych samych, których używają Netflix i TikTok. Standardowy
+            czas realizacji wynosi 14 dni roboczych i obejmuje projekt graficzny,
+            kodowanie, SEO techniczne oraz uruchomienie na domenie klienta.
+            Ceny zaczynają się od 1200 zł za landing page, 1500 zł za stronę
+            wizytówkową i 2500 zł za rozbudowaną stronę ofertową. Każda strona
+            zawiera meta tagi, sitemap XML, dane strukturalne JSON-LD,
+            optymalizację Core Web Vitals i responsywny design mobile-first.
+            Po uruchomieniu klient otrzymuje 30 dni bezpłatnego wsparcia
+            technicznego. Działamy zdalnie dla klientów z całej Polski.
+          </p>
+        </div>
       </div>
     </section>
   );

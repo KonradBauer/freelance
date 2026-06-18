@@ -86,6 +86,9 @@ function buildSchemas() {
     "@id": `${SITE_URL}/#person`,
     name: "Konrad Bauer",
     url: SITE_URL,
+    image: `${SITE_URL}/konrad-bauer.jpg`,
+    description:
+      "Freelance web developer specjalizujący się w tworzeniu stron internetowych dla firm w Polsce. Buduję strony w Next.js i React od 2019 roku.",
     jobTitle: "Web Developer Freelancer",
     worksFor: { "@id": `${SITE_URL}/#business` },
     knowsAbout: [

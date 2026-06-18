@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { FAQ_ITEMS } from "@/components/ui/JsonLd";
 
 export default function FaqSection() {
@@ -65,31 +65,30 @@ export default function FaqSection() {
                   </motion.span>
                 </button>
 
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      key="answer"
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                      style={{ overflow: "hidden" }}
-                    >
-                      <div className="px-6 pb-6">
-                        <div
-                          className="w-full mb-4"
-                          style={{
-                            height: "1px",
-                            background: "rgba(201,168,76,0.1)",
-                          }}
-                        />
-                        <p className="text-slate-400 leading-relaxed text-sm sm:text-base">
-                          {item.answer}
-                        </p>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                {/* Answer always in DOM — AI crawlers read static HTML, not JS-toggled nodes */}
+                <div
+                  style={{
+                    maxHeight: isOpen ? "600px" : "0",
+                    overflow: "hidden",
+                    opacity: isOpen ? 1 : 0,
+                    transition:
+                      "max-height 0.3s cubic-bezier(0.22,1,0.36,1), opacity 0.25s ease",
+                  }}
+                  aria-hidden={!isOpen}
+                >
+                  <div className="px-6 pb-6">
+                    <div
+                      className="w-full mb-4"
+                      style={{
+                        height: "1px",
+                        background: "rgba(201,168,76,0.1)",
+                      }}
+                    />
+                    <p className="text-slate-400 leading-relaxed text-sm sm:text-base">
+                      {item.answer}
+                    </p>
+                  </div>
+                </div>
               </div>
             );
           })}
