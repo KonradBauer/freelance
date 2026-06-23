@@ -1,0 +1,256 @@
+{
+  "typebot": {
+    "groups": [
+      {
+        "id": "g-powitanie",
+        "title": "Powitanie + Q1",
+        "graphCoordinates": { "x": 200, "y": 0 },
+        "blocks": [
+          {
+            "id": "b-welcome",
+            "type": "text",
+            "content": {
+              "richText": [
+                { "type": "p", "children": [{ "text": "Hej! Jestem Konrad 👋 Pomagam firmom zdobywac klientow przez internet. Zanim wysliesz formularz - powiedz mi czego szukasz, a dopasuje Ci od razu konkretna odpowiedz." }] }
+              ]
+            }
+          },
+          {
+            "id": "b-q1",
+            "type": "choice input",
+            "items": [
+              { "id": "i-nowa-strona", "content": "Chce nowa strone", "outgoingEdgeId": "e-q1-nowa" },
+              { "id": "i-nie-dziala", "content": "Mam strone ale nie dziala", "outgoingEdgeId": "e-q1-nie-dziala" },
+              { "id": "i-sklep", "content": "Chce sklep online", "outgoingEdgeId": "e-q1-sklep" },
+              { "id": "i-ogladam", "content": "Tylko ogladam", "outgoingEdgeId": "e-q1-ogladam" }
+            ],
+            "options": { "variableId": "var-purpose", "isMultipleChoice": false }
+          }
+        ]
+      },
+      {
+        "id": "g-q2",
+        "title": "Q2 - Aktualna strona",
+        "graphCoordinates": { "x": 600, "y": -250 },
+        "blocks": [
+          {
+            "id": "b-q2",
+            "type": "choice input",
+            "items": [
+              { "id": "i-tak-slabo", "content": "Tak, ale slabo dziala", "outgoingEdgeId": "e-q2" },
+              { "id": "i-zero", "content": "Nie, zaczynam od zera", "outgoingEdgeId": "e-q2" },
+              { "id": "i-dodatkowe", "content": "Tak, potrzebuje czegos dodatkowego", "outgoingEdgeId": "e-q2" }
+            ],
+            "options": { "variableId": "var-hasWebsite", "isMultipleChoice": false }
+          }
+        ]
+      },
+      {
+        "id": "g-q3",
+        "title": "Q3 - Typ firmy",
+        "graphCoordinates": { "x": 900, "y": -250 },
+        "blocks": [
+          {
+            "id": "b-q3",
+            "type": "choice input",
+            "items": [
+              { "id": "i-swoj-biznes", "content": "Prowadze swoj biznes", "outgoingEdgeId": "e-q3" },
+              { "id": "i-firma-sr", "content": "Pracuje w firmie (10-50 osob)", "outgoingEdgeId": "e-q3" },
+              { "id": "i-duza-org", "content": "Wieksza organizacja", "outgoingEdgeId": "e-q3" }
+            ],
+            "options": { "variableId": "var-businessType", "isMultipleChoice": false }
+          }
+        ]
+      },
+      {
+        "id": "g-q4",
+        "title": "Q4 - Cel strony",
+        "graphCoordinates": { "x": 1200, "y": -250 },
+        "blocks": [
+          {
+            "id": "b-q4",
+            "type": "choice input",
+            "items": [
+              { "id": "i-klientow", "content": "Przyciagac nowych klientow", "outgoingEdgeId": "e-q4" },
+              { "id": "i-profesjonalnie", "content": "Wyglada bardziej profesjonalnie", "outgoingEdgeId": "e-q4" },
+              { "id": "i-sprzedaz", "content": "Sprzedawac produkty online", "outgoingEdgeId": "e-q4" },
+              { "id": "i-inne", "content": "Cos innego", "outgoingEdgeId": "e-q4" }
+            ],
+            "options": { "variableId": "var-goal", "isMultipleChoice": false }
+          }
+        ]
+      },
+      {
+        "id": "g-q5",
+        "title": "Q5 - Budzet",
+        "graphCoordinates": { "x": 1500, "y": -250 },
+        "blocks": [
+          {
+            "id": "b-q5-text",
+            "type": "text",
+            "content": {
+              "richText": [
+                { "type": "p", "children": [{ "text": "Zeby nie tracic Twojego czasu - w jakim budzecie myslisz? Moje projekty zazwyczaj mieszcza sie w jednym z tych przedzilow:" }] }
+              ]
+            }
+          },
+          {
+            "id": "b-q5",
+            "type": "choice input",
+            "items": [
+              { "id": "i-do3k", "content": "do 3 000 zl", "outgoingEdgeId": "e-q5" },
+              { "id": "i-3-6k", "content": "3 000-6 000 zl", "outgoingEdgeId": "e-q5" },
+              { "id": "i-6-15k", "content": "6 000-15 000 zl", "outgoingEdgeId": "e-q5" },
+              { "id": "i-15kplus", "content": "15 000+ zl", "outgoingEdgeId": "e-q5" }
+            ],
+            "options": { "variableId": "var-budget", "isMultipleChoice": false }
+          }
+        ]
+      },
+      {
+        "id": "g-q6",
+        "title": "Q6 - Timeline",
+        "graphCoordinates": { "x": 1800, "y": -250 },
+        "blocks": [
+          {
+            "id": "b-q6",
+            "type": "choice input",
+            "items": [
+              { "id": "i-asap", "content": "Jak najszybciej (w ciagu miesiaca)", "outgoingEdgeId": "e-q6" },
+              { "id": "i-1-3m", "content": "W ciagu 1-3 miesiecy", "outgoingEdgeId": "e-q6" },
+              { "id": "i-3-6m", "content": "3-6 miesiecy", "outgoingEdgeId": "e-q6" },
+              { "id": "i-nie-wiem", "content": "Nie wiem jeszcze", "outgoingEdgeId": "e-q6" }
+            ],
+            "options": { "variableId": "var-timeline", "isMultipleChoice": false }
+          }
+        ]
+      },
+      {
+        "id": "g-email-gdpr",
+        "title": "Email + GDPR",
+        "graphCoordinates": { "x": 2100, "y": -250 },
+        "blocks": [
+          {
+            "id": "b-email-text",
+            "type": "text",
+            "content": {
+              "richText": [
+                { "type": "p", "children": [{ "text": "Super - wysle Ci kilka przykladow z portfolio dopasowanych do Twojego projektu. Na jaki email?" }] }
+              ]
+            }
+          },
+          {
+            "id": "b-email-input",
+            "type": "email input",
+            "options": {
+              "variableId": "var-email",
+              "labels": { "placeholder": "Twoj adres email", "button": "Wyslij" }
+            }
+          },
+          {
+            "id": "b-gdpr-consent",
+            "type": "choice input",
+            "items": [
+              { "id": "i-zgoda", "content": "Wyrazam zgode na kontakt mailowy w celu omowienia projektu", "outgoingEdgeId": "e-gdpr-done" }
+            ],
+            "options": { "isMultipleChoice": false }
+          }
+        ]
+      },
+      {
+        "id": "g-tylko-ogladam",
+        "title": "Tylko ogladam",
+        "graphCoordinates": { "x": 600, "y": 250 },
+        "blocks": [
+          {
+            "id": "b-ogladam-text",
+            "type": "text",
+            "content": {
+              "richText": [
+                { "type": "p", "children": [{ "text": "Rozumiem! Wysle Ci liste 10 rzeczy, ktore kazda strona firmowa musi miec. Na jaki email?" }] }
+              ]
+            }
+          },
+          {
+            "id": "b-ogladam-email",
+            "type": "email input",
+            "options": {
+              "variableId": "var-email",
+              "labels": { "placeholder": "Twoj adres email", "button": "Wyslij" }
+            }
+          },
+          {
+            "id": "b-ogladam-gdpr",
+            "type": "choice input",
+            "items": [
+              { "id": "i-ogladam-zgoda", "content": "Wyrazam zgode na kontakt mailowy w celu omowienia projektu", "outgoingEdgeId": "e-ogladam-done" }
+            ],
+            "options": { "isMultipleChoice": false }
+          }
+        ]
+      },
+      {
+        "id": "g-pozegnanie",
+        "title": "Pozegnanie",
+        "graphCoordinates": { "x": 2400, "y": -250 },
+        "blocks": [
+          {
+            "id": "b-set-gdpr",
+            "type": "Set variable",
+            "options": {
+              "variableId": "var-gdprTimestamp",
+              "expressionToEvaluate": "new Date().toISOString()"
+            }
+          },
+          {
+            "id": "b-pozegnanie",
+            "outgoingEdgeId": "e-poz-http",
+            "type": "text",
+            "content": {
+              "richText": [
+                { "type": "p", "children": [{ "text": "Super! Wysle Ci portfolio za chwile. Mozesz tez od razu umowic 30-minutowa rozmowe:" }] },
+                { "type": "p", "children": [{ "text": "https://calendly.com/konradbauer94/30min" }] }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-http",
+        "title": "HTTP Request",
+        "graphCoordinates": { "x": 2700, "y": -250 },
+        "blocks": [
+          {
+            "id": "b-http",
+            "type": "Webhook",
+            "options": {
+              "isCustomBody": true,
+              "isAdvancedConfig": true,
+              "webhook": {
+                "url": "https://www.studiocodeart.pl/api/bot-lead",
+                "method": "POST",
+                "headers": [{ "id": "h1", "key": "Content-Type", "value": "application/json" }],
+                "body": "{\"purpose\":\"{{purpose}}\",\"hasWebsite\":\"{{hasWebsite}}\",\"businessType\":\"{{businessType}}\",\"goal\":\"{{goal}}\",\"budget\":\"{{budget}}\",\"timeline\":\"{{timeline}}\",\"email\":\"{{email}}\",\"gdprTimestamp\":\"{{gdprTimestamp}}\",\"secret\":\"a74c91d05e3bf8126dc48a77e109bb5f212faegae01e7bc590fd3368ae4f11d68c\"}"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "edges": [
+      { "id": "e-start", "from": { "eventId": "n9iyi2pocpe56683kp0b17bh" }, "to": { "groupId": "g-powitanie" } },
+      { "id": "e-q1-nowa", "from": { "groupId": "g-powitanie", "blockId": "b-q1", "itemId": "i-nowa-strona" }, "to": { "groupId": "g-q2" } },
+      { "id": "e-q1-nie-dziala", "from": { "groupId": "g-powitanie", "blockId": "b-q1", "itemId": "i-nie-dziala" }, "to": { "groupId": "g-q2" } },
+      { "id": "e-q1-sklep", "from": { "groupId": "g-powitanie", "blockId": "b-q1", "itemId": "i-sklep" }, "to": { "groupId": "g-q2" } },
+      { "id": "e-q1-ogladam", "from": { "groupId": "g-powitanie", "blockId": "b-q1", "itemId": "i-ogladam" }, "to": { "groupId": "g-tylko-ogladam" } },
+      { "id": "e-q2", "from": { "groupId": "g-q2", "blockId": "b-q2" }, "to": { "groupId": "g-q3" } },
+      { "id": "e-q3", "from": { "groupId": "g-q3", "blockId": "b-q3" }, "to": { "groupId": "g-q4" } },
+      { "id": "e-q4", "from": { "groupId": "g-q4", "blockId": "b-q4" }, "to": { "groupId": "g-q5" } },
+      { "id": "e-q5", "from": { "groupId": "g-q5", "blockId": "b-q5" }, "to": { "groupId": "g-q6" } },
+      { "id": "e-q6", "from": { "groupId": "g-q6", "blockId": "b-q6" }, "to": { "groupId": "g-email-gdpr" } },
+      { "id": "e-gdpr-done", "from": { "groupId": "g-email-gdpr", "blockId": "b-gdpr-consent", "itemId": "i-zgoda" }, "to": { "groupId": "g-pozegnanie" } },
+      { "id": "e-ogladam-done", "from": { "groupId": "g-tylko-ogladam", "blockId": "b-ogladam-gdpr", "itemId": "i-ogladam-zgoda" }, "to": { "groupId": "g-pozegnanie" } },
+      { "id": "e-poz-http", "from": { "groupId": "g-pozegnanie", "blockId": "b-pozegnanie" }, "to": { "groupId": "g-http" } }
+    ]
+  }
+}

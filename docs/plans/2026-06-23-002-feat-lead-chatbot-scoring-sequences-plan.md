@@ -264,7 +264,7 @@ Konrad
 
 ---
 
-- [ ] **Unit 3: LeadChatbot.tsx - komponent React z trigger logic**
+- [x] **Unit 3: LeadChatbot.tsx - komponent React z trigger logic**
 
 **Cel:** Client component embeddujący Typebot Bubble, auto-otwierający się po 20s+50% scroll na desktop, z manualnym launcher buttonem na mobile.
 
@@ -352,7 +352,7 @@ import { Bubble } from '@typebot.io/react'
 
 ---
 
-- [ ] **Unit 4: Montaż w page.tsx**
+- [x] **Unit 4: Montaż w page.tsx**
 
 **Cel:** LeadChatbot widoczny na głównej stronie.
 

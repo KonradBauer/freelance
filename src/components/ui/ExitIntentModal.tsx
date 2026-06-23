@@ -57,15 +57,12 @@ export default function ExitIntentModal() {
     setIsSubmitting(true);
     setServerError(null);
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("/api/quick-contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          projectType: "Nie wiem jeszcze",
           name: name.trim(),
           phone: phone.trim(),
-          industry: "Inna branża",
-          budget: "do 1500 zł",
           honeypot: "",
         }),
       });
