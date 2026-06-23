@@ -11,9 +11,9 @@ services:
     environment:
       - NODE_ENV=production
       - PORT=3000
-      - RESEND_API_KEY=${RESEND_API_KEY}
       - RESEND_TO_EMAIL=${RESEND_TO_EMAIL}
-      - RESEND_FROM_EMAIL=${RESEND_FROM_EMAIL}
+      - BREVO_API_KEY=${BREVO_API_KEY}
+      - FROM_EMAIL=${FROM_EMAIL}
       - BOT_WEBHOOK_SECRET=${BOT_WEBHOOK_SECRET}
     volumes:
       - ./public/portfolio:/app/public/portfolio
