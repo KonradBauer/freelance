@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { Resend } from "resend";
+import { sendEmail } from "@/lib/mailer";
 
 const requestLog = new Map<string, number[]>();
 
@@ -54,14 +54,9 @@ export async function POST(request: Request) {
     return Response.json({ error: "Invalid submission" }, { status: 400 });
   }
 
-  const apiKey = process.env.RESEND_API_KEY;
   const toEmail = process.env.RESEND_TO_EMAIL;
-  const fromEmail = process.env.RESEND_FROM_EMAIL ?? "onboarding@resend.dev";
-
-  if (apiKey && toEmail) {
-    const resend = new Resend(apiKey);
-    await resend.emails.send({
-      from: fromEmail,
+  if (toEmail) {
+    await sendEmail({
       to: toEmail,
       subject: `Szybki kontakt: ${name}`,
       text: [`Imię: ${name}`, `Telefon: ${phone}`, "", "Źródło: modal exit-intent"].join("\n"),

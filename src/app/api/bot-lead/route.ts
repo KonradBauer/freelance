@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { Resend } from "resend";
+import { sendEmail } from "@/lib/mailer";
 
 const emailLog = new Map<string, number>();
 
@@ -44,7 +44,9 @@ function buildKonradEmail(data: BotLeadData): string {
 }
 
 function buildConfirmationEmail(goal: string): string {
-  const goalLine = goal ? `Na podstawie tego co powiedziałeś (${goal}) - to brzmi jak projekt w mojej specjalizacji.` : "To brzmi jak projekt w mojej specjalizacji.";
+  const goalLine = goal
+    ? `Na podstawie tego co powiedziałeś (${goal}) - to brzmi jak projekt w mojej specjalizacji.`
+    : "To brzmi jak projekt w mojej specjalizacji.";
   return [
     "Cześć!",
     "",
@@ -112,44 +114,34 @@ export async function POST(request: Request) {
     return Response.json({ error: "Already processed" }, { status: 429 });
   }
 
-  const apiKey = process.env.RESEND_API_KEY;
   const toEmail = process.env.RESEND_TO_EMAIL;
-  const fromEmail = process.env.RESEND_FROM_EMAIL ?? "onboarding@resend.dev";
+  const twoDays = new Date(Date.now() + 2 * 24 * 60 * 60 * 1000).toISOString();
+  const sevenDays = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString();
 
-  if (apiKey && toEmail) {
-    const resend = new Resend(apiKey);
-    const twoDays = new Date(Date.now() + 2 * 24 * 60 * 60 * 1000).toISOString();
-    const sevenDays = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString();
-
-    await Promise.allSettled([
-      resend.emails.send({
-        from: fromEmail,
-        to: toEmail,
-        subject: `Nowy lead z chatbota: ${data.purpose}`,
-        text: buildKonradEmail(data),
-      }),
-      resend.emails.send({
-        from: fromEmail,
-        to: data.email,
-        subject: "Odebrałem Twoje zgłoszenie - Konrad",
-        text: buildConfirmationEmail(data.goal ?? ""),
-      }),
-      resend.emails.send({
-        from: fromEmail,
-        to: data.email,
-        subject: "Masz jeszcze pytania o projekt?",
-        text: buildReminder1Email(),
-        scheduledAt: twoDays,
-      }),
-      resend.emails.send({
-        from: fromEmail,
-        to: data.email,
-        subject: "Ostatnia wiadomość ode mnie",
-        text: buildReminder2Email(),
-        scheduledAt: sevenDays,
-      }),
-    ]);
-  }
+  await Promise.allSettled([
+    toEmail && sendEmail({
+      to: toEmail,
+      subject: `Nowy lead z chatbota: ${data.purpose}`,
+      text: buildKonradEmail(data),
+    }),
+    sendEmail({
+      to: data.email,
+      subject: "Odebrałem Twoje zgłoszenie - Konrad",
+      text: buildConfirmationEmail(data.goal ?? ""),
+    }),
+    sendEmail({
+      to: data.email,
+      subject: "Masz jeszcze pytania o projekt?",
+      text: buildReminder1Email(),
+      scheduledAt: twoDays,
+    }),
+    sendEmail({
+      to: data.email,
+      subject: "Ostatnia wiadomość ode mnie",
+      text: buildReminder2Email(),
+      scheduledAt: sevenDays,
+    }),
+  ]);
 
   return Response.json({ ok: true });
 }
