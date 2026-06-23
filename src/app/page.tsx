@@ -11,6 +11,7 @@ import FaqSection from "@/components/sections/FaqSection";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import StickyHeader from "@/components/ui/StickyHeader";
 import Footer from "@/components/ui/Footer";
+import ExitIntentModal from "@/components/ui/ExitIntentModal";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
       <ContactFormSection />
       </main>
       <Footer />
+      <ExitIntentModal />
     </>
   );
 }
