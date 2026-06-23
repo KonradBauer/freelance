@@ -8,13 +8,11 @@ export default function ExitIntentModal() {
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  const [gdprConsent, setGdprConsent] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [serverError, setServerError] = useState<string | null>(null);
-  const [errors, setErrors] = useState<{ name?: string; phone?: string; gdpr?: string }>({});
+  const [errors, setErrors] = useState<{ name?: string; phone?: string }>({});
 
   const firstFocusRef = useRef<HTMLInputElement>(null);
-  const closeRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const handleMouseLeave = (e: MouseEvent) => {
@@ -45,7 +43,6 @@ export default function ExitIntentModal() {
     if (name.trim().length < 2) errs.name = "Imię musi mieć min. 2 znaki";
     if (!/^(\+48[\s]?)?(\d{3}[\s-]?\d{3}[\s-]?\d{3})$/.test(phone.trim()))
       errs.phone = "Podaj prawidłowy numer telefonu (9 cyfr)";
-    if (!gdprConsent) errs.gdpr = "Wymagana zgoda na kontakt";
     return errs;
   };
 
@@ -115,7 +112,6 @@ export default function ExitIntentModal() {
       >
         {/* Close button */}
         <button
-          ref={closeRef}
           type="button"
           onClick={() => setOpen(false)}
           aria-label="Zamknij"
@@ -134,7 +130,7 @@ export default function ExitIntentModal() {
           className="font-heading font-bold text-white mb-2"
           style={{ fontSize: "1.25rem", letterSpacing: "-0.02em" }}
         >
-          Poczekaj — masz projekt?
+          Poczekaj - masz projekt?
         </h2>
         <p className="text-sm mb-6" style={{ color: "#64748B" }}>
           Zostaw numer, oddzwonię bezpłatnie w 24h.
@@ -177,24 +173,6 @@ export default function ExitIntentModal() {
             />
             {errors.phone && (
               <p role="alert" className="mt-1.5 text-sm text-red-400">{errors.phone}</p>
-            )}
-          </div>
-
-          <div>
-            <label className="flex items-start gap-3 cursor-pointer">
-              <input
-                type="checkbox"
-                checked={gdprConsent}
-                onChange={(e) => setGdprConsent(e.target.checked)}
-                className="mt-0.5 shrink-0 accent-amber-400"
-                aria-invalid={!!errors.gdpr}
-              />
-              <span className="text-xs leading-relaxed" style={{ color: "#64748B" }}>
-                Wyrażam zgodę na kontakt telefoniczny w celu omówienia projektu.
-              </span>
-            </label>
-            {errors.gdpr && (
-              <p role="alert" className="mt-1 text-sm text-red-400">{errors.gdpr}</p>
             )}
           </div>
 

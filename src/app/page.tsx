@@ -12,7 +12,6 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
 import StickyHeader from "@/components/ui/StickyHeader";
 import Footer from "@/components/ui/Footer";
 import ExitIntentModal from "@/components/ui/ExitIntentModal";
-import StickyBar from "@/components/ui/StickyBar";
 
 export default function Home() {
   return (
@@ -33,7 +32,6 @@ export default function Home() {
       </main>
       <Footer />
       <ExitIntentModal />
-      <StickyBar />
     </>
   );
 }

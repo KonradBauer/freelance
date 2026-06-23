@@ -61,7 +61,7 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from: fromEmail,
       to: toEmail,
-      subject: `Nowy lead: ${name} — ${projectType}`,
+      subject: `Nowy lead: ${name} - ${projectType}`,
       text: [
         `Typ projektu: ${projectType}`,
         `Imię: ${name}`,

@@ -175,15 +175,6 @@
   }
 }
 
-/* StickyBar: add body padding and reposition scroll-to-top button */
-body.sticky-bar-visible {
-  padding-bottom: 56px;
-}
-
-body.sticky-bar-visible .scroll-to-top-btn {
-  bottom: 4.5rem;
-}
-
 @theme {
   --color-gold: #C9A84C;
   --color-gold-light: #F0D060;

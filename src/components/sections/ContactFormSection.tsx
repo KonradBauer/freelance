@@ -37,7 +37,7 @@ export default function ContactFormSection() {
           </p>
           <p className="text-sm mt-3 flex items-center justify-center gap-2 font-medium" style={{ color: "#C9A84C" }}>
             <span aria-hidden="true">✓</span>
-            Pracuję do momentu, gdy jesteś w pełni zadowolony — bez dodatkowych kosztów.
+            Pracuję do momentu, gdy jesteś w pełni zadowolony - bez dodatkowych kosztów.
           </p>
         </div>
 

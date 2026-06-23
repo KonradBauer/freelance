@@ -116,7 +116,7 @@ export default function TransformationSection() {
             to freelance studio web development prowadzone przez Konrada Bauera,
             specjalizujące się w tworzeniu stron internetowych dla małych i
             średnich firm w Polsce. Realizujemy projekty w technologii Next.js i
-            React — tych samych, których używają Netflix i TikTok. Standardowy
+            React - tych samych, których używają Netflix i TikTok. Standardowy
             czas realizacji wynosi 14 dni roboczych i obejmuje projekt graficzny,
             kodowanie, SEO techniczne oraz uruchomienie na domenie klienta.
             Ceny zaczynają się od 1200 zł za landing page, 1500 zł za stronę

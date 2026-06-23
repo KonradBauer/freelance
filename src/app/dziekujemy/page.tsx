@@ -49,7 +49,7 @@ export default function ThankYouPage() {
                     <ol className="space-y-3">
                         {[
                             "Sprawdzam Twoje zgłoszenie i zapoznaję się z branżą",
-                            "Dzwonię w ciągu 24h — krótka rozmowa o projekcie i celach",
+                            "Dzwonię w ciągu 24h - krótka rozmowa o projekcie i celach",
                             "Przygotowuję wycenę i harmonogram bez zobowiązań",
                         ].map((step, i) => (
                             <li key={i} className="flex items-start gap-3">

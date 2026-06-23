@@ -44,17 +44,17 @@ const FAQ_ITEMS = [
   {
     question: "Czy strona będzie wyglądać dobrze na telefonie?",
     answer:
-      "Tak, każda strona jest w pełni responsywna — wygląda i działa doskonale na telefonach, tabletach i komputerach. Ponad 60% ruchu w internecie pochodzi z urządzeń mobilnych, dlatego mobile-first to standard.",
+      "Tak, każda strona jest w pełni responsywna - wygląda i działa doskonale na telefonach, tabletach i komputerach. Ponad 60% ruchu w internecie pochodzi z urządzeń mobilnych, dlatego mobile-first to standard.",
   },
   {
     question: "Jaka technologia jest używana do budowy stron?",
     answer:
-      "Używam Next.js i React — technologii stosowanej przez największe firmy na świecie. Gwarantuje to błyskawiczne ładowanie, doskonałe SEO i wysoką niezawodność strony przez lata.",
+      "Używam Next.js i React - technologii stosowanej przez największe firmy na świecie. Gwarantuje to błyskawiczne ładowanie, doskonałe SEO i wysoką niezawodność strony przez lata.",
   },
   {
     question: "Jak wygląda gwarancja i wsparcie po uruchomieniu?",
     answer:
-      "Po uruchomieniu otrzymujesz 30 dni bezpłatnego wsparcia — poprawki, dostosowania i odpowiedzi na pytania. Oferuję też długoterminową opiekę techniczną w ramach miesięcznego abonamentu.",
+      "Po uruchomieniu otrzymujesz 30 dni bezpłatnego wsparcia - poprawki, dostosowania i odpowiedzi na pytania. Oferuję też długoterminową opiekę techniczną w ramach miesięcznego abonamentu.",
   },
   {
     question: "Czy mogę zobaczyć projekt przed zapłatą?",
@@ -64,7 +64,7 @@ const FAQ_ITEMS = [
   {
     question: "Czy oferujesz pozycjonowanie SEO?",
     answer:
-      "Każda strona zawiera podstawowe SEO techniczne: struktura nagłówków, meta tagi, szybkość ładowania, dane strukturalne i sitemap. Rozszerzone pozycjonowanie (content marketing, link building) to osobna usługa — zapytaj podczas konsultacji.",
+      "Każda strona zawiera podstawowe SEO techniczne: struktura nagłówków, meta tagi, szybkość ładowania, dane strukturalne i sitemap. Rozszerzone pozycjonowanie (content marketing, link building) to osobna usługa - zapytaj podczas konsultacji.",
   },
 ];
 
@@ -233,7 +233,7 @@ function buildSchemas() {
             "@type": "Service",
             name: "Landing page",
             description:
-              "Strona skupiona na konwersji — zbieranie leadów, sprzedaż produktu lub usługi.",
+              "Strona skupiona na konwersji - zbieranie leadów, sprzedaż produktu lub usługi.",
           },
           priceSpecification: {
             "@type": "PriceSpecification",
@@ -249,7 +249,7 @@ function buildSchemas() {
     "@context": "https://schema.org",
     "@type": "HowTo",
     "@id": `${SITE_URL}/#howto`,
-    name: "Jak zamówić stronę internetową — Studio Code Art",
+    name: "Jak zamówić stronę internetową - Studio Code Art",
     description:
       "Prosty 3-krokowy proces od pierwszego kontaktu do gotowej strony internetowej dla Twojej firmy",
     totalTime: "P14D",
@@ -280,7 +280,7 @@ function buildSchemas() {
     "@context": "https://schema.org",
     "@type": "VideoObject",
     "@id": `${SITE_URL}/#video`,
-    name: "Studio Code Art — Tworzenie stron internetowych dla firm",
+    name: "Studio Code Art - Tworzenie stron internetowych dla firm",
     description:
       "Obejrzyj realizacje stron internetowych dla firm. Portfolio projektów web developerskich: strony wizytówkowe, sklepy, platformy i aplikacje webowe.",
     thumbnailUrl: `${SITE_URL}/portfolio/video-thumbnail.jpg`,
