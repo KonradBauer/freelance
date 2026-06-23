@@ -46,7 +46,7 @@ export async function POST(request: Request) {
     return Response.json({ error: "Invalid data" }, { status: 400 });
   }
 
-  const { name, phone, industry, budget, projectDescription, honeypot } = result.data;
+  const { projectType, name, phone, industry, budget, projectDescription, honeypot } = result.data;
 
   if (honeypot && honeypot.length > 0) {
     return Response.json({ error: "Invalid submission" }, { status: 400 });
@@ -61,8 +61,9 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from: fromEmail,
       to: toEmail,
-      subject: `Nowy lead: ${name} (${industry})`,
+      subject: `Nowy lead: ${name} — ${projectType}`,
       text: [
+        `Typ projektu: ${projectType}`,
         `Imię: ${name}`,
         `Telefon: ${phone}`,
         `Branża: ${industry}`,

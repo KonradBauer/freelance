@@ -1,5 +1,13 @@
 import { z } from "zod";
 
+export const PROJECT_TYPES = [
+  "Strona wizytówkowa",
+  "Sklep internetowy",
+  "Platforma & aplikacja",
+  "Modernizacja istniejącej strony",
+  "Nie wiem jeszcze",
+] as const;
+
 export const INDUSTRIES = [
   "Restauracja / gastronomia",
   "Budownictwo / remonty",
@@ -19,6 +27,9 @@ export const BUDGETS = [
 ] as const;
 
 export const contactSchema = z.object({
+  projectType: z.enum(PROJECT_TYPES, {
+    errorMap: () => ({ message: "Wybierz typ projektu" }),
+  }),
   name: z
     .string()
     .min(2, "Imię musi mieć min. 2 znaki")
