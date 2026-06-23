@@ -32,7 +32,7 @@ export default function PrivacyPolicyPage() {
             Nie sprzedajemy ani nie udostępniamy danych osobom trzecim.
           </p>
           <p>
-            Możesz w każdej chwili zażądać ich usunięcia lub poprawienia —
+            Możesz w każdej chwili zażądać ich usunięcia lub poprawienia -
             wystarczy napisać na{" "}
             <a
               href="mailto:konradbauer94@gmail.com"

@@ -21,6 +21,7 @@
 
 # IDE
 .idea/
+.claude/
 
 # Claude Code skill agent artifacts
 screenshots/
@@ -43,3 +44,5 @@ next-env.d.ts
 
 # Large media files
 public/portfolio/hero-animation.gif
+compound-engineering-plugin-main/
+.DS_Store
