@@ -35,6 +35,10 @@ export default function ContactFormSection() {
             Wypełnij formularz. Skontaktuję się w ciągu 24 godzin i omówimy
             Twój projekt bez zobowiązań.
           </p>
+          <p className="text-sm mt-3 flex items-center justify-center gap-2 font-medium" style={{ color: "#C9A84C" }}>
+            <span aria-hidden="true">✓</span>
+            Pracuję do momentu, gdy jesteś w pełni zadowolony — bez dodatkowych kosztów.
+          </p>
         </div>
 
         <div
