@@ -3,8 +3,7 @@
 import { useEffect, useRef } from "react";
 import { Bubble } from "@typebot.io/react";
 
-// Replace with actual bot ID from cloud.typebot.io after Typebot setup (Unit 1)
-const TYPEBOT_ID = "lead-kwalifikacja";
+const TYPEBOT_ID = "studiocodeart-lead";
 
 export default function LeadChatbot() {
   const hasScrolled50 = useRef(false);
