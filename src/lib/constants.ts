@@ -118,6 +118,14 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     url: "https://neonpolska.pl/",
   },
   {
+    id: "pianki-widula",
+    industry: "Produkcja przemysłowa B2B",
+    result: "Przetwórnia Pianek Widuła zastąpiła kontakt telefoniczny stroną z pełną ofertą. Producenci mebli i materaców z całej Polski wysyłają zapytania bezpośrednio ze strony.",
+    imageSrc: "/portfolio/pianki-widula.png",
+    imageAlt: "Pianki Widuła - przetwórnia pianek tapicerskich CNC",
+    url: "https://pianki-widula.pl/",
+  },
+  {
     id: "kalabi",
     industry: "Meble",
     result: "Kalabi Meble dostało nowoczesną stronę z pełną prezentacją oferty. Klienci przeglądają produkty i pytają o wycenę bezpośrednio ze strony.",
