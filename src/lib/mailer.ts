@@ -2,6 +2,7 @@ interface EmailOptions {
   to: string;
   subject: string;
   text: string;
+  html?: string;
   scheduledAt?: string;
 }
 
@@ -16,6 +17,7 @@ export async function sendEmail(options: EmailOptions): Promise<void> {
     to: [{ email: options.to }],
     subject: options.subject,
     textContent: options.text,
+    ...(options.html && { htmlContent: options.html }),
   };
 
   if (options.scheduledAt) {
@@ -35,4 +37,108 @@ export async function sendEmail(options: EmailOptions): Promise<void> {
     const errorText = await response.text();
     throw new Error(`Brevo API error ${response.status}: ${errorText}`);
   }
+}
+
+export function buildClientConfirmationEmail(name: string): { text: string; html: string } {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://studiocodeart.pl";
+
+  const text = [
+    `Czesc ${name},`,
+    "",
+    "Dziekuje za kontakt. Odezwe sie w ciagu 24 godzin z wycena i odpowiedziami na pytania.",
+    "",
+    "Konrad Bauer",
+    "Studio Code Art",
+    siteUrl,
+  ].join("\n");
+
+  const html = `<!DOCTYPE html>
+<html lang="pl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;background:#f1f5f9;font-family:Inter,Arial,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f1f5f9;padding:40px 16px;">
+    <tr><td align="center">
+      <table width="560" cellpadding="0" cellspacing="0" style="max-width:560px;width:100%;">
+
+        <!-- Logo header -->
+        <tr>
+          <td align="center" style="padding-bottom:24px;">
+            <a href="${siteUrl}" style="text-decoration:none;">
+              <img src="${siteUrl}/logo.png" alt="Studio Code Art" width="160" style="display:block;height:auto;" />
+            </a>
+          </td>
+        </tr>
+
+        <!-- Card -->
+        <tr>
+          <td style="background:#060A14;border-radius:16px;padding:40px 36px;border:1px solid rgba(201,168,76,0.15);">
+
+            <!-- Greeting -->
+            <p style="margin:0 0 8px;font-size:22px;font-weight:700;color:#F0D060;">Cześć, ${name}! 👋</p>
+            <p style="margin:0 0 28px;font-size:15px;color:#94A3B8;line-height:1.6;">
+              Dziekuje za kontakt. Juz pracuje nad Twoja sprawa i odezwe sie w ciagu <strong style="color:#E2E8F0;">24 godzin</strong> z wycena dopasowana do Twojego projektu.
+            </p>
+
+            <!-- Divider -->
+            <div style="height:1px;background:rgba(201,168,76,0.15);margin:0 0 28px;"></div>
+
+            <!-- Co dalej -->
+            <p style="margin:0 0 16px;font-size:13px;font-weight:600;color:#C9A84C;letter-spacing:0.08em;text-transform:uppercase;">Co dalej?</p>
+            <table cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td style="padding:0 0 14px;">
+                  <span style="display:inline-block;width:24px;height:24px;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);border-radius:50%;text-align:center;line-height:24px;font-size:12px;font-weight:700;color:#C9A84C;vertical-align:middle;margin-right:10px;">1</span>
+                  <span style="font-size:14px;color:#CBD5E1;vertical-align:middle;">Analizuje Twoj projekt i przygotowuje wycene</span>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:0 0 14px;">
+                  <span style="display:inline-block;width:24px;height:24px;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);border-radius:50%;text-align:center;line-height:24px;font-size:12px;font-weight:700;color:#C9A84C;vertical-align:middle;margin-right:10px;">2</span>
+                  <span style="font-size:14px;color:#CBD5E1;vertical-align:middle;">Oddzwaniam lub odpisuje w ciagu 24 godzin</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span style="display:inline-block;width:24px;height:24px;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);border-radius:50%;text-align:center;line-height:24px;font-size:12px;font-weight:700;color:#C9A84C;vertical-align:middle;margin-right:10px;">3</span>
+                  <span style="font-size:14px;color:#CBD5E1;vertical-align:middle;">Zaczynamy prace nad Twoja strona</span>
+                </td>
+              </tr>
+            </table>
+
+            <!-- CTA -->
+            <div style="margin-top:32px;text-align:center;">
+              <a href="${siteUrl}" style="display:inline-block;padding:14px 32px;background:linear-gradient(135deg,#C9A84C,#F0D060);color:#060A14;font-weight:700;font-size:14px;border-radius:12px;text-decoration:none;">
+                Zobacz nasze realizacje &rarr;
+              </a>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Footer -->
+        <tr>
+          <td style="padding:28px 0 0;">
+            <table width="100%" cellpadding="0" cellspacing="0">
+              <tr>
+                <td align="center" style="padding-bottom:16px;">
+                  <img src="${siteUrl}/avatar.png" alt="Konrad Bauer" width="56" height="56" style="border-radius:50%;display:block;margin:0 auto 10px;border:2px solid rgba(201,168,76,0.4);" />
+                  <p style="margin:0;font-size:14px;font-weight:600;color:#475569;">Konrad Bauer</p>
+                  <p style="margin:4px 0 0;font-size:12px;color:#64748B;">Studio Code Art &bull; <a href="${siteUrl}" style="color:#C9A84C;text-decoration:none;">${siteUrl.replace("https://", "")}</a></p>
+                </td>
+              </tr>
+              <tr>
+                <td align="center">
+                  <p style="margin:0;font-size:11px;color:#94A3B8;">Wyslales formularz kontaktowy na stronie ${siteUrl.replace("https://", "")}.<br>Jesli to pomylka, mozesz zignorowac ta wiadomosc.</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>`;
+
+  return { text, html };
 }

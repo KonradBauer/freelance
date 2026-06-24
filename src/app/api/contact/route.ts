@@ -1,5 +1,5 @@
 import { contactSchema } from "@/lib/schemas";
-import { sendEmail } from "@/lib/mailer";
+import { buildClientConfirmationEmail, sendEmail } from "@/lib/mailer";
 
 const requestLog = new Map<string, number[]>();
 
@@ -40,7 +40,7 @@ export async function POST(request: Request) {
     return Response.json({ error: "Invalid data" }, { status: 400 });
   }
 
-  const { projectType, name, phone, industry, budget, projectDescription, honeypot } = result.data;
+  const { projectType, name, phone, industry, budget, clientEmail, projectDescription, honeypot } = result.data;
 
   if (honeypot && honeypot.length > 0) {
     return Response.json({ error: "Invalid submission" }, { status: 400 });
@@ -67,6 +67,15 @@ export async function POST(request: Request) {
     }
   } else {
     console.warn("[contact] RESEND_TO_EMAIL not set — email skipped");
+  }
+
+  if (clientEmail) {
+    try {
+      const { text, html } = buildClientConfirmationEmail(name);
+      await sendEmail({ to: clientEmail, subject: "Dziekuje za kontakt! Odezwe sie wkrotce", text, html });
+    } catch (err) {
+      console.error("[contact] client confirmation email failed:", err);
+    }
   }
 
   return Response.json({ ok: true });

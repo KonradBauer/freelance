@@ -8,7 +8,7 @@ const BG = "#060A14";
 const BORDER = "rgba(201,168,76,0.2)";
 const PHONE_RE = /^(\+48[\s]?)?(\d{3}[\s-]?\d{3}[\s-]?\d{3})$/;
 
-type LeadData = { projectType: string; industry: string; budget: string; name: string; phone: string };
+type LeadData = { projectType: string; industry: string; budget: string; name: string; email: string; phone: string };
 type Msg = { from: "bot" | "user"; text: string };
 type Choice = { label: string; next: string; value: string; field?: keyof LeadData };
 type Step =
@@ -80,9 +80,17 @@ const FLOW: Record<string, Step> = {
     kind: "input",
     text: "Jak mam się do Ciebie zwracać?",
     field: "name",
-    next: "lead_phone",
+    next: "lead_email",
     placeholder: "Twoje imię...",
     validate: (v) => (v.trim().length < 2 ? "Podaj przynajmniej 2 znaki" : null),
+  },
+  lead_email: {
+    kind: "input",
+    text: "Podaj adres email, wyślę Ci potwierdzenie od razu.",
+    field: "email",
+    next: "lead_phone",
+    placeholder: "twoj@email.pl",
+    validate: (v) => (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? null : "Podaj prawidłowy adres email"),
   },
   lead_phone: {
     kind: "input",
@@ -183,7 +191,7 @@ export default function LeadChatbot() {
         const res = await fetch("/api/contact", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ ...newData, honeypot: "" }),
+          body: JSON.stringify({ ...newData, clientEmail: newData.email, honeypot: "" }),
         });
         setTimeout(() => {
           addBotMsg(res.ok
@@ -276,9 +284,13 @@ export default function LeadChatbot() {
       <button
         onClick={() => setIsOpen((v) => !v)}
         aria-label={isOpen ? "Zamknij czat" : "Otwórz czat"}
-        style={{ position: "fixed", bottom: "24px", right: "24px", width: "56px", height: "56px", borderRadius: "50%", background: `linear-gradient(135deg, ${GOLD}, ${GOLD_LIGHT})`, border: "none", cursor: "pointer", boxShadow: "0 4px 20px rgba(201,168,76,0.45)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 10000, fontSize: isOpen ? "22px" : "24px", transition: "transform 0.15s", color: BG, fontWeight: 700 }}
+        style={{ position: "fixed", bottom: "24px", right: "24px", width: "56px", height: "56px", borderRadius: "50%", background: `linear-gradient(135deg, ${GOLD}, ${GOLD_LIGHT})`, border: "none", cursor: "pointer", boxShadow: "0 4px 20px rgba(201,168,76,0.45)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 10000, transition: "transform 0.15s", color: BG }}
       >
-        {isOpen ? "×" : "💬"}
+        {isOpen ? (
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        ) : (
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        )}
       </button>
     </>
   );
