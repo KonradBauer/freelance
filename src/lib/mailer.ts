@@ -142,3 +142,73 @@ export function buildClientConfirmationEmail(name: string): { text: string; html
 
   return { text, html };
 }
+
+function buildFooter(siteUrl: string): string {
+  return `
+        <tr>
+          <td style="padding:28px 0 0;">
+            <table width="100%" cellpadding="0" cellspacing="0">
+              <tr>
+                <td align="center" style="padding-bottom:16px;">
+                  <img src="${siteUrl}/avatar.png" alt="Konrad Bauer" width="56" height="56" style="border-radius:50%;display:block;margin:0 auto 10px;border:2px solid rgba(201,168,76,0.4);" />
+                  <p style="margin:0;font-size:14px;font-weight:600;color:#475569;">Konrad Bauer</p>
+                  <p style="margin:4px 0 0;font-size:12px;color:#64748B;">Studio Code Art &bull; <a href="${siteUrl}" style="color:#C9A84C;text-decoration:none;">${siteUrl.replace("https://", "")}</a></p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>`;
+}
+
+export function buildReminderEmail(name: string, day: 1 | 3): { subject: string; text: string; html: string } {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://studiocodeart.pl";
+
+  const isDay1 = day === 1;
+
+  const subject = isDay1
+    ? `${name}, czy masz chwile na rozmowe?`
+    : `${name}, ostatnia szansa na bezplatna wycene`;
+
+  const bodyText = isDay1
+    ? `Czesc ${name},\n\nChcialem upewnic sie, ze moja poprzednia wiadomosc dotarla. Jestem gotowy omowic Twoj projekt i przygotowac bezplatna wycene.\n\nOdpisz na tego maila albo zadzwon.\n\nKonrad Bauer\nStudio Code Art\n${siteUrl}`
+    : `Czesc ${name},\n\nTo moja ostatnia wiadomosc w tej sprawie. Jesli zmienily sie Twoje plany, rozumiem. Oferta jest nadal aktualna - mozesz wrocic kiedy bedziesz gotowy.\n\nKonrad Bauer\nStudio Code Art\n${siteUrl}`;
+
+  const cardText = isDay1
+    ? { headline: `${name}, czy dotarla moja wiadomosc?`, body: "Chcialem sie upewnic, ze otrzymales moje potwierdzenie. Jestem gotowy omowic Twoj projekt i przygotowac <strong style=\"color:#E2E8F0;\">bezplatna wycene</strong> bez zobowiazan.", cta: "Odpowiedz teraz &rarr;" }
+    : { headline: `${name}, to moja ostatnia wiadomosc`, body: "Jesli zmienily sie Twoje plany, rozumiem. Moja oferta jest nadal aktualna i mozesz wrocic kiedy bedziesz gotowy. Zycze powodzenia!", cta: "Wróc kiedy bedziesz gotowy &rarr;" };
+
+  const html = `<!DOCTYPE html>
+<html lang="pl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;background:#f1f5f9;font-family:Inter,Arial,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f1f5f9;padding:40px 16px;">
+    <tr><td align="center">
+      <table width="560" cellpadding="0" cellspacing="0" style="max-width:560px;width:100%;">
+        <tr>
+          <td align="center" style="padding-bottom:24px;">
+            <a href="${siteUrl}"><img src="${siteUrl}/logo.png" alt="Studio Code Art" width="160" style="display:block;height:auto;" /></a>
+          </td>
+        </tr>
+        <tr>
+          <td style="background:#060A14;border-radius:16px;padding:40px 36px;border:1px solid rgba(201,168,76,0.15);">
+            <p style="margin:0 0 8px;font-size:22px;font-weight:700;color:#F0D060;">${cardText.headline}</p>
+            <p style="margin:0 0 28px;font-size:15px;color:#94A3B8;line-height:1.6;">${cardText.body}</p>
+            <div style="text-align:center;">
+              <a href="${siteUrl}" style="display:inline-block;padding:14px 32px;background:linear-gradient(135deg,#C9A84C,#F0D060);color:#060A14;font-weight:700;font-size:14px;border-radius:12px;text-decoration:none;">${cardText.cta}</a>
+            </div>
+          </td>
+        </tr>
+        ${buildFooter(siteUrl)}
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>`;
+
+  return { subject, text: bodyText, html };
+}
+
+export function scheduleAt(daysFromNow: number): string {
+  const d = new Date(Date.now() + daysFromNow * 24 * 60 * 60 * 1000);
+  return d.toISOString().replace(/\.\d{3}Z$/, "+00:00");
+}

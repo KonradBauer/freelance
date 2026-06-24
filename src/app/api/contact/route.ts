@@ -1,5 +1,5 @@
 import { contactSchema } from "@/lib/schemas";
-import { buildClientConfirmationEmail, sendEmail } from "@/lib/mailer";
+import { buildClientConfirmationEmail, buildReminderEmail, scheduleAt, sendEmail } from "@/lib/mailer";
 
 const requestLog = new Map<string, number[]>();
 
@@ -74,6 +74,13 @@ export async function POST(request: Request) {
     try {
       const { text, html } = buildClientConfirmationEmail(name);
       await sendEmail({ to: clientEmail, subject: "Dziekuje za kontakt! Odezwe sie wkrotce", text, html });
+
+      const r1 = buildReminderEmail(name, 1);
+      const r3 = buildReminderEmail(name, 3);
+      await Promise.allSettled([
+        sendEmail({ to: clientEmail, ...r1, scheduledAt: scheduleAt(1) }),
+        sendEmail({ to: clientEmail, ...r3, scheduledAt: scheduleAt(3) }),
+      ]);
     } catch (err) {
       console.error("[contact] client confirmation email failed:", err);
     }
