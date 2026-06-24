@@ -48,18 +48,25 @@ export async function POST(request: Request) {
 
   const toEmail = process.env.RESEND_TO_EMAIL;
   if (toEmail) {
-    await sendEmail({
-      to: toEmail,
-      subject: `Nowy lead: ${name} - ${projectType}`,
-      text: [
-        `Typ projektu: ${projectType}`,
-        `Imię: ${name}`,
-        `Telefon: ${phone}`,
-        `Branża: ${industry}`,
-        `Budżet: ${budget}`,
-        ...(projectDescription ? [`\nOpis projektu:\n${projectDescription}`] : []),
-      ].join("\n"),
-    });
+    try {
+      await sendEmail({
+        to: toEmail,
+        subject: `Nowy lead: ${name} - ${projectType}`,
+        text: [
+          `Typ projektu: ${projectType}`,
+          `Imię: ${name}`,
+          `Telefon: ${phone}`,
+          `Branża: ${industry}`,
+          `Budżet: ${budget}`,
+          ...(projectDescription ? [`\nOpis projektu:\n${projectDescription}`] : []),
+        ].join("\n"),
+      });
+    } catch (err) {
+      console.error("[contact] sendEmail failed:", err);
+      return Response.json({ error: "Email delivery failed" }, { status: 500 });
+    }
+  } else {
+    console.warn("[contact] RESEND_TO_EMAIL not set — email skipped");
   }
 
   return Response.json({ ok: true });

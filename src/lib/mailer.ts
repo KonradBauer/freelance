@@ -22,7 +22,7 @@ export async function sendEmail(options: EmailOptions): Promise<void> {
     body.scheduledAt = options.scheduledAt;
   }
 
-  await fetch("https://api.brevo.com/v3/smtp/email", {
+  const response = await fetch("https://api.brevo.com/v3/smtp/email", {
     method: "POST",
     headers: {
       "api-key": apiKey,
@@ -30,4 +30,9 @@ export async function sendEmail(options: EmailOptions): Promise<void> {
     },
     body: JSON.stringify(body),
   });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`Brevo API error ${response.status}: ${errorText}`);
+  }
 }
