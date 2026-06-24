@@ -27,7 +27,7 @@ const FLOW: Record<string, Step> = {
   },
   faq_cost: {
     kind: "options",
-    text: "Strona wizytówkowa od 1500 zł, sklep od 3000 zł, platforma wyceniana indywidualnie. Dokładna wycena jest bezpłatna — przygotowuję ją po krótkiej rozmowie.",
+    text: "Strona wizytówkowa od 1500 zł, sklep od 3000 zł, platforma wyceniana indywidualnie. Dokładna wycena jest bezpłatna, przygotowuję ją po krótkiej rozmowie.",
     choices: [
       { label: "Chcę bezpłatną wycenę →", next: "lead_type", value: "" },
       { label: "← Wróć", next: "start", value: "" },
@@ -86,7 +86,7 @@ const FLOW: Record<string, Step> = {
   },
   lead_phone: {
     kind: "input",
-    text: "Podaj numer telefonu — oddzwonię w ciągu 24h 🔔",
+    text: "Podaj numer telefonu, oddzwonię w ciągu 24h 🔔",
     field: "phone",
     next: "done",
     placeholder: "123 456 789",
@@ -212,7 +212,7 @@ export default function LeadChatbot() {
           {/* Header */}
           <div style={{ padding: "14px 16px", borderBottom: `1px solid ${BORDER}`, display: "flex", alignItems: "center", justifyContent: "space-between", flexShrink: 0 }}>
             <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-              <div style={{ width: "32px", height: "32px", borderRadius: "50%", background: `linear-gradient(135deg, ${GOLD}, ${GOLD_LIGHT})`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "13px", fontWeight: 700, color: BG, flexShrink: 0 }}>K</div>
+              <img src="/avatar.png" alt="Konrad" width={64} height={64} style={{ borderRadius: "50%", flexShrink: 0, objectFit: "cover" }} />
               <div>
                 <div style={{ color: "#E2E8F0", fontSize: "13px", fontWeight: 600, lineHeight: 1.2 }}>Konrad</div>
                 <div style={{ color: "#64748B", fontSize: "11px" }}>Studio Code Art</div>
