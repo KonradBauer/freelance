@@ -56,6 +56,7 @@ export async function POST(request: Request) {
           `Typ projektu: ${projectType}`,
           `Imię: ${name}`,
           `Telefon: ${phone}`,
+          ...(clientEmail ? [`Email: ${clientEmail}`] : []),
           `Branża: ${industry}`,
           `Budżet: ${budget}`,
           ...(projectDescription ? [`\nOpis projektu:\n${projectDescription}`] : []),
