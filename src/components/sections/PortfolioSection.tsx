@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import { PORTFOLIO_ITEMS } from "@/lib/constants";
 
 function getVisible() {
@@ -12,6 +12,8 @@ function getVisible() {
 export default function PortfolioSection() {
   const [startIndex, setStartIndex] = useState(0);
   const [visible, setVisible] = useState(3);
+  const [paused, setPaused] = useState(false);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const total = PORTFOLIO_ITEMS.length;
   const maxStart = Math.max(0, total - visible);
@@ -27,13 +29,32 @@ export default function PortfolioSection() {
     return () => window.removeEventListener("resize", update);
   }, [total]);
 
+  // Auto-advance every 4s, wraps around, pauses on hover
+  useEffect(() => {
+    if (paused) return;
+    intervalRef.current = setInterval(() => {
+      setStartIndex((i) => {
+        const next = i + visible;
+        return next > maxStart ? 0 : next;
+      });
+    }, 4000);
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, [paused, visible, maxStart]);
+
+  const resetAndGo = useCallback((newIndex: number) => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    setStartIndex(newIndex);
+  }, []);
+
   const prev = useCallback(() => {
-    setStartIndex((i) => Math.max(0, i - visible));
-  }, [visible]);
+    resetAndGo(Math.max(0, startIndex - visible));
+  }, [startIndex, visible, resetAndGo]);
 
   const next = useCallback(() => {
-    setStartIndex((i) => Math.min(maxStart, i + visible));
-  }, [visible, maxStart]);
+    resetAndGo(Math.min(maxStart, startIndex + visible));
+  }, [startIndex, visible, maxStart, resetAndGo]);
 
   const canPrev = startIndex > 0;
   const canNext = startIndex < maxStart;
@@ -62,7 +83,11 @@ export default function PortfolioSection() {
         </div>
 
         {/* Slider viewport */}
-        <div className="relative">
+        <div
+          className="relative"
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+        >
           <div className="overflow-hidden">
             {/*
               Inner track width = total / visible * 100% of outer.
@@ -198,7 +223,7 @@ export default function PortfolioSection() {
                   role="tab"
                   aria-selected={i === currentPage}
                   aria-label={`Strona ${i + 1}`}
-                  onClick={() => setStartIndex(Math.min(i * visible, maxStart))}
+                  onClick={() => resetAndGo(Math.min(i * visible, maxStart))}
                   className="rounded-full transition-all duration-300"
                   style={{
                     width: i === currentPage ? "24px" : "8px",
