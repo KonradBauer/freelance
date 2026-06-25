@@ -10,6 +10,7 @@ export type ProcessStep = {
 
 export type PortfolioItem = {
   id: string;
+  name: string;
   industry: string;
   result: string;
   imageSrc: string;
@@ -47,6 +48,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
 export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: "skowronek",
+    name: "Skowronek Studio",
     industry: "Fotografia i wideo ślubne",
     result: "Skowronek Studio zaczęło pozyskiwać klientów przez internet. Formularz kontaktowy stał się głównym kanałem zapytań - bez cold callingu.",
     imageSrc: "/portfolio/portfolio-1.png",
@@ -55,6 +57,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   },
   {
     id: "armagedon",
+    name: "Armagedon",
     industry: "Zespół weselny",
     result: "Armagedon zastąpił ulotki stroną z audio demo i galerią. Klienci sprawdzają wolne terminy i piszą sami - bez pośredników.",
     imageSrc: "/portfolio/portfolio-2.png",
@@ -63,6 +66,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   },
   {
     id: "devask",
+    name: "DevAsk",
     industry: "Platforma społecznościowa",
     result: "DevAsk skupia pytania z prawdziwych rozmów rekrutacyjnych IT. Platforma zbudowana od zera - filtrowanie, głosowanie, moderacja treści.",
     imageSrc: "/portfolio/devask.png",
@@ -71,6 +75,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   },
   {
     id: "thecars",
+    name: "TheCars",
     industry: "Wynajem samochodów",
     result: "TheCars wyeliminował telefoniczne rezerwacje. Interaktywny kalendarz i przepływ online skróciły czas obsługi klienta o połowę.",
     imageSrc: "/portfolio/thecars-1.png",
@@ -79,6 +84,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   },
   {
     id: "solidcars",
+    name: "SolidCars",
     industry: "Wynajem samochodów",
     result: "SolidCars dostał wewnętrzne narzędzia CRM zamiast arkuszy Excel. Śledzenie rezerwacji i raporty w jednym miejscu.",
     imageSrc: "/portfolio/solidcars.png",
@@ -87,6 +93,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   },
   {
     id: "gsport",
+    name: "Gsport",
     industry: "E-commerce sportowy",
     result: "Gsport - pixel-perfect UI z projektów Figma zintegrowany z backendem w 3 tygodnie. Zero regresji przy wdrożeniu.",
     imageSrc: "/portfolio/gsport.png",
@@ -95,6 +102,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   },
   {
     id: "justhodl",
+    name: "JustHodl",
     industry: "Foundation",
     result: "JustHodl - landing page i interfejsy Web3 spójne z marką. Szybki czas ładowania mimo złożonych animacji.",
     imageSrc: "/portfolio/justhodl.png",
@@ -103,6 +111,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   },
   {
     id: "ausgaba",
+    name: "Ausgaba",
     industry: "E-commerce",
     result: "Ausgaba przeszedł migrację Vue.js → Qwik.js. Wynik Lighthouse wzrósł o 40 punktów, czas ładowania spadł o 60%.",
     imageSrc: "/portfolio/ausgaba.png",
@@ -111,6 +120,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   },
   {
     id: "neonpolska",
+    name: "NeonPolska",
     industry: "E-commerce",
     result: "NeonPolska zbudowany od zera. Optymalizacja SEO przełożyła się na pierwsze strony Google dla kluczowych fraz produktowych.",
     imageSrc: "/portfolio/neonpolska-1.png",
@@ -119,6 +129,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   },
   {
     id: "pianki-widula",
+    name: "Pianki Widuła",
     industry: "Produkcja przemysłowa B2B",
     result: "Przetwórnia Pianek Widuła zastąpiła kontakt telefoniczny stroną z pełną ofertą. Producenci mebli i materaców z całej Polski wysyłają zapytania bezpośrednio ze strony.",
     imageSrc: "/portfolio/pianki-widula.png",
@@ -127,6 +138,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   },
   {
     id: "kalabi",
+    name: "Kalabi Meble",
     industry: "Meble",
     result: "Kalabi Meble dostało nowoczesną stronę z pełną prezentacją oferty. Klienci przeglądają produkty i pytają o wycenę bezpośrednio ze strony.",
     imageSrc: "/portfolio/kalabi.png",
