@@ -161,10 +161,12 @@ export default function HeroSection() {
               <motion.div variants={item} className="flex flex-col items-center gap-4">
                 <div className="flex flex-wrap justify-center gap-3">
                   <a
-                    href="#formularz"
+                    href={process.env.NEXT_PUBLIC_CALENDLY_URL ?? "#formularz"}
+                    target={process.env.NEXT_PUBLIC_CALENDLY_URL ? "_blank" : undefined}
+                    rel={process.env.NEXT_PUBLIC_CALENDLY_URL ? "noopener noreferrer" : undefined}
                     className="btn-gold inline-block text-lg px-10 py-4 rounded-[14px]"
                   >
-                    Chcę więcej klientów →
+                    Umów bezpłatną konsultację →
                   </a>
                   <a
                     href="#portfolio"

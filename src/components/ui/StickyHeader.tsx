@@ -47,10 +47,26 @@ export default function StickyHeader() {
               </svg>
             </a>
             <a
-              href="#formularz"
+              href="https://www.instagram.com/studiocodeart_/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram Studio Code Art"
+              className="flex items-center justify-center w-9 h-9 rounded-full transition-opacity duration-200 hover:opacity-80"
+              style={{ color: "#C9A84C" }}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a
+              href={process.env.NEXT_PUBLIC_CALENDLY_URL ?? "#formularz"}
+              target={process.env.NEXT_PUBLIC_CALENDLY_URL ? "_blank" : undefined}
+              rel={process.env.NEXT_PUBLIC_CALENDLY_URL ? "noopener noreferrer" : undefined}
               className="btn-gold text-sm px-5 py-2.5 rounded-xl"
             >
-              Chcę więcej klientów →
+              Umów konsultację →
             </a>
           </div>
         </div>
