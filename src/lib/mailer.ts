@@ -43,9 +43,9 @@ export function buildClientConfirmationEmail(name: string): { text: string; html
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://studiocodeart.pl";
 
   const text = [
-    `Czesc ${name},`,
+    `Cześć ${name},`,
     "",
-    "Dziekuje za kontakt. Odezwe sie w ciagu 24 godzin z wycena i odpowiedziami na pytania.",
+    "Dziękuję za kontakt. Odezwę się w ciągu 24 godzin z wyceną i odpowiedziami na pytania.",
     "",
     "Konrad Bauer",
     "Studio Code Art",
@@ -76,7 +76,7 @@ export function buildClientConfirmationEmail(name: string): { text: string; html
             <!-- Greeting -->
             <p style="margin:0 0 8px;font-size:22px;font-weight:700;color:#F0D060;">Cześć, ${name}! 👋</p>
             <p style="margin:0 0 28px;font-size:15px;color:#94A3B8;line-height:1.6;">
-              Dziekuje za kontakt. Juz pracuje nad Twoja sprawa i odezwe sie w ciagu <strong style="color:#E2E8F0;">24 godzin</strong> z wycena dopasowana do Twojego projektu.
+              Dziękuję za kontakt. Już pracuję nad Twoją sprawą i odezwę się w ciągu <strong style="color:#E2E8F0;">24 godzin</strong> z wyceną dopasowaną do Twojego projektu.
             </p>
 
             <!-- Divider -->
@@ -88,19 +88,19 @@ export function buildClientConfirmationEmail(name: string): { text: string; html
               <tr>
                 <td style="padding:0 0 14px;">
                   <span style="display:inline-block;width:24px;height:24px;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);border-radius:50%;text-align:center;line-height:24px;font-size:12px;font-weight:700;color:#C9A84C;vertical-align:middle;margin-right:10px;">1</span>
-                  <span style="font-size:14px;color:#CBD5E1;vertical-align:middle;">Analizuje Twoj projekt i przygotowuje wycene</span>
+                  <span style="font-size:14px;color:#CBD5E1;vertical-align:middle;">Analizuję Twój projekt i przygotowuję wycenę</span>
                 </td>
               </tr>
               <tr>
                 <td style="padding:0 0 14px;">
                   <span style="display:inline-block;width:24px;height:24px;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);border-radius:50%;text-align:center;line-height:24px;font-size:12px;font-weight:700;color:#C9A84C;vertical-align:middle;margin-right:10px;">2</span>
-                  <span style="font-size:14px;color:#CBD5E1;vertical-align:middle;">Oddzwaniam lub odpisuje w ciagu 24 godzin</span>
+                  <span style="font-size:14px;color:#CBD5E1;vertical-align:middle;">Oddzwaniam lub odpisuję w ciągu 24 godzin</span>
                 </td>
               </tr>
               <tr>
                 <td>
                   <span style="display:inline-block;width:24px;height:24px;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);border-radius:50%;text-align:center;line-height:24px;font-size:12px;font-weight:700;color:#C9A84C;vertical-align:middle;margin-right:10px;">3</span>
-                  <span style="font-size:14px;color:#CBD5E1;vertical-align:middle;">Zaczynamy prace nad Twoja strona</span>
+                  <span style="font-size:14px;color:#CBD5E1;vertical-align:middle;">Zaczynamy pracę nad Twoją stroną</span>
                 </td>
               </tr>
             </table>
@@ -127,7 +127,7 @@ export function buildClientConfirmationEmail(name: string): { text: string; html
               </tr>
               <tr>
                 <td align="center">
-                  <p style="margin:0;font-size:11px;color:#94A3B8;">Wyslales formularz kontaktowy na stronie ${siteUrl.replace("https://", "")}.<br>Jesli to pomylka, mozesz zignorowac ta wiadomosc.</p>
+                  <p style="margin:0;font-size:11px;color:#94A3B8;">Wysłałeś(-aś) formularz kontaktowy na stronie ${siteUrl.replace("https://", "")}.<br>Jeśli to pomyłka, możesz zignorować tę wiadomość.</p>
                 </td>
               </tr>
             </table>
@@ -166,16 +166,24 @@ export function buildReminderEmail(name: string, day: 1 | 3): { subject: string;
   const isDay1 = day === 1;
 
   const subject = isDay1
-    ? `${name}, czy masz chwile na rozmowe?`
-    : `${name}, ostatnia szansa na bezplatna wycene`;
+    ? `${name}, czy masz chwilę na rozmowę?`
+    : `${name}, ostatnia szansa na bezpłatną wycenę`;
 
   const bodyText = isDay1
-    ? `Czesc ${name},\n\nChcialem upewnic sie, ze moja poprzednia wiadomosc dotarla. Jestem gotowy omowic Twoj projekt i przygotowac bezplatna wycene.\n\nOdpisz na tego maila albo zadzwon.\n\nKonrad Bauer\nStudio Code Art\n${siteUrl}`
-    : `Czesc ${name},\n\nTo moja ostatnia wiadomosc w tej sprawie. Jesli zmienily sie Twoje plany, rozumiem. Oferta jest nadal aktualna - mozesz wrocic kiedy bedziesz gotowy.\n\nKonrad Bauer\nStudio Code Art\n${siteUrl}`;
+    ? `Cześć ${name},\n\nChciałem upewnić się, że moja poprzednia wiadomość dotarła. Jestem gotowy omówić Twój projekt i przygotować bezpłatną wycenę.\n\nOdpisz na tego maila albo zadzwoń.\n\nKonrad Bauer\nStudio Code Art\n${siteUrl}`
+    : `Cześć ${name},\n\nTo moja ostatnia wiadomość w tej sprawie. Jeśli zmieniły się Twoje plany, rozumiem. Oferta jest nadal aktualna - możesz wrócić kiedy będziesz gotowy.\n\nKonrad Bauer\nStudio Code Art\n${siteUrl}`;
 
   const cardText = isDay1
-    ? { headline: `${name}, czy dotarla moja wiadomosc?`, body: "Chcialem sie upewnic, ze otrzymales moje potwierdzenie. Jestem gotowy omowic Twoj projekt i przygotowac <strong style=\"color:#E2E8F0;\">bezplatna wycene</strong> bez zobowiazan.", cta: "Odpowiedz teraz &rarr;" }
-    : { headline: `${name}, to moja ostatnia wiadomosc`, body: "Jesli zmienily sie Twoje plany, rozumiem. Moja oferta jest nadal aktualna i mozesz wrocic kiedy bedziesz gotowy. Zycze powodzenia!", cta: "Wróc kiedy bedziesz gotowy &rarr;" };
+    ? {
+        headline: `${name}, czy dotarła moja wiadomość?`,
+        body: `Chciałem się upewnić, że otrzymałeś(-aś) moje potwierdzenie. Jestem gotowy omówić Twój projekt i przygotować <strong style="color:#E2E8F0;">bezpłatną wycenę</strong> bez zobowiązań.`,
+        cta: "Odpowiedz teraz &rarr;",
+      }
+    : {
+        headline: `${name}, to moja ostatnia wiadomość`,
+        body: "Jeśli zmieniły się Twoje plany, rozumiem. Moja oferta jest nadal aktualna i możesz wrócić kiedy będziesz gotowy. Życzę powodzenia!",
+        cta: "Wróć kiedy będziesz gotowy &rarr;",
+      };
 
   const html = `<!DOCTYPE html>
 <html lang="pl">

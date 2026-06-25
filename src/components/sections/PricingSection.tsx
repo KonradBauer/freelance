@@ -110,7 +110,7 @@ export default function PricingSection() {
             Przejrzyste pakiety. Zero niespodzianek.
           </h2>
           <p className="text-slate-500 text-lg max-w-xl mx-auto">
-            Każdy projekt jest wyceniany uczciwie — płacisz za efekt, nie za godziny.
+            Każdy projekt jest wyceniany uczciwie - płacisz za efekt, nie za godziny.
           </p>
         </div>
 
