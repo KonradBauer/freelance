@@ -1,12 +1,11 @@
 import HeroSection from "@/components/sections/HeroSection";
 import AgitationSection from "@/components/sections/AgitationSection";
 import TransformationSection from "@/components/sections/TransformationSection";
-import StatsSection from "@/components/sections/StatsSection";
 import ProcessSection from "@/components/sections/ProcessSection";
 import PortfolioSection from "@/components/sections/PortfolioSection";
-import PortfolioCTASection from "@/components/sections/PortfolioCTASection";
-import VideoSection from "@/components/sections/VideoSection";
-import TestimonialsSection from "@/components/sections/TestimonialsSection";
+import PricingSection from "@/components/sections/PricingSection";
+import LeadMagnetSection from "@/components/sections/LeadMagnetSection";
+import GoogleReviewsSection from "@/components/sections/GoogleReviewsSection";
 import FaqSection from "@/components/sections/FaqSection";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import StickyHeader from "@/components/ui/StickyHeader";
@@ -19,17 +18,16 @@ export default function Home() {
     <>
       <StickyHeader />
       <main>
-      <HeroSection />
-      <AgitationSection />
-      <TransformationSection />
-      <StatsSection />
-      <ProcessSection />
-      <PortfolioSection />
-      <PortfolioCTASection />
-      <VideoSection />
-      {/* <TestimonialsSection /> */}
-      <FaqSection />
-      <ContactFormSection />
+        <HeroSection />
+        <AgitationSection />
+        <TransformationSection />
+        <ProcessSection />
+        <PortfolioSection />
+        <PricingSection />
+        <LeadMagnetSection />
+        <GoogleReviewsSection />
+        <FaqSection />
+        <ContactFormSection />
       </main>
       <Footer />
       <ExitIntentModal />

@@ -1,3 +1,5 @@
+"use client";
+
 import { TiltCard } from "@/components/ui/TiltCard";
 
 type PricingTier = {
