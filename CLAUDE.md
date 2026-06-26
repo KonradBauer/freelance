@@ -91,3 +91,7 @@ Active plans live in `docs/active/`; requirements docs in `docs/dev-brainstorms/
 ### Coding rules
 
 `.claude/rules/coding-rules.md` — enforced conventions covering file size limits, testing, error handling, naming, type safety, async patterns, and a catalogue of 10 AI anti-patterns to avoid.
+
+### Texts rules
+
+NEVER USE em dashes, use - instead

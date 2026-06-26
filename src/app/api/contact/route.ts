@@ -73,7 +73,7 @@ export async function POST(request: Request) {
   if (clientEmail) {
     try {
       const { text, html } = buildClientConfirmationEmail(name);
-      await sendEmail({ to: clientEmail, subject: "Dziekuje za kontakt! Odezwe sie wkrotce", text, html });
+      await sendEmail({ to: clientEmail, subject: "Dziękuję za kontakt! Odezwę się wkrótce", text, html });
 
       const r1 = buildReminderEmail(name, 1);
       const r3 = buildReminderEmail(name, 3);
