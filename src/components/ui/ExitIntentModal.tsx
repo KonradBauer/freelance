@@ -8,9 +8,10 @@ export default function ExitIntentModal() {
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [serverError, setServerError] = useState<string | null>(null);
-  const [errors, setErrors] = useState<{ name?: string; phone?: string }>({});
+  const [errors, setErrors] = useState<{ name?: string; phone?: string; email?: string }>({});
 
   const firstFocusRef = useRef<HTMLInputElement>(null);
 
@@ -43,6 +44,8 @@ export default function ExitIntentModal() {
     if (name.trim().length < 2) errs.name = "Imię musi mieć min. 2 znaki";
     if (!/^(\+48[\s]?)?(\d{3}[\s-]?\d{3}[\s-]?\d{3})$/.test(phone.trim()))
       errs.phone = "Podaj prawidłowy numer telefonu (9 cyfr)";
+    if (email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim()))
+      errs.email = "Podaj prawidłowy adres email";
     return errs;
   };
 
@@ -63,6 +66,7 @@ export default function ExitIntentModal() {
         body: JSON.stringify({
           name: name.trim(),
           phone: phone.trim(),
+          email: email.trim() || undefined,
           honeypot: "",
         }),
       });
@@ -170,6 +174,26 @@ export default function ExitIntentModal() {
             />
             {errors.phone && (
               <p role="alert" className="mt-1.5 text-sm text-red-400">{errors.phone}</p>
+            )}
+          </div>
+
+          <div>
+            <label htmlFor="modal-email" className="block text-sm font-semibold mb-1.5" style={{ color: "#94A3B8" }}>
+              Adres email{" "}
+              <span style={{ color: "#475569", fontWeight: 400 }}>(opcjonalnie)</span>
+            </label>
+            <input
+              id="modal-email"
+              type="email"
+              autoComplete="email"
+              placeholder="jan@firma.pl"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="dark-input w-full rounded-xl px-4 py-3"
+              aria-invalid={!!errors.email}
+            />
+            {errors.email && (
+              <p role="alert" className="mt-1.5 text-sm text-red-400">{errors.email}</p>
             )}
           </div>
 

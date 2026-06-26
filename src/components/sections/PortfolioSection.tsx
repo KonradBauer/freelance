@@ -60,7 +60,7 @@ export default function PortfolioSection() {
   const canNext = startIndex < maxStart;
 
   const pageCount = Math.ceil(total / visible);
-  const currentPage = Math.floor(startIndex / visible);
+  const currentPage = startIndex === maxStart ? pageCount - 1 : Math.floor(startIndex / visible);
 
   return (
     <section id="portfolio" className="py-24 overflow-hidden" style={{ background: "#060A14" }}>

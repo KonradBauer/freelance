@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { sendEmail } from "@/lib/mailer";
+import { buildClientConfirmationEmail, buildReminderEmail, scheduleAt, sendEmail } from "@/lib/mailer";
 
 const requestLog = new Map<string, number[]>();
 
@@ -26,6 +26,7 @@ const quickContactSchema = z.object({
   phone: z
     .string()
     .regex(/^(\+48[\s]?)?(\d{3}[\s-]?\d{3}[\s-]?\d{3})$/, "Podaj prawidłowy numer telefonu"),
+  email: z.string().email("Podaj prawidłowy adres email").optional().or(z.literal("")),
   honeypot: z.string().max(0).optional(),
 });
 
@@ -48,7 +49,7 @@ export async function POST(request: Request) {
     return Response.json({ error: "Invalid data" }, { status: 400 });
   }
 
-  const { name, phone, honeypot } = result.data;
+  const { name, phone, email, honeypot } = result.data;
 
   if (honeypot && honeypot.length > 0) {
     return Response.json({ error: "Invalid submission" }, { status: 400 });
@@ -59,8 +60,30 @@ export async function POST(request: Request) {
     await sendEmail({
       to: toEmail,
       subject: `Szybki kontakt: ${name}`,
-      text: [`Imię: ${name}`, `Telefon: ${phone}`, "", "Źródło: modal exit-intent"].join("\n"),
+      text: [
+        `Imię: ${name}`,
+        `Telefon: ${phone}`,
+        ...(email ? [`Email: ${email}`] : []),
+        "",
+        "Źródło: modal exit-intent",
+      ].join("\n"),
     });
+  }
+
+  if (email) {
+    try {
+      const { text, html } = buildClientConfirmationEmail(name);
+      await sendEmail({ to: email, subject: "Dziękuję za kontakt! Odezwę się wkrótce", text, html });
+
+      const r1 = buildReminderEmail(name, 1);
+      const r3 = buildReminderEmail(name, 3);
+      await Promise.allSettled([
+        sendEmail({ to: email, ...r1, scheduledAt: scheduleAt(1) }),
+        sendEmail({ to: email, ...r3, scheduledAt: scheduleAt(3) }),
+      ]);
+    } catch (err) {
+      console.error("[quick-contact] client confirmation email failed:", err);
+    }
   }
 
   return Response.json({ ok: true });

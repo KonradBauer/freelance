@@ -297,6 +297,28 @@ export default function ContactForm() {
             )}
           </div>
 
+          <div>
+            <label htmlFor="clientEmail" className={labelClass} style={{ color: "#94A3B8" }}>
+              Adres email{" "}
+              <span style={{ color: "#475569", fontWeight: 400 }}>(opcjonalnie)</span>
+            </label>
+            <input
+              id="clientEmail"
+              type="email"
+              autoComplete="email"
+              placeholder="jan@firma.pl"
+              className={inputClass}
+              aria-invalid={!!errors.clientEmail}
+              aria-describedby={errors.clientEmail ? "clientEmail-error" : undefined}
+              {...register("clientEmail")}
+            />
+            {errors.clientEmail && (
+              <p id="clientEmail-error" role="alert" className={errorClass}>
+                {errors.clientEmail.message}
+              </p>
+            )}
+          </div>
+
           {serverError && (
             <div
               role="alert"
