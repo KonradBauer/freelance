@@ -19,9 +19,8 @@ const fade = (reduce: boolean) => ({
 });
 
 const STATS = [
-  { value: "11 firm", label: "pozyskuje klientów online", delay: "0s" },
-  { value: "14 dni", label: "od zlecenia do launch", delay: "1.2s" },
-  { value: "24/7", label: "strona pracuje za Ciebie", delay: "2.4s" },
+  { value: "14 dni", label: "od zlecenia do launch", delay: "0s" },
+  { value: "24/7", label: "strona pracuje za Ciebie", delay: "1.2s" },
 ];
 
 export default function HeroSection() {
