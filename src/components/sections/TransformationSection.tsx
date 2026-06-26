@@ -1,8 +1,8 @@
 const AFTER_POINTS = [
-  "Klienci znajdują Cię w Google i na Facebooku, nie konkurencję",
-  "Strona sprzedaje za Ciebie 24/7, nawet gdy śpisz",
-  "Wyglądasz profesjonalnie. Klienci mają do Ciebie zaufanie od pierwszej sekundy",
-  "Masz stały napływ zapytań, nie tylko polecenia",
+  "Klienci szukają usług w Google i trafiają do Ciebie, nie do konkurencji",
+  "Strona pracuje za Ciebie 24/7 - zamienia odwiedzających w telefony i zapytania",
+  "Nowi klienci trafiają do Ciebie samodzielnie - bez cold callingu i czekania na polecenia",
+  "Widzisz skąd przychodzą klienci i ile kosztuje Cię każde nowe zapytanie",
 ];
 
 function CheckIcon() {
@@ -113,18 +113,15 @@ export default function TransformationSection() {
             <span style={{ color: "#C9A84C" }} className="font-semibold">
               Studio Code Art
             </span>{" "}
-            to freelance studio web development prowadzone przez Konrada Bauera,
-            specjalizujące się w tworzeniu stron internetowych dla małych i
-            średnich firm w Polsce. Realizujemy projekty w technologii Next.js i
-            React - tych samych, których używają Netflix i TikTok. Standardowy
-            czas realizacji wynosi 14 dni roboczych i obejmuje projekt graficzny,
-            kodowanie, SEO techniczne oraz uruchomienie na domenie klienta.
-            Ceny zaczynają się od 1200 zł za landing page, 1500 zł za stronę
-            wizytówkową i 2500 zł za rozbudowaną stronę ofertową. Każda strona
-            zawiera meta tagi, sitemap XML, dane strukturalne JSON-LD,
-            optymalizację Core Web Vitals i responsywny design mobile-first.
-            Po uruchomieniu klient otrzymuje 30 dni bezpłatnego wsparcia
-            technicznego. Działamy zdalnie dla klientów z całej Polski.
+            to freelance studio prowadzone przez Konrada Bauera. Pomagam małym
+            i średnim firmom w Polsce pozyskiwać klientów przez internet - bez
+            cold callingu i uzależnienia od poleceń. Każda strona którą projektuję
+            zawiera strategię konwersji, pełne SEO techniczne i analitykę
+            (GA4 + Search Console) - żebyś od dnia premiery wiedział skąd
+            trafiają do Ciebie nowi klienci. Realizację zamykamy w 14 dniach
+            roboczych, projekty wyceniam indywidualnie. Po uruchomieniu masz
+            30 dni bezpłatnego wsparcia i bezpośredni kontakt ze mną, nie z
+            help deskiem. Działam zdalnie dla klientów z całej Polski.
           </p>
         </div>
       </div>

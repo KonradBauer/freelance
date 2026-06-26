@@ -21,27 +21,27 @@ export type PortfolioItem = {
 export const PROCESS_STEPS: ProcessStep[] = [
   {
     step: 1,
-    title: "Kontakt i wycena",
+    title: "Bezpłatna rozmowa",
     description:
-      "Wypełniasz formularz. Oddzwaniam w ciągu 24 godzin. Omawiam projekt i przygotowuję wycenę bez zobowiązań.",
+      "Opowiadasz mi o firmie i celach. Analizuję rynek i konkurencję w Twojej branży. Oddzwaniam w ciągu 24 godzin z wyceną i harmonogramem.",
     timeline: "do 24h",
-    deliverable: "Wycena + harmonogram",
+    deliverable: "Plan + wycena",
   },
   {
     step: 2,
-    title: "Projekt i akceptacja",
+    title: "Projekt pod Twoich klientów",
     description:
-      "Projektuję stronę dopasowaną do Twojej branży. Wprowadzam poprawki do momentu, gdy jesteś w pełni zadowolony.",
+      "Projektuję stronę zorientowaną na konwersję: układ, treści i CTA tak, żeby odwiedzający stawał się zapytaniem. Poprawki do momentu, gdy jesteś w pełni zadowolony.",
     timeline: "5–10 dni",
     deliverable: "Gotowy projekt do akceptacji",
   },
   {
     step: 3,
-    title: "Uruchomienie i wsparcie",
+    title: "Launch i analityka",
     description:
-      "Wdrażam gotową stronę na Twoją domenę. Szkolę z obsługi i jestem dostępny po uruchomieniu.",
+      "Wdrażam stronę na Twoją domenę i konfiguruję analitykę (GA4 + Search Console) - od dnia 1 widzisz skąd trafiają klienci. Dostępny przez 30 dni po wdrożeniu.",
     timeline: "1–2 dni",
-    deliverable: "Działająca strona + szkolenie",
+    deliverable: "Strona live + analityka",
   },
 ];
 
@@ -68,7 +68,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     id: "devask",
     name: "DevAsk",
     industry: "Platforma społecznościowa",
-    result: "DevAsk skupia pytania z prawdziwych rozmów rekrutacyjnych IT. Platforma zbudowana od zera - filtrowanie, głosowanie, moderacja treści.",
+    result: "DevAsk zbudował społeczność programistów przygotowujących się do rekrutacji IT. Platforma zbiera pytania z prawdziwych rozmów i angażuje użytkowników od dnia premiery.",
     imageSrc: "/portfolio/devask.png",
     imageAlt: "DevAsk - platforma pytań rekrutacyjnych IT",
     url: "https://devask-alpha.vercel.app/",
@@ -95,7 +95,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     id: "gsport",
     name: "Gsport",
     industry: "E-commerce sportowy",
-    result: "Gsport - pixel-perfect UI z projektów Figma zintegrowany z backendem w 3 tygodnie. Zero regresji przy wdrożeniu.",
+    result: "Gsport wdrożył nowy sklep w 3 tygodnie - bez przestojów sprzedaży i zero błędów w dniu premiery.",
     imageSrc: "/portfolio/gsport.png",
     imageAlt: "Gsport - sklep sportowy e-commerce",
     url: "https://gsport.pl/",
@@ -104,7 +104,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     id: "justhodl",
     name: "JustHodl",
     industry: "Foundation",
-    result: "JustHodl - landing page i interfejsy Web3 spójne z marką. Szybki czas ładowania mimo złożonych animacji.",
+    result: "JustHodl zbudował obecność online w Web3 ze szybko ładującym się interfejsem - niski bounce rate mimo złożonych animacji i technologii blockchain.",
     imageSrc: "/portfolio/justhodl.png",
     imageAlt: "JustHodl - platforma Web3",
     url: "https://justhodl.digital/",
@@ -113,7 +113,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     id: "ausgaba",
     name: "Ausgaba",
     industry: "E-commerce",
-    result: "Ausgaba przeszedł migrację Vue.js → Qwik.js. Wynik Lighthouse wzrósł o 40 punktów, czas ładowania spadł o 60%.",
+    result: "Ausgaba przyspieszyła sklep o 60% czasu ładowania - wyższe pozycje w Google i mniejszy wskaźnik porzucenia koszyka.",
     imageSrc: "/portfolio/ausgaba.png",
     imageAlt: "Ausgaba - sklep internetowy",
     url: "https://ausgaba.pl/",

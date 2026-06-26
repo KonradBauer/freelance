@@ -1,6 +1,7 @@
 import HeroSection from "@/components/sections/HeroSection";
 import AgitationSection from "@/components/sections/AgitationSection";
 import TransformationSection from "@/components/sections/TransformationSection";
+import ValuePropositionSection from "@/components/sections/ValuePropositionSection";
 import ProcessSection from "@/components/sections/ProcessSection";
 import PortfolioSection from "@/components/sections/PortfolioSection";
 import PricingSection from "@/components/sections/PricingSection";
@@ -21,6 +22,7 @@ export default function Home() {
         <HeroSection />
         <AgitationSection />
         <TransformationSection />
+        <ValuePropositionSection />
         <ProcessSection />
         <PortfolioSection />
         <PricingSection />

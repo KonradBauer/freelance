@@ -19,7 +19,7 @@ const TIERS: PricingTier[] = [
     name: "Basic",
     price: "od 1 500 zł",
     priceNote: "netto",
-    description: "Dla firm, które potrzebują profesjonalnej obecności online.",
+    description: "Dla firm które chcą zacząć pozyskiwać klientów przez internet.",
     features: [
       "1-stronnicowy landing page",
       "Custom design (nie szablon)",
@@ -37,7 +37,7 @@ const TIERS: PricingTier[] = [
     name: "Premium",
     price: "od 3 000 zł",
     priceNote: "netto",
-    description: "Pełna obecność online z analityką i opieką po wdrożeniu.",
+    description: "Dla firm które traktują stronę jako główny kanał pozyskiwania klientów.",
     features: [
       "Do 5 podstron",
       "Wszystko z pakietu Basic",

@@ -19,9 +19,9 @@ const fade = (reduce: boolean) => ({
 });
 
 const STATS = [
-  { value: "12+", label: "projektów", delay: "0s" },
-  { value: "14 dni", label: "realizacja", delay: "1.2s" },
-  { value: "24/7", label: "wsparcie", delay: "2.4s" },
+  { value: "11 firm", label: "pozyskuje klientów online", delay: "0s" },
+  { value: "14 dni", label: "od zlecenia do launch", delay: "1.2s" },
+  { value: "24/7", label: "strona pracuje za Ciebie", delay: "2.4s" },
 ];
 
 export default function HeroSection() {
@@ -118,7 +118,7 @@ export default function HeroSection() {
                       display: "inline-block",
                     }}
                   />
-                  Strony internetowe dla firm
+                  Strony które zarabiają na siebie
                 </span>
               </motion.div>
 
