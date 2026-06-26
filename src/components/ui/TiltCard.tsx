@@ -46,14 +46,14 @@ export function TiltCard({ children, className = "", style, depth = 12 }: TiltCa
   }
 
   return (
-    <div style={{ perspective: "900px" }}>
+    <div style={{ perspective: "900px" }} className="h-full">
       <motion.div
         ref={cardRef}
         onMouseMove={onMouseMove}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
         style={{ rotateX, rotateY, scale, transformStyle: "preserve-3d", ...style }}
-        className={`relative ${className}`}
+        className={`relative h-full ${className}`}
       >
         {children}
         {/* Glare overlay */}

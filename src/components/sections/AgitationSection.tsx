@@ -89,7 +89,7 @@ export default function AgitationSection() {
               }}
             >
               {/* Elevated content layer */}
-              <div style={{ transform: "translateZ(24px)", transformStyle: "preserve-3d" }}>
+              <div className="flex flex-col h-full" style={{ transform: "translateZ(24px)", transformStyle: "preserve-3d" }}>
                 <WarningIcon />
                 <h3
                   className="font-heading font-bold text-white mb-3 leading-tight"

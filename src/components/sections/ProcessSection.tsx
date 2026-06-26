@@ -39,7 +39,7 @@ export default function ProcessSection() {
                 padding: "2rem",
               }}
             >
-              <div style={{ transform: "translateZ(20px)", transformStyle: "preserve-3d" }}>
+              <div className="flex flex-col h-full" style={{ transform: "translateZ(20px)", transformStyle: "preserve-3d" }}>
                 {/* Step number + connector */}
                 <div className="flex items-center gap-4 mb-6">
                   <span
