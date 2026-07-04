@@ -1,74 +1,31 @@
-"use client";
+import { REVIEWS } from "@/lib/constants";
 
-import { useEffect, useRef, useState } from "react";
-
-const WIDGET_SRC = "https://cdn.trustindex.io/loader.js?1dd1b977516e124fd756a079016";
-
-function ReviewsSkeleton() {
+function StarRating({ rating }: { rating: number }) {
   return (
-    <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 animate-pulse">
-      {Array.from({ length: 3 }).map((_, i) => (
-        <div key={i} className="rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.05)" }}>
-          <div className="flex gap-1 mb-4">
-            {Array.from({ length: 5 }).map((_, j) => (
-              <div key={j} className="w-4 h-4 rounded-full" style={{ background: "rgba(251,191,36,0.3)" }} />
-            ))}
-          </div>
-          <div className="space-y-2 mb-6">
-            <div className="h-3 rounded" style={{ background: "rgba(255,255,255,0.1)", width: "100%" }} />
-            <div className="h-3 rounded" style={{ background: "rgba(255,255,255,0.1)", width: "85%" }} />
-            <div className="h-3 rounded" style={{ background: "rgba(255,255,255,0.1)", width: "70%" }} />
-          </div>
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full" style={{ background: "rgba(255,255,255,0.1)" }} />
-            <div className="space-y-1">
-              <div className="h-3 w-24 rounded" style={{ background: "rgba(255,255,255,0.1)" }} />
-              <div className="h-2 w-16 rounded" style={{ background: "rgba(255,255,255,0.07)" }} />
-            </div>
-          </div>
-        </div>
+    <div className="flex gap-1 mb-4" aria-label={`Ocena: ${rating} z 5`}>
+      {Array.from({ length: 5 }).map((_, i) => (
+        <svg
+          key={i}
+          viewBox="0 0 20 20"
+          className="w-4 h-4"
+          fill={i < rating ? "#fbbf24" : "rgba(255,255,255,0.15)"}
+        >
+          <path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.79L10 14.9l-5.2 2.61.99-5.79-4.21-4.1 5.82-.85z" />
+        </svg>
       ))}
     </div>
   );
 }
 
+function getInitials(name: string): string {
+  return name
+    .split(" ")
+    .map((part) => part[0])
+    .join("")
+    .toUpperCase();
+}
+
 export default function GoogleReviewsSection() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    const observer = new MutationObserver((mutations) => {
-      for (const mutation of mutations) {
-        for (const node of Array.from(mutation.addedNodes)) {
-          if (
-            node instanceof HTMLElement &&
-            (node.hasAttribute("data-trustindex-widget") ||
-              node.classList.contains("ti-widget"))
-          ) {
-            container.appendChild(node);
-            setIsLoaded(true);
-            observer.disconnect();
-            return;
-          }
-        }
-      }
-    });
-
-    observer.observe(document.body, { childList: true });
-
-    if (!document.querySelector(`script[src="${WIDGET_SRC}"]`)) {
-      const script = document.createElement("script");
-      script.src = WIDGET_SRC;
-      script.async = true;
-      document.body.appendChild(script);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section id="opinie" className="py-24" style={{ background: "#060A14" }}>
       <div className="max-w-6xl mx-auto px-6">
@@ -86,8 +43,27 @@ export default function GoogleReviewsSection() {
           </h2>
         </div>
 
-        {!isLoaded && <ReviewsSkeleton />}
-        <div ref={containerRef} className="flex justify-center" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {REVIEWS.map((review) => (
+            <div
+              key={review.author}
+              className="rounded-2xl p-6"
+              style={{ background: "rgba(255,255,255,0.05)" }}
+            >
+              <StarRating rating={review.rating} />
+              <p className="text-white/80 text-sm leading-relaxed mb-6">{review.text}</p>
+              <div className="flex items-center gap-3">
+                <div
+                  className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-semibold text-white"
+                  style={{ background: "rgba(251,191,36,0.2)" }}
+                >
+                  {getInitials(review.author)}
+                </div>
+                <span className="text-white text-sm font-medium">{review.author}</span>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

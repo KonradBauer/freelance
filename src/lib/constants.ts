@@ -95,3 +95,27 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
 
 export const VIDEO_EMBED_SRC = "/portfolio/video.mp4";
 export const VIDEO_THUMBNAIL_SRC = "/portfolio/video-thumbnail.jpg";
+
+export type Review = {
+  author: string;
+  rating: number;
+  text: string;
+};
+
+export const REVIEWS: Review[] = [
+  {
+    author: "Marcin Macherzyński",
+    rating: 5,
+    text: "Fachowo wykonana robota oraz świetny kontakt na każdym etapie tworzenia strony www. Oprócz wymaganych funkcji Pan Konrad wdrożył również kilka usprawnień które przekładają się na efekt końcowy – podejście godne polecenia, pełne zaangażowanie a nie tylko prostolinijne wykonanie fuchy wg skryptu. Zdecydowanie polecam",
+  },
+  {
+    author: "Kamila Bauer",
+    rating: 5,
+    text: "Bardzo profesjonalna obsługa. Dobry kontakt, zaangażowanie i zrozumienie potrzeb klienta, a także szybka realizacja. Serdecznie polecam",
+  },
+  {
+    author: "Kamil Kujawski",
+    rating: 5,
+    text: "Polecam współpracę. Strona została wykonana dokładnie tak, jak oczekiwałem - wygląda profesjonalnie, działa sprawnie i jest przejrzysta dla klientów. Kontakt przez cały czas był bardzo dobry, a wszelkie poprawki były wprowadzane szybko i bez problemów. Widać zaangażowanie i dbałość o szczegóły. Jestem zadowolony z efektu końcowego i na pewno skorzystałbym ponownie.",
+  },
+];
