@@ -47,12 +47,12 @@ export default function GoogleReviewsSection() {
           {REVIEWS.map((review) => (
             <div
               key={review.author}
-              className="rounded-2xl p-6"
+              className="rounded-2xl p-6 flex flex-col h-full"
               style={{ background: "rgba(255,255,255,0.05)" }}
             >
               <StarRating rating={review.rating} />
               <p className="text-white/80 text-sm leading-relaxed mb-6">{review.text}</p>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 mt-auto">
                 <div
                   className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-semibold text-white"
                   style={{ background: "rgba(251,191,36,0.2)" }}
