@@ -58,7 +58,6 @@ export default function AgitationSection() {
         <div className="divider-gold mb-16" />
 
         <div className="text-center mb-16">
-          <span className="section-label">Problem</span>
           <h2
             className="font-heading font-bold text-white mb-5 leading-tight"
             style={{

@@ -23,10 +23,8 @@ export default function LeadMagnetSection() {
       />
 
       <div className="relative max-w-2xl mx-auto px-6 text-center">
-        <span className="section-label">Bezpłatna konsultacja</span>
-
         <h2
-          className="font-heading font-bold text-white mt-4 mb-6 leading-tight"
+          className="font-heading font-bold text-white mb-6 leading-tight"
           style={{
             fontSize: "clamp(1.75rem, 3.5vw + 0.5rem, 2.75rem)",
             letterSpacing: "-0.02em",
@@ -63,7 +61,7 @@ export default function LeadMagnetSection() {
           rel={isExternal ? "noopener noreferrer" : undefined}
           className="btn-gold inline-block text-lg px-10 py-4 rounded-[14px]"
         >
-          Umów bezpłatną konsultację 30 min →
+          Umów bezpłatną konsultację →
         </a>
 
         <p className="mt-4 text-slate-600 text-sm">Czas trwania: 30 minut · Całkowicie bezpłatnie</p>

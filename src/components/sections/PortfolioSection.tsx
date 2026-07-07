@@ -67,7 +67,6 @@ export default function PortfolioSection() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-14 text-center">
           <div className="divider-gold mb-16" />
-          <span className="section-label">Portfolio</span>
           <h2
             className="font-heading font-bold text-white mb-5 leading-tight"
             style={{
@@ -260,7 +259,7 @@ export default function PortfolioSection() {
 
           {/* Counter */}
           <p className="text-center mt-3 text-slate-600 text-sm">
-            {startIndex + 1}–{Math.min(startIndex + visible, total)} z {total} projektów
+            {startIndex + 1}-{Math.min(startIndex + visible, total)} z {total} projektów
           </p>
         </div>
       </div>

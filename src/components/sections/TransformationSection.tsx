@@ -41,7 +41,6 @@ export default function TransformationSection() {
         <div className="divider-gold mb-16" />
 
         <div className="text-center mb-14">
-          <span className="section-label">Rozwiązanie</span>
           <h2
             className="font-heading font-bold text-white mb-5 leading-tight"
             style={{

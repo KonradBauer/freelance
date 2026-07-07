@@ -1,16 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
+import { useMotionValueEvent, useScroll } from "motion/react";
 
 export default function StickyHeader() {
   const [visible, setVisible] = useState(false);
+  const { scrollY } = useScroll();
 
-  useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY > 500);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  useMotionValueEvent(scrollY, "change", (y) => {
+    setVisible(y > 500);
+  });
 
   return (
     <>
@@ -66,7 +66,7 @@ export default function StickyHeader() {
               rel={process.env.NEXT_PUBLIC_CALENDLY_URL ? "noopener noreferrer" : undefined}
               className="btn-gold text-sm px-5 py-2.5 rounded-xl"
             >
-              Umów konsultację →
+              Umów bezpłatną konsultację →
             </a>
           </div>
         </div>

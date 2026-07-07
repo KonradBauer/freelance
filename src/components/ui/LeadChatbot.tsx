@@ -35,7 +35,7 @@ const FLOW: Record<string, Step> = {
   },
   faq_time: {
     kind: "options",
-    text: "Projekt i akceptacja: 5–10 dni roboczych. Wdrożenie na domenę: 1–2 dni. Łącznie ok. 2 tygodnie od pierwszego kontaktu.",
+    text: "Projekt i akceptacja: 5-10 dni roboczych. Wdrożenie na domenę: 1-2 dni. Łącznie ok. 2 tygodnie od pierwszego kontaktu.",
     choices: [
       { label: "Chcę zacząć →", next: "lead_type", value: "" },
       { label: "← Wróć", next: "start", value: "" },
@@ -71,8 +71,8 @@ const FLOW: Record<string, Step> = {
     text: "Jaki masz orientacyjny budżet?",
     choices: [
       { label: "do 1500 zł", next: "lead_name", value: "do 1500 zł", field: "budget" },
-      { label: "1500–3000 zł", next: "lead_name", value: "1500-3000 zł", field: "budget" },
-      { label: "3000–6000 zł", next: "lead_name", value: "3000-6000 zł", field: "budget" },
+      { label: "1500-3000 zł", next: "lead_name", value: "1500-3000 zł", field: "budget" },
+      { label: "3000-6000 zł", next: "lead_name", value: "3000-6000 zł", field: "budget" },
       { label: "6000+ zł", next: "lead_name", value: "6000+ zł", field: "budget" },
     ],
   },

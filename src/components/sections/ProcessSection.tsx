@@ -10,7 +10,6 @@ export default function ProcessSection() {
         <div className="divider-gold mb-16" />
 
         <div className="text-center mb-16">
-          <span className="section-label">Proces</span>
           <h2
             className="font-heading font-bold text-white mb-5 leading-tight"
             style={{
@@ -82,13 +81,41 @@ export default function ProcessSection() {
                 </p>
                 <div className="flex flex-col gap-1.5 mt-auto">
                   <div className="flex items-center gap-2">
-                    <span className="text-xs" style={{ color: "#475569" }}>⏱</span>
+                    <svg
+                      className="w-3.5 h-3.5 shrink-0"
+                      style={{ color: "#475569" }}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={1.8}
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
                     <span className="text-xs font-medium" style={{ color: "#64748B" }}>
                       {item.timeline}
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-xs" style={{ color: "#475569" }}>📋</span>
+                    <svg
+                      className="w-3.5 h-3.5 shrink-0"
+                      style={{ color: "#C9A84C" }}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={1.8}
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
                     <span className="text-xs font-semibold" style={{ color: "#C9A84C" }}>
                       {item.deliverable}
                     </span>

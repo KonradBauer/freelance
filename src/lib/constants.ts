@@ -32,7 +32,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     title: "Projekt pod Twoich klientów",
     description:
       "Projektuję stronę zorientowaną na konwersję: układ, treści i CTA tak, żeby odwiedzający stawał się zapytaniem. Poprawki do momentu, gdy jesteś w pełni zadowolony.",
-    timeline: "5–10 dni",
+    timeline: "5-10 dni",
     deliverable: "Gotowy projekt do akceptacji",
   },
   {
@@ -40,7 +40,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     title: "Launch i analityka",
     description:
       "Wdrażam stronę na Twoją domenę i konfiguruję analitykę (GA4 + Search Console) - od dnia 1 widzisz skąd trafiają klienci. Dostępny przez 30 dni po wdrożeniu.",
-    timeline: "1–2 dni",
+    timeline: "1-2 dni",
     deliverable: "Strona live + analityka",
   },
 ];
@@ -106,7 +106,7 @@ export const REVIEWS: Review[] = [
   {
     author: "Marcin Macherzyński",
     rating: 5,
-    text: "Fachowo wykonana robota oraz świetny kontakt na każdym etapie tworzenia strony www. Oprócz wymaganych funkcji Pan Konrad wdrożył również kilka usprawnień które przekładają się na efekt końcowy – podejście godne polecenia, pełne zaangażowanie a nie tylko prostolinijne wykonanie fuchy wg skryptu. Zdecydowanie polecam",
+    text: "Fachowo wykonana robota oraz świetny kontakt na każdym etapie tworzenia strony www. Oprócz wymaganych funkcji Pan Konrad wdrożył również kilka usprawnień które przekładają się na efekt końcowy - podejście godne polecenia, pełne zaangażowanie a nie tylko prostolinijne wykonanie fuchy wg skryptu. Zdecydowanie polecam",
   },
   {
     author: "Kamila Bauer",

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 
 const stagger = {
   hidden: {},
@@ -18,11 +18,6 @@ const fade = (reduce: boolean) => ({
   },
 });
 
-const STATS = [
-  { value: "14 dni", label: "od zlecenia do launch", delay: "0s" },
-  { value: "24/7", label: "strona pracuje za Ciebie", delay: "1.2s" },
-];
-
 export default function HeroSection() {
   const reduce = useReducedMotion() ?? false;
   const item = fade(reduce);
@@ -33,7 +28,7 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative min-h-screen flex flex-col justify-center overflow-hidden"
+      className="relative min-h-[100dvh] flex flex-col justify-center overflow-hidden"
       style={{ background: "#060A14" }}
     >
 
@@ -95,32 +90,6 @@ export default function HeroSection() {
                 />
               </motion.div>
 
-              {/* Badge */}
-              <motion.div variants={item} className="flex justify-center mb-7">
-                <span
-                  className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full text-[0.7rem] font-semibold"
-                  style={{
-                    background: "rgba(255,255,255,0.03)",
-                    backdropFilter: "blur(12px)",
-                    border: "1px solid rgba(201,168,76,0.22)",
-                    color: "#C9A84C",
-                    letterSpacing: "0.18em",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  <span
-                    className="w-1.5 h-1.5 rounded-full shrink-0"
-                    style={{
-                      background: "#C9A84C",
-                      boxShadow: "0 0 8px rgba(201,168,76,0.9)",
-                      animation: "float 2s ease-in-out infinite",
-                      display: "inline-block",
-                    }}
-                  />
-                  Strony które zarabiają na siebie
-                </span>
-              </motion.div>
-
               {/* Headline */}
               <motion.h1
                 variants={item}
@@ -130,9 +99,7 @@ export default function HeroSection() {
                   letterSpacing: "-0.025em",
                 }}
               >
-                Twoi klienci szukają{" "}
-                <br className="hidden sm:block" />
-                Cię w internecie.{" "}
+                Twoi klienci szukają Cię w internecie.{" "}
                 <br />
                 <span
                   style={{
@@ -185,37 +152,6 @@ export default function HeroSection() {
                     Zobacz realizacje
                   </a>
                 </div>
-                <p className="text-slate-600 text-sm">
-                  Bezpłatna konsultacja · Bez zobowiązań
-                </p>
-              </motion.div>
-
-              {/* Floating stats */}
-              <motion.div
-                variants={item}
-                className="flex flex-wrap justify-center gap-4 mt-12"
-              >
-                {STATS.map((s) => (
-                  <div
-                    key={s.label}
-                    className="px-5 py-3 rounded-xl text-center"
-                    style={{
-                      background: "rgba(255,255,255,0.025)",
-                      backdropFilter: "blur(12px)",
-                      border: "1px solid rgba(201,168,76,0.12)",
-                      animation: `float 3.5s ease-in-out ${s.delay} infinite`,
-                    }}
-                  >
-                    <p className="font-heading font-bold text-lg leading-none mb-1"
-                      style={{ color: "#C9A84C" }}>
-                      {s.value}
-                    </p>
-                    <p className="text-[0.65rem] uppercase tracking-widest"
-                      style={{ color: "#475569" }}>
-                      {s.label}
-                    </p>
-                  </div>
-                ))}
               </motion.div>
             </motion.div>
           </div>

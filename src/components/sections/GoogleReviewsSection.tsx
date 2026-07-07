@@ -31,7 +31,6 @@ export default function GoogleReviewsSection() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-14">
           <div className="divider-gold mb-16" />
-          <span className="section-label">Opinie</span>
           <h2
             className="font-heading font-bold text-white mb-4 leading-tight"
             style={{

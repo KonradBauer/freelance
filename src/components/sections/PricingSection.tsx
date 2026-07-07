@@ -67,7 +67,7 @@ const TIERS: PricingTier[] = [
       "Migracje i modernizacje",
       "Zakres i czas ustalane indywidualnie",
     ],
-    cta: "Umów konsultację",
+    cta: "Umów bezpłatną konsultację",
     ctaHref: process.env.NEXT_PUBLIC_CALENDLY_URL ?? "#formularz",
     highlighted: false,
   },
@@ -99,7 +99,6 @@ export default function PricingSection() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <div className="divider-gold mb-16" />
-          <span className="section-label">Cennik</span>
           <h2
             className="font-heading font-bold text-white mb-5 leading-tight"
             style={{

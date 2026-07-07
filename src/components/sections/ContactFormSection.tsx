@@ -21,7 +21,6 @@ export default function ContactFormSection() {
         <div className="divider-gold mb-16" />
 
         <div className="text-center mb-10">
-          <span className="section-label">Kontakt</span>
           <h2
             className="font-heading font-bold text-white mb-5 leading-tight"
             style={{

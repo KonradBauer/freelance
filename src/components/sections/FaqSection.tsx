@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { FAQ_ITEMS } from "@/components/ui/JsonLd";
 
 export default function FaqSection() {
@@ -13,7 +13,6 @@ export default function FaqSection() {
         <div className="divider-gold mb-16" />
 
         <div className="text-center mb-14">
-          <span className="section-label">FAQ</span>
           <h2
             className="font-heading font-bold text-white mb-5 leading-tight"
             style={{
