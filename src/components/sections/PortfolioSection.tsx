@@ -215,12 +215,11 @@ export default function PortfolioSection() {
             </button>
 
             {/* Page dots */}
-            <div className="flex gap-2" role="tablist" aria-label="Strony portfolio">
+            <div className="flex gap-2" role="group" aria-label="Strony portfolio">
               {Array.from({ length: pageCount }).map((_, i) => (
                 <button
                   key={i}
-                  role="tab"
-                  aria-selected={i === currentPage}
+                  aria-current={i === currentPage ? "true" : undefined}
                   aria-label={`Strona ${i + 1}`}
                   onClick={() => resetAndGo(Math.min(i * visible, maxStart))}
                   className="rounded-full transition-all duration-300"

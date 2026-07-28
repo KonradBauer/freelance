@@ -2,7 +2,7 @@ import { REVIEWS } from "@/lib/constants";
 
 function StarRating({ rating }: { rating: number }) {
   return (
-    <div className="flex gap-1 mb-4" aria-label={`Ocena: ${rating} z 5`}>
+    <div className="flex gap-1 mb-4" role="img" aria-label={`Ocena: ${rating} z 5`}>
       {Array.from({ length: 5 }).map((_, i) => (
         <svg
           key={i}
