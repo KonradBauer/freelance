@@ -18,8 +18,6 @@ export default function ContactFormSection() {
       />
 
       <div className="relative z-10 max-w-xl mx-auto">
-        <div className="divider-gold mb-16" />
-
         <div className="text-center mb-10">
           <h2
             className="font-heading font-bold text-white mb-5 leading-tight"
@@ -28,11 +26,11 @@ export default function ContactFormSection() {
               letterSpacing: "-0.02em",
             }}
           >
-            Zostaw wiadomość
+            Umów się na konsultację
           </h2>
           <p className="text-slate-500 text-lg">
-            Wypełnij formularz. Skontaktuję się w ciągu 24 godzin i omówimy
-            Twój projekt bez zobowiązań.
+            Wypełnij formularz, żeby zarezerwować termin. Oddzwaniam w ciągu
+            24 godzin - ustalamy konkretny plan dla Twojej firmy, bez zobowiązań.
           </p>
           <p className="text-sm mt-3 flex items-center justify-center gap-2 font-medium" style={{ color: "#C9A84C" }}>
             <span aria-hidden="true">✓</span>

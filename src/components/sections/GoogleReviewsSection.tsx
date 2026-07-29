@@ -30,7 +30,6 @@ export default function GoogleReviewsSection() {
     <section id="opinie" className="py-24" style={{ background: "#060A14" }}>
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-14">
-          <div className="divider-gold mb-16" />
           <h2
             className="font-heading font-bold text-white mb-4 leading-tight"
             style={{
@@ -50,7 +49,7 @@ export default function GoogleReviewsSection() {
               style={{ background: "rgba(255,255,255,0.05)" }}
             >
               <StarRating rating={review.rating} />
-              <p className="text-white/80 text-sm leading-relaxed mb-6">{review.text}</p>
+              <p className="text-white/80 text-sm leading-relaxed mb-6 line-clamp-5">{review.text}</p>
               <div className="flex items-center gap-3 mt-auto">
                 <div
                   className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-semibold text-white"

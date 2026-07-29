@@ -1,3 +1,6 @@
+import Image from "next/image";
+import { CTA_TEXT } from "@/lib/constants";
+
 const AFTER_POINTS = [
   "Klienci szukają usług w Google i trafiają do Ciebie, nie do konkurencji",
   "Strona pracuje za Ciebie 24/7 - zamienia odwiedzających w telefony i zapytania",
@@ -38,8 +41,6 @@ export default function TransformationSection() {
       />
 
       <div className="relative z-10 max-w-4xl mx-auto">
-        <div className="divider-gold mb-16" />
-
         <div className="text-center mb-14">
           <h2
             className="font-heading font-bold text-white mb-5 leading-tight"
@@ -97,7 +98,7 @@ export default function TransformationSection() {
             href="#formularz"
             className="btn-gold inline-block text-lg px-10 py-4 rounded-[14px]"
           >
-            Chcę więcej klientów →
+            {CTA_TEXT}
           </a>
         </div>
 
@@ -108,20 +109,30 @@ export default function TransformationSection() {
             border: "1px solid rgba(201,168,76,0.08)",
           }}
         >
-          <p className="text-slate-500 text-sm leading-relaxed">
-            <span style={{ color: "#C9A84C" }} className="font-semibold">
-              Studio Code Art
-            </span>{" "}
-            to freelance studio prowadzone przez Konrada Bauera. Pomagam małym
-            i średnim firmom w Polsce pozyskiwać klientów przez internet - bez
-            cold callingu i uzależnienia od poleceń. Każda strona którą projektuję
-            zawiera strategię konwersji, pełne SEO techniczne i analitykę
-            (GA4 + Search Console) - żebyś od dnia premiery wiedział skąd
-            trafiają do Ciebie nowi klienci. Realizację zamykamy w 14 dniach
-            roboczych, projekty wyceniam indywidualnie. Po uruchomieniu masz
-            30 dni bezpłatnego wsparcia i bezpośredni kontakt ze mną, nie z
-            help deskiem. Działam zdalnie dla klientów z całej Polski.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5">
+            <Image
+              src="/avatar.png"
+              alt="Konrad Bauer - Studio Code Art"
+              width={64}
+              height={64}
+              className="rounded-full shrink-0"
+              style={{ border: "1px solid rgba(201,168,76,0.3)" }}
+            />
+            <p className="text-slate-500 text-sm leading-relaxed">
+              <span style={{ color: "#C9A84C" }} className="font-semibold">
+                Studio Code Art
+              </span>{" "}
+              to freelance studio prowadzone przez Konrada Bauera. Pomagam małym
+              i średnim firmom w Polsce pozyskiwać klientów przez internet - bez
+              cold callingu i uzależnienia od poleceń. Każda strona którą projektuję
+              zawiera strategię konwersji, pełne SEO techniczne i analitykę
+              (GA4 + Search Console) - żebyś od dnia premiery wiedział skąd
+              trafiają do Ciebie nowi klienci. Realizację zamykamy w 14 dniach
+              roboczych, projekty wyceniam indywidualnie. Po uruchomieniu masz
+              30 dni bezpłatnego wsparcia i bezpośredni kontakt ze mną, nie z
+              help deskiem. Działam zdalnie dla klientów z całej Polski.
+            </p>
+          </div>
         </div>
       </div>
     </section>

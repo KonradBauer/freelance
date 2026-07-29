@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
+import { CTA_TEXT } from "@/lib/constants";
 import {
   contactSchema,
   type ContactFormData,
@@ -351,7 +352,7 @@ export default function ContactForm() {
               disabled={isSubmitting}
               className="btn-gold flex-[2] px-8 py-4 rounded-xl text-lg disabled:cursor-not-allowed disabled:opacity-60"
             >
-              {isSubmitting ? "Wysyłanie..." : "Chcę więcej klientów →"}
+              {isSubmitting ? "Wysyłanie..." : CTA_TEXT}
             </button>
           </div>
 

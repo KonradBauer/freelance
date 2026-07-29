@@ -66,7 +66,6 @@ export default function PortfolioSection() {
     <section id="portfolio" className="py-24 overflow-hidden" style={{ background: "#060A14" }}>
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-14 text-center">
-          <div className="divider-gold mb-16" />
           <h2
             className="font-heading font-bold text-white mb-5 leading-tight"
             style={{

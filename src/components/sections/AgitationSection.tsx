@@ -1,7 +1,3 @@
-"use client";
-
-import { TiltCard } from "@/components/ui/TiltCard";
-
 const PAIN_POINTS = [
   {
     id: 1,
@@ -26,7 +22,7 @@ const PAIN_POINTS = [
 function WarningIcon() {
   return (
     <div
-      className="w-11 h-11 rounded-xl flex items-center justify-center mb-5 shrink-0"
+      className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0"
       style={{
         background: "rgba(239,68,68,0.09)",
         border: "1px solid rgba(239,68,68,0.22)",
@@ -54,9 +50,7 @@ function WarningIcon() {
 export default function AgitationSection() {
   return (
     <section className="py-24 px-6" style={{ background: "#060A14" }}>
-      <div className="max-w-5xl mx-auto">
-        <div className="divider-gold mb-16" />
-
+      <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
           <h2
             className="font-heading font-bold text-white mb-5 leading-tight"
@@ -73,25 +67,13 @@ export default function AgitationSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="flex flex-col gap-10">
           {PAIN_POINTS.map((point) => (
-            <TiltCard
-              key={point.id}
-              depth={10}
-              style={{
-                background: "rgba(255,255,255,0.028)",
-                backdropFilter: "blur(16px)",
-                WebkitBackdropFilter: "blur(16px)",
-                border: "1px solid rgba(201,168,76,0.14)",
-                borderRadius: "16px",
-                padding: "2rem",
-              }}
-            >
-              {/* Elevated content layer */}
-              <div className="flex flex-col h-full" style={{ transform: "translateZ(24px)", transformStyle: "preserve-3d" }}>
-                <WarningIcon />
+            <div key={point.id} className="flex gap-5 items-start">
+              <WarningIcon />
+              <div>
                 <h3
-                  className="font-heading font-bold text-white mb-3 leading-tight"
+                  className="font-heading font-bold text-white mb-2 leading-tight"
                   style={{ fontSize: "1.1rem", letterSpacing: "-0.01em" }}
                 >
                   {point.title}
@@ -100,7 +82,7 @@ export default function AgitationSection() {
                   {point.description}
                 </p>
               </div>
-            </TiltCard>
+            </div>
           ))}
         </div>
       </div>

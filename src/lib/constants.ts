@@ -1,4 +1,4 @@
-export const CTA_TEXT = "Chcę więcej klientów →";
+export const CTA_TEXT = "Umów się na konsultację →";
 
 export type ProcessStep = {
   step: number;
@@ -92,9 +92,6 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     url: "https://devask-alpha.vercel.app/",
   },
 ];
-
-export const VIDEO_EMBED_SRC = "/portfolio/video.mp4";
-export const VIDEO_THUMBNAIL_SRC = "/portfolio/video-thumbnail.jpg";
 
 export type Review = {
   author: string;

@@ -10,8 +10,6 @@ export default function FaqSection() {
   return (
     <section id="faq" className="py-24 px-6" style={{ background: "#060A14" }}>
       <div className="max-w-3xl mx-auto">
-        <div className="divider-gold mb-16" />
-
         <div className="text-center mb-14">
           <h2
             className="font-heading font-bold text-white mb-5 leading-tight"

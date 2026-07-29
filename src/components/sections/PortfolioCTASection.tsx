@@ -1,3 +1,5 @@
+import { CTA_TEXT } from "@/lib/constants";
+
 export default function PortfolioCTASection() {
   return (
     <section
@@ -35,13 +37,13 @@ export default function PortfolioCTASection() {
           Dołącz do firm, które już zdobywają klientów online
         </h2>
         <p className="text-slate-400 text-lg mb-8">
-          12+ zrealizowanych projektów. Bezpłatna wycena w ciągu 24 godzin. Bez zobowiązań.
+          12+ firm, które przestały tracić klientów na rzecz konkurencji. Bezpłatna konsultacja, konkretny plan w 24 godziny.
         </p>
         <a
           href="#formularz"
           className="btn-gold inline-block text-lg px-10 py-4 rounded-[14px]"
         >
-          Chcę więcej klientów →
+          {CTA_TEXT}
         </a>
       </div>
     </section>

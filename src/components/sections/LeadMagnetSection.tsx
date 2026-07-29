@@ -1,7 +1,9 @@
+import { CTA_TEXT } from "@/lib/constants";
+
 const BENEFITS = [
-  "Omówimy szczegóły Twojego projektu",
+  "Zrozumiem, gdzie tracisz klientów i czego potrzebuje Twoja branża",
   "Odpowiem na wszystkie pytania",
-  "Wycena bez zobowiązań",
+  "Konkretny plan działania i termin - bez zobowiązań",
 ];
 
 const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL;
@@ -61,7 +63,7 @@ export default function LeadMagnetSection() {
           rel={isExternal ? "noopener noreferrer" : undefined}
           className="btn-gold inline-block text-lg px-10 py-4 rounded-[14px]"
         >
-          Umów bezpłatną konsultację →
+          {CTA_TEXT}
         </a>
 
         <p className="mt-4 text-slate-600 text-sm">Czas trwania: 30 minut · Całkowicie bezpłatnie</p>

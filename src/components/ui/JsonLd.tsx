@@ -9,7 +9,7 @@ const FAQ_ITEMS = [
   {
     question: "Ile kosztuje strona internetowa?",
     answer:
-      "Cena zależy od zakresu projektu. Podstawowa strona wizytówkowa zaczyna się od 1500 zł, a rozbudowane strony ofertowe od 2500 zł. Bezpłatna wycena w ciągu 24 godzin - wystarczy wypełnić formularz.",
+      "Nie mam sztywnego cennika, bo każdy projekt ma inny zakres i inne cele biznesowe. Podczas bezpłatnej konsultacji poznaję Twoją branżę i to, czego potrzebujesz, a wycenę i harmonogram dostajesz w ciągu 24 godzin - dopasowane do Twojego projektu, nie z gotowej tabeli.",
   },
   {
     question: "Jak długo trwa wykonanie strony internetowej?",
@@ -86,7 +86,7 @@ function buildSchemas() {
     "@id": `${SITE_URL}/#person`,
     name: "Konrad Bauer",
     url: SITE_URL,
-    image: `${SITE_URL}/konrad-bauer.jpg`,
+    image: `${SITE_URL}/avatar.png`,
     description:
       "Freelance web developer specjalizujący się w tworzeniu stron internetowych dla firm w Polsce. Buduję strony w Next.js i React od 2019 roku.",
     jobTitle: "Web Developer Freelancer",

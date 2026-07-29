@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
+import { CTA_TEXT } from "@/lib/constants";
 
 const stagger = {
   hidden: {},
@@ -118,9 +119,10 @@ export default function HeroSection() {
                 variants={item}
                 className="text-slate-400 text-lg max-w-xl mx-auto mb-10 leading-relaxed"
               >
-                Bez profesjonalnej strony tracisz zlecenia każdego dnia. Zbuduję
-                Ci stronę, która pracuje na Ciebie 24/7 i zamienia odwiedzających
-                w klientów.
+                To nie jest kwestia gustu - to utracone zlecenia, które w tej
+                chwili trafiają do kogoś innego. Pokażę Ci dokładnie, gdzie
+                tracisz klientów, i zbuduję rozwiązanie, które od pierwszego
+                dnia zaczyna ich odzyskiwać.
               </motion.p>
 
               {/* CTA */}
@@ -132,9 +134,12 @@ export default function HeroSection() {
                     rel={process.env.NEXT_PUBLIC_CALENDLY_URL ? "noopener noreferrer" : undefined}
                     className="btn-gold inline-block text-lg px-10 py-4 rounded-[14px]"
                   >
-                    Umów bezpłatną konsultację →
+                    {CTA_TEXT}
                   </a>
                 </div>
+                <p className="text-slate-600 text-sm">
+                  30 minut · Bez zobowiązań · Konkretny plan dla Twojej branży
+                </p>
               </motion.div>
             </motion.div>
           </div>
