@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ContactForm from "@/components/ui/ContactForm";
 
 export default function ContactFormSection() {
@@ -18,6 +19,22 @@ export default function ContactFormSection() {
       />
 
       <div className="relative z-10 max-w-xl mx-auto">
+        <div className="flex items-center justify-center gap-3 mb-8">
+          <Image
+            src="/avatar.png"
+            alt="Konrad Bauer - Studio Code Art"
+            width={40}
+            height={40}
+            className="rounded-full shrink-0"
+            style={{ border: "1px solid rgba(201,168,76,0.3)" }}
+          />
+          <p className="text-slate-500 text-sm text-left">
+            &ldquo;Wypełniasz formularz - odzywam się ja, nie dział sprzedaży.&rdquo;
+            <br />
+            <span style={{ color: "#C9A84C" }}>Konrad, założyciel Studio Code Art</span>
+          </p>
+        </div>
+
         <div className="text-center mb-10">
           <h2
             className="font-heading font-bold text-white mb-5 leading-tight"
